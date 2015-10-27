@@ -1,6 +1,6 @@
 # PuMuKIT-2 Installation Guide
 
-*This page is updated to the 2.1 release*
+*This page is updated to the 2.1.0-RC1*
 
 ## Requirements
 
@@ -50,11 +50,11 @@ Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#faq) if
     git clone https://github.com/campusdomar/PuMuKIT2.git /var/www/pumukit2
     ```
 
-5. Activate the master branch:
+5. Activate the 2.1.0-RC1 tag:
 
     ```
     cd /var/www/pumukit2
-    git checkout master
+    git checkout 2.1.0-RC1
     ```
 
 6. Install [composer](https://getcomposer.org/).
