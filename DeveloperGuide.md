@@ -25,7 +25,6 @@ List of Bundles
 PuMuKIT-2 has been developed with the Symfony framework. Symfony 2.x is based on bundles, and so, PuMuKIT-2 is structured in bundles. There is a list of bundles that come activated by default with the project, these are mandatory for the code to work. There is also a list of optional bundles that come deactivated. In order to install/activate them, follow the instructions in the guide of each bundle.
 
 Activated by default:
-* ArcaBundle: provides a service to add RSS for the Academic Community.
 * EncoderBundle: provides a service to encode audio/video tracks.
 * ExampleDataBundle: provides a command to add example data on a new installation on the instance.
 * InspectionBundle: provides a service to inspect multimedia tracks.
@@ -41,6 +40,7 @@ Activated by default:
 
 
 Not activated by default:
+* [ArcaBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/ArcaBundle/Resources/doc/InstallationGuide.md): provides a service to add RSS for the Academic Community.
 * [LDAPBundle](https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/LDAPBundle/Resources/doc/AdminGuide.md): provides a service to connect to a LDAP Server and to retrieve data from the server.
 * [MoodleBundle](https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/MoodleBundle/Resources/doc/InstallationGuide.md): allows to share PuMuKIT videos whitin a Moodle.
 * [NotificationBundle](https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/NotificationBundle/Resources/doc/AdminGuide.md): sends emails when a job finished, whether it failed or succeed
@@ -78,7 +78,11 @@ src/Pumukit/ExampleOrg/Feature3Bundle
 Override a Bundle
 -----------------
 
+<<<<<<< HEAD
 See an example in [WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md).
+=======
+See an example in [WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md).
+>>>>>>> 2.1.x
 
 
 Create a new Bundle
@@ -102,9 +106,15 @@ Create all Documents, [Services](http://symfony.com/doc/current/book/service_con
 Examples
 --------
 
+<<<<<<< HEAD
 * [Cmar/LiveBundle](https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/Cmar/LiveBundle/Resources/doc/AdminGuide.md) overrides LiveBundle.
 * Cmar/SonarBundle is a new Bundle for Cmar organization.
 * [Cmar/WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/Cmar/WebTVBundle/Resources/doc/AdminGuide.md) overrides WebTVBundle
+=======
+* [Cmar/LiveBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/Cmar/LiveBundle/Resources/doc/AdminGuide.md) overrides LiveBundle.
+* Cmar/SonarBundle is a new Bundle for Cmar organization.
+* [Cmar/WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/Cmar/WebTVBundle/Resources/doc/AdminGuide.md) overrides WebTVBundle
+>>>>>>> 2.1.x
 
 
 
@@ -112,4 +122,3 @@ Main URLs of a PuMuKIT deployment
 ---------------------------------
 * Web Portal: `http://{MyPuMuKIT_IP}/`
 * Back-office (admin interface): `http://{MyPuMuKIT_IP}/admin`
-  * ARCA: `http://{MyPuMuKIT_IP}/arca.xml`
