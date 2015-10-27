@@ -1,20 +1,20 @@
-PUMUKIT2
-========
+PuMuKIT-2 Documentation Project
+===============================
 
-Site
-----
+PuMuKIT-2 Site:
+--------------
 
 http://pumukit.org
 
 
-Source
-------
+PuMuKIt-2 Code Project:
+----------------------
 
 https://github.com/campusdomar/PuMuKIT2
 
 
-Documentation
--------------
+PuMuKIT-2 Documentation:
+-----------------------
 
 1. [Installation Guide.](InstallationGuide.md)
 2. [User Guide.](UserGuide.md)
