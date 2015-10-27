@@ -1,6 +1,8 @@
 PuMuKIT-2 User Guide
 ====================
 
+*This page is updated to the 2.1.0-RC1*
+
 # PuMuKIT Content Manager Manual
 
 ## Table of contents

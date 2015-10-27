@@ -1,6 +1,8 @@
 ﻿PuMuKIT-2 Developer & Architecture Guide
 ========================================
 
+*This page is updated to the 2.1.0-RC1*
+
 Architecture
 ============
 
