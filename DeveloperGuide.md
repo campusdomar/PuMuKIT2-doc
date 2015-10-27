@@ -32,19 +32,19 @@ Activated by default:
 * InstallBundleBundle: provides a command to install new bundles into the PuMuKIT-2 project.
 * LiveBundle: provides a service to show live stream events.
 * NewAdminBundle: provides the back-office admin UI.
-* [OpencastBundle](../src/Pumukit/OpencastBundle/Resources/doc/ConfigurationGuide.md): provides a service to import multimedia content of an Opencast Server.
+* [OpencastBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/OpencastBundle/Resources/doc/ConfigurationGuide.md): provides a service to import multimedia content of an Opencast Server.
 * SchemaBundle: defines the schema of classes and services.
 * StatsBundle: provides a service to log the statistics.
-* [WebTVBundle](../src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md): defines the portal web.
+* [WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md): defines the portal web.
 * WizardBundle: provides a service to guide the user on uploading multimedia content.
-* [WorkflowBundle](../src/Pumukit/WorkflowBundle/Resources/doc/ConfigurationGuide.md): provides a service to automatically extract a picture from a video that just has been transcoded if the MultimediaObject does not have any picture yet.
+* [WorkflowBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/WorkflowBundle/Resources/doc/ConfigurationGuide.md): provides a service to automatically extract a picture from a video that just has been transcoded if the MultimediaObject does not have any picture yet.
 
 
 Not activated by default:
-* [LDAPBundle](../src/Pumukit/LDAPBundle/Resources/doc/AdminGuide.md): provides a service to connect to a LDAP Server and to retrieve data from the server.
-* [MoodleBundle](../src/Pumukit/MoodleBundle/Resources/doc/InstallationGuide.md): allows to share PuMuKIT videos whitin a Moodle.
-* [NotificationBundle](../src/Pumukit/NotificationBundle/Resources/doc/AdminGuide.md): sends emails when a job finished, whether it failed or succeed
-* [PodcastBundle](../src/Pumukit/PodcastBundle/Resources/doc/InstallationGuide.md): provides a service to add PuMuKIT videos into Podcast channel.
+* [LDAPBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/LDAPBundle/Resources/doc/AdminGuide.md): provides a service to connect to a LDAP Server and to retrieve data from the server.
+* [MoodleBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/MoodleBundle/Resources/doc/InstallationGuide.md): allows to share PuMuKIT videos whitin a Moodle.
+* [NotificationBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/NotificationBundle/Resources/doc/AdminGuide.md): sends emails when a job finished, whether it failed or succeed
+* [PodcastBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/PodcastBundle/Resources/doc/InstallationGuide.md): provides a service to add PuMuKIT videos into Podcast channel.
 
 
 List of Events
@@ -78,7 +78,7 @@ src/Pumukit/ExampleOrg/Feature3Bundle
 Override a Bundle
 -----------------
 
-See an example in [WebTVBundle](../src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md../src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md).
+See an example in [WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.mdhttps://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md).
 
 
 Create a new Bundle
@@ -102,9 +102,9 @@ Create all Documents, [Services](http://symfony.com/doc/current/book/service_con
 Examples
 --------
 
-* [Cmar/LiveBundle](../src/Pumukit/Cmar/LiveBundle/Resources/doc/AdminGuide.md) overrides LiveBundle.
+* [Cmar/LiveBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/Cmar/LiveBundle/Resources/doc/AdminGuide.md) overrides LiveBundle.
 * Cmar/SonarBundle is a new Bundle for Cmar organization.
-* [Cmar/WebTVBundle](../src/Pumukit/Cmar/WebTVBundle/Resources/doc/AdminGuide.md) overrides WebTVBundle
+* [Cmar/WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/Cmar/WebTVBundle/Resources/doc/AdminGuide.md) overrides WebTVBundle
 
 
 
