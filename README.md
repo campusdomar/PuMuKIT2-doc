@@ -6,7 +6,7 @@ Documentation:
 
 1. [Installation Guide.](InstallationGuide.md)
 2. [User Guide.](UserGuide.md)
-3. [Developer Guide](DeveloperGuide.md)
+3. [Developer & Architecture Guide](DeveloperGuide.md)
 4. [Admin Guide.](AdminGuide.md)
 
 
