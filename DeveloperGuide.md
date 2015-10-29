@@ -80,11 +80,7 @@ src/Pumukit/ExampleOrg/Feature3Bundle
 Override a Bundle
 -----------------
 
-<<<<<<< HEAD
 See an example in [WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md).
-=======
-See an example in [WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md).
->>>>>>> 2.1.x
 
 
 Create a new Bundle
@@ -108,15 +104,9 @@ Create all Documents, [Services](http://symfony.com/doc/current/book/service_con
 Examples
 --------
 
-<<<<<<< HEAD
 * [Cmar/LiveBundle](https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/Cmar/LiveBundle/Resources/doc/AdminGuide.md) overrides LiveBundle.
 * Cmar/SonarBundle is a new Bundle for Cmar organization.
 * [Cmar/WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/Cmar/WebTVBundle/Resources/doc/AdminGuide.md) overrides WebTVBundle
-=======
-* [Cmar/LiveBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/Cmar/LiveBundle/Resources/doc/AdminGuide.md) overrides LiveBundle.
-* Cmar/SonarBundle is a new Bundle for Cmar organization.
-* [Cmar/WebTVBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/Cmar/WebTVBundle/Resources/doc/AdminGuide.md) overrides WebTVBundle
->>>>>>> 2.1.x
 
 
 
