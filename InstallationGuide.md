@@ -73,9 +73,10 @@ Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#faq) if
 
    * Follow the instructions at Symfony [documentation](http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup).
 
-9. Set the "date.timezone" setting in php.ini with your timezone (e.g. Europe/Madrid):
+9. Set the `"date.timezone"` setting in all the `php.ini` files with your timezone (e.g. `Europe/Madrid`):
 
     ```
+    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/cli/php.ini 
     sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/fpm/php.ini 
     ```
 
