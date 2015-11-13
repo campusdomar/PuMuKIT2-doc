@@ -1,6 +1,6 @@
 # Migration Guide
 
-*This page is updated to the 2.1.0 version*
+*This page is updated to the 2.1.0*
 
 The migration from PuMuKIT1 to PuMuKIT2 allows to export the metadata of series
 from PuMuKIT1 and import this metadata into PuMuKIT2. The essence (multimedia
