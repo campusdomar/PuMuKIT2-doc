@@ -24,7 +24,7 @@ exports all metadata from all the series in PuMuKIT1 database, including its
 multimedia objects metadata.
 
 To export this metadata, install these scripts and export the metadata into your
-PuMuKIT1 server. In order to do that, follow the installation guide of the [PuMuKIT1-data-export
+PuMuKIT1 server. In order to do that, follow the exportation guide of the [PuMuKIT1-data-export
 repository](https://github.com/campusdomar/PuMuKIT1-data-export/blob/master/README.md).
 
 ## Metadata import to PuMuKIT2
