@@ -44,9 +44,11 @@ Activated by default:
 Not activated by default:
 * [ArcaBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/ArcaBundle/Resources/doc/InstallationGuide.md): provides a service to add RSS for the Academic Community.
 * [LDAPBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/LDAPBundle/Resources/doc/AdminGuide.md): provides a service to connect to a LDAP Server and to retrieve data from the server.
-* [MoodleBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/MoodleBundle/Resources/doc/InstallationGuide.md): allows to share PuMuKIT videos whitin a Moodle.
 * [NotificationBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/NotificationBundle/Resources/doc/AdminGuide.md): sends emails when a job finished, whether it failed or succeed
 * [PodcastBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/PodcastBundle/Resources/doc/InstallationGuide.md): provides a service to add PuMuKIT videos into Podcast channel.
+
+Third party bundles:
+* [List of third party bundles](ThirdPartyBundlesGuide.md)
 
 
 List of Events
