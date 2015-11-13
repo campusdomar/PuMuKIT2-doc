@@ -8,6 +8,7 @@ Documentation:
 2. [User Guide.](UserGuide.md)
 3. [Developer & Architecture Guide](DeveloperGuide.md)
 4. [Admin Guide.](AdminGuide.md)
+5. [Migration Guide.](MigrationGuide.md)
 
 
 PuMuKIT-2 Site:
@@ -20,5 +21,3 @@ PuMuKIT-2 Code Project:
 ----------------------
 
 https://github.com/campusdomar/PuMuKIT2
-
-
