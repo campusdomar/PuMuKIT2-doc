@@ -15,15 +15,15 @@ PuMuKIT-2 User Guide
   
   1.1.2 [What is PuMuKIT?](#112-what-is-pumukit)
   
-2. [PuMuKIT Content Manager Manual](#2--pumukit-content-manager-manual)
+2. [PuMuKIT Content Manager Manual](#2-pumukit-user-manual)
 
-  2.1 [Content Import](#21--content-import)
+  2.1 [Content Import](#21-content-import)
   
   2.1.1 [Manual import of mono-stream content](#211-manual-import-of-mono-stream-content)
   
   2.1.2 [Importing videos from Opencast](#212-importing-videos-from-opencast)
   
-  2.2 [Metadata edition](#22--metadata-edition)
+  2.2 [Metadata edition](#22-metadata-edition)
   
   2.2.1 [Series metadata edition](#221-series-metadata-edition)
   
@@ -31,9 +31,9 @@ PuMuKIT-2 User Guide
 
   2.2.3 [Series and multimedia object image edition](#223-series-and-multimedia-object-image-edition)
 
-  2.3 [Content publication](#23--content-publication)
+  2.3 [Content publication](#23-content-publication)
 
-  2.4 [Other administration modules](#24--other-administration-modules)
+  2.4 [Other administration modules](#24-other-administration-modules)
   
   2.4.1 [Access module](#241-access-module)
   
