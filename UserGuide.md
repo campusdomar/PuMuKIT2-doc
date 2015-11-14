@@ -15,7 +15,7 @@ PuMuKIT-2 User Guide
   
   1.1.2 [What is PuMuKIT?](#112-what-is-pumukit)
   
-2. [PuMuKIT Content Manager Manual](#2-pumukit-user-manual)
+2. [PuMuKIT User Manual](#2-pumukit-user-manual)
 
   2.1 [Content Import](#21-content-import)
   
@@ -531,7 +531,7 @@ We can see from video files to various icons appear to us before the name and id
 
 This would also be true for SBS generated from imported files from Opencast.
 
-### 2.3.2 Series and multimedia object image edition
+### 2.2.3 Series and multimedia object image edition
 
 This module is used by the series module and the multimedia object module to list images linked to different multimedia objects or series. This also allows you to link new images.
 
