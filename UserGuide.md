@@ -7,59 +7,59 @@ PuMuKIT-2 User Guide
 
 ## Table of contents
 
-1. General Introduction
+1. [General Introduction](#1--general-introduction)
 
-  1.1 PuMuKIT’s overview
+  1.1 [PuMuKIT’s overview](#11--pumukits-overview)
   
-  1.1.1 Terminology
+  1.1.1 [Terminology](#111-terminology)
   
-  1.1.2 What is PuMuKIT?
+  1.1.2 [What is PuMuKIT?](#112-what-is-pumukit)
   
-2. PuMuKIT Content Manager Manual
+2. [PuMuKIT User Manual](#2-pumukit-user-manual)
 
-  2.1 Content Import
+  2.1 [Content Import](#21-content-import)
   
-  2.1.1 Manual import of mono-stream content
+  2.1.1 [Manual import of mono-stream content](#211-manual-import-of-mono-stream-content)
   
-  2.1.2 Importing videos from Opencast
+  2.1.2 [Importing videos from Opencast](#212-importing-videos-from-opencast)
   
-  2.2 Metadata edition
+  2.2 [Metadata edition](#22-metadata-edition)
   
-  2.2.1 Series metadata edition
+  2.2.1 [Series metadata edition](#221-series-metadata-edition)
   
-  2.2.2 Multimedia object metadata edition
+  2.2.2 [Multimedia object metadata edition](#222-multimedia-object-metadata-edition)
 
-  2.2.3 Series and multimedia object image edition
+  2.2.3 [Series and multimedia object image edition](#223-series-and-multimedia-object-image-edition)
 
-  2.3 Content publication
+  2.3 [Content publication](#23-content-publication)
 
-  2.4 Other administration modules
+  2.4 [Other administration modules](#24-other-administration-modules)
   
-  2.4.1 Access module
+  2.4.1 [Access module](#241-access-module)
   
-  2.4.2 Dashboard module
+  2.4.2 [Dashboard module](#242-dashboard-module)
 
-  2.4.3 Multimedia series module
+  2.4.3 [Multimedia series module](#243-multimedia-series-module)
 
-  2.4.4 Live channels module (Live streaming)
+  2.4.4 [Live channels module (Live streaming)](#244-live-channels-module-live-streaming)
 
-  2.4.5 Live events module
+  2.4.5 [Live events module](#245-live-events-module)
 
-  2.4.6 Encoder jobs module
+  2.4.6 [Encoder jobs module](#246-encoder-jobs-module)
   
-  2.4.7 People module
+  2.4.7 [People module](#247-people-module)
 
-  2.4.8 Tags module
+  2.4.8 [Tags module](#248-tags-module)
 
-  2.4.9 Access Profiles module
+  2.4.9 [Access Profiles module](#249-access-profiles-module)
 
-  2.4.10 Series types module
+  2.4.10 [Series types module](#2410-series-types-module)
 
-  2.4.11 Admin users module
+  2.4.11 [Admin users module](#2411-admin-users-module)
 
-  2.4.12 Roles module
+  2.4.12 [Roles module](#2412-roles-module)
 
-  2.4.13 Opencast ingester module
+  2.4.13 [Opencast ingester module](#2413-opencast-ingester-module)
   
 # 1.  General Introduction
 
@@ -531,7 +531,7 @@ We can see from video files to various icons appear to us before the name and id
 
 This would also be true for SBS generated from imported files from Opencast.
 
-### 2.3.2 Series and multimedia object image edition
+### 2.2.3 Series and multimedia object image edition
 
 This module is used by the series module and the multimedia object module to list images linked to different multimedia objects or series. This also allows you to link new images.
 
