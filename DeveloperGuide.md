@@ -47,9 +47,6 @@ Not activated by default:
 * [NotificationBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/NotificationBundle/Resources/doc/AdminGuide.md): sends emails when a job finished, whether it failed or succeed
 * [PodcastBundle](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/src/Pumukit/PodcastBundle/Resources/doc/InstallationGuide.md): provides a service to add PuMuKIT videos into Podcast channel.
 
-Third party bundles:
-* [List of third party bundles](ThirdPartyBundlesGuide.md)
-
 
 List of Events
 --------------
