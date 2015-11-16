@@ -1,10 +1,14 @@
 # Migration Guide
 
-*This page is updated to the PuMuKIT 2.1.0* 
+*This page is updated to the PuMuKIT 2.1.0 version* 
 
 The migration from PuMuKIT 1.7 to PuMuKIT 2.1 implies the migration of all the content (Multimedia Objects, Series,etc...) in the PuMuKIT 1.7 instance to the new PuMuKIT 2.1 instance. Content in PuMuKIT is built of essences (video files, pictures, etc...) and Metadata (the descriptive data like title, author, etc…). Essences are stored on a filesystem folders structure and Metadata in an internal database.
 
 The migration procedures described here includes the migration of the Essences and Metadata.
+
+## PuMuKIT 2.1 Installation
+
+Install PuMuKIT 2.1 in a new system following the steps at [InstallationGuide.md](InstallationGuide.md).
 
 
 ## Essences Migration
