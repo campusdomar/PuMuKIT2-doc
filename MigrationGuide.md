@@ -33,7 +33,7 @@ multimedia objects metadata.
 
 To export this metadata, install these scripts and export the metadata into your
 PuMuKIT1 server. In order to do that, follow the export guide of the [PuMuKIT1-data-export
-repository](https://github.com/campusdomar/PuMuKIT1-data-export/blob/master/README.md).
+repository](https://github.com/campusdomar/PuMuKIT1-data-export/blob/1.0.0/README.md).
 
 Note: Some minor metadata tables are not included in the automatic migration scripts, the metadata from PuMuKIT Users (Publishers, Administrators, etc…), Live Channels and Live Events will not be migrated.
 For a complete migration, these metadata must be introduced using the back-office of PuMuKIT2 (http://{PuMuKIT2-Server}/admin).
@@ -43,7 +43,7 @@ For a complete migration, these metadata must be introduced using the back-offic
 To import the metadata into PuMuKIT2 you can use the PuMuKIT2-import-bundle. This bundle allows you to import the metadata exported in the format of the PuMuKIT1-data-export repository into the PuMuKIt2 database.
 
 To import this metadata exported from PuMuKIT 1.7, install this bundle into your PuMuKIT2 instance and
-execute the importation following the steps at [PuMuKIT2-import-bundle README](https://github.com/campusdomar/PuMuKIT2-import-bundle/blob/master/README.md).
+execute the importation following the steps at [PuMuKIT2-import-bundle README](https://github.com/campusdomar/PuMuKIT2-import-bundle/blob/1.0.0/README.md).
 
 ## Step 4: Final check
 
