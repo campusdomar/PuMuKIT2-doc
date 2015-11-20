@@ -52,10 +52,34 @@ List of Events
 --------------
 
 Custom events added to PuMuKIT-2:
+
+* *multimediaobject.create*: thrown each time a multimedia object is created.
 * *multimediaobject.update*: thrown each time a multimedia object is updated.
+* *multimediaobject.delete*: thrown each time a multimedia object is deleted.
 * *multimediaobject.view*: thrown each time a multimedia object is played in the webtv portal.
+
 * *job.success*: thrown each time a job is finished successfully in the system.
 * *job.error*: thrown each time a job fails in the system.
+
+* *track.create*: thrown each time a track is added to a multimedia object.
+* *track.update*: thrown each time a track in a multimedia object is updated.
+* *track.delete*: thrown each time a track is deleted from a multimedia object.
+
+* *pic.create*: thrown each time a pic is added to a multimedia object.
+* *pic.update*: thrown each time a pic in a multimedia object is updated.
+* *pic.delete*: thrown each time a pic is deleted from a multimedia object.
+
+* *material.create*: thrown each time a material is added to a multimedia object.
+* *material.update*: thrown each time a material in a multimedia object is updated.
+* *material.delete*: thrown each time a material is deleted from a multimedia object.
+
+* *link.create*: thrown each time a link is added to a multimedia object.
+* *link.update*: thrown each time a link in a multimedia object is updated.
+* *link.delete*: thrown each time a link is deleted from a multimedia object.
+
+* *personwithrole.create*: thrown each time a person with a given role is added to a multimedia object.
+* *personwithrole.update*: thrown each time a person with a given role in a multimedia object is updated.
+* *personwithrole.delete*: thrown each time a person with a given role is deleted from a multimedia object.
 
 To add more events, read the Symfony documentation about creating [custom events](http://symfony.com/doc/current/components/event_dispatcher/introduction.html#creating-and-dispatching-an-event) and [listeners](http://symfony.com/doc/current/cookbook/event_dispatcher/event_listener.html).
 
