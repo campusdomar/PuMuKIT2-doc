@@ -1,45 +1,54 @@
 # Migration Guide
 
-*This page is updated to the 2.1.0*
+*This page is updated to the PuMuKIT 2.1.0 version* 
 
-The migration from PuMuKIT1 to PuMuKIT2 allows to export the metadata of series
-from PuMuKIT1 and import this metadata into PuMuKIT2. The essence (multimedia
-files such as videos and pictures) of these series will not be imported. It is
-important that both PuMuKIT1 and PuMuKIT2 servers have access to these essences.
+The migration from PuMuKIT 1.7 to PuMuKIT 2.1 implies the installation of a PuMuKIT 2.1 instance and the migration of all the content (Multimedia Objects, Series,etc...) in the PuMuKIT 1.7 instance to the new PuMuKIT 2.1 instance. Content in PuMuKIT is built of essences (video files, pictures, etc...) and Metadata (the descriptive data like title, author, etc…). Essences are stored on a filesystem folders structure and Metadata in an internal database.
 
-The metadata from Users, Live Channels and Live Events will not be migrated.
-For a complete migration, these metadata must be introduced using the back-
--office of PuMuKIT2 (http://{PuMuKIT2-Server}/admin).
+The migration procedures described here includes the migration of the Essences and Metadata.
 
-## System requirements
+## Step 1: PuMuKIT 2.1 Installation
 
-Configure your `web/storage/` and `web/uploads/` directories to be mounted on
-your PuMuKIT share in a way PuMuKIT1 and PuMuKIT2 servers have access to the
-multimedia files.
+Install PuMuKIT 2.1 in a new system following the steps at the [Installation Guide](InstallationGuide.md).
 
-## Metadata export from PuMuKIT1
 
-There are a series of scripts to export metadata from PuMuKIT1. These scripts
-exports all metadata from all the series in PuMuKIT1 database, including its
+## Step 2: Essences Migration
+
+The migration of the PuMuKIT essence-folders is very straight forward as PuMuKIT 1.7 and PuMuKIT 2.1 are totally compatible at that level.
+
+Copy all the files and folders from the two PuMuKIT1.7 essence-folders to PuMuKIT 2.1 ones following the rules:
+
+`web/almacen/`  (PuMuKIT 1.7)  ->  `web/storage/`  (PuMuKIT 2.1)
+
+`web/uploads/`  (PuMuKIT 1.7)  ->  `web/uploads/`  (PuMuKIT 2.1)
+
+If your essence-folders are stored in a NAS (Network Storage System) just adjust the mounting points properly in your new PuMuKIT 2.1 deployment and all will be done at this level. 
+
+## Step 3: Metadata Migration
+
+### Metadata export from PuMuKIT1.7
+
+There are a series of scripts to export metadata from PuMuKIT1.7 These scripts
+exports all metadata from all the series in PuMuKIT1.7 database, including its
 multimedia objects metadata.
 
 To export this metadata, install these scripts and export the metadata into your
-PuMuKIT1 server. In order to do that, follow the exportation guide of the [PuMuKIT1-data-export
-repository](https://github.com/campusdomar/PuMuKIT1-data-export/blob/master/README.md).
+PuMuKIT1 server. In order to do that, follow the export guide of the [PuMuKIT1-data-export
+repository](https://github.com/campusdomar/PuMuKIT1-data-export/blob/1.0.0/README.md).
 
-## Metadata import to PuMuKIT2
+Note: Some minor metadata tables are not included in the automatic migration scripts, the metadata from PuMuKIT Users (Publishers, Administrators, etc…), Live Channels and Live Events will not be migrated.
+For a complete migration, these metadata must be introduced using the back-office of PuMuKIT2 (http://{PuMuKIT2-Server}/admin).
 
-PuMuKIT2-import-bundle is a Symfony bundle that allows to import the metadata
-exported in the format of the PuMuKIT1-data-export repository. This bundle
-imports the metadata into the database of PuMuKIT2.
+### Metadata import to PuMuKIT2
 
-To import this metadata, install this bundle into your PuMuKIT2 instance and
-execute the importation following the steps at [PuMuKIT2-import-bundle README](https://github.com/campusdomar/PuMuKIT2-import-bundle/blob/master/README.md).
+To import the metadata into PuMuKIT2 you can use the PuMuKIT2-import-bundle. This bundle allows you to import the metadata exported in the format of the PuMuKIT1-data-export repository into the PuMuKIt2 database.
 
-## Final check
+To import this metadata exported from PuMuKIT 1.7, install this bundle into your PuMuKIT2 instance and
+execute the importation following the steps at [PuMuKIT2-import-bundle README](https://github.com/campusdomar/PuMuKIT2-import-bundle/blob/1.0.0/README.md).
 
-As a recommendation, check you have the same amount of Series and Multimedia
-Objects at both systems.
+## Step 4: Final check
+
+As a recommendation, check you have the same number of Series and Multimedia
+Objects in both systems.
 
 #### PuMuKIT1
 

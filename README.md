@@ -9,7 +9,7 @@ Documentation:
 3. [Developer & Architecture Guide](DeveloperGuide.md)
 4. [Admin Guide.](AdminGuide.md)
 5. [Migration Guide.](MigrationGuide.md)
-6. [Third Party Bundles Guide.](ThirdPartyBundlesGuide.md)
+6. [Third Party Bundles List.](ThirdPartyBundlesList.md)
 
 
 PuMuKIT-2 Site:
