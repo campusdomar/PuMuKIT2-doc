@@ -6,7 +6,7 @@
 
 1. [Requirements](#requirements)
 2. [Standalone Installation on Linux Ubuntu 14.04](#standalone-installation-on-linux-ubuntu-1404)
-3. [Standalone Installation of a development environment](#standalone-installation-on-linux-ubuntu-1404)
+3. [Standalone Installation of a development environment](#standalone-installation-of-a-development-environment)
 4. [Multi-node Setup](#multi-node-setup)
 5. [F.A.Q.](#faq)
 
