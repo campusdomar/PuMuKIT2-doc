@@ -5,8 +5,8 @@
 ## Index
 
 1. [Requirements](#1-requirements)
-2. [Standalone Installation on Linux Ubuntu 14.04](#2-standalone-installation-on-linux-ubuntu-1404)
-3. [Standalone Installation of a development environment](#3-standalone-installation-of-a-development-environment)
+2. [Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404)
+3. [Single-node Installation of a development environment](#3-single-node-installation-of-a-development-environment)
 4. [Multi-node Setup](#4-multi-node-setup)
 5. [F.A.Q.](#5-faq)
 
@@ -22,7 +22,7 @@ Use [composer](https://getcomposer.org/) to check and install the dependencies
 
 PuMuKIT-2 has been developed and is often installed on Linux Ubuntu but its use is not essential. It is known it works on Ubuntu 14.04. If it is installed on other Linux distributions, additional libraries may be required.
 
-## 2. Standalone Installation on Linux Ubuntu 14.04
+## 2. Single-node Installation on Linux Ubuntu 14.04
 
 Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#5-faq) if any error is thrown:
 
@@ -152,7 +152,7 @@ Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#5-faq) 
 
 [(back to index)](#index)
 
-## 3. Standalone Installation of a development environment
+## 3. Single-node Installation of a development environment
 
 To quick develop you could use the PHP built-in web server.
 
@@ -178,7 +178,7 @@ php app/console server:run
 ## 4. Multi-node Setup
 
 A multi-node installation of PuMuKIT can be done. First you need to install PuMuKIT in a node according to
-[Standalone Installation on Linux Ubuntu 14.04](#standalone-installation-on-linux-ubuntu-1404).
+[Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404).
 
 On a default standalone installation, the transcoder, the storage of the multimedia files and the database are
 installed in the same node as PuMuKIT. A different installation can be done. It is possible to set up external nodes
