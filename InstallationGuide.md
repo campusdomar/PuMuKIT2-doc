@@ -6,17 +6,16 @@
 
 1. [Requirements](#1-requirements)
 2. [Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404)
-3. [Single-node Installation of a development environment](#3-single-node-installation-of-a-development-environment)
-4. [Multi-node Installation](#4-multi-node-installation)
-5. [F.A.Q.](#5-faq)
+3. [Multi-node Installation](#3-multi-node-installation)
+4. [F.A.Q.](#5-faq)
 
 ## 1. Requirements
 
 PuMuKIT-2 is a LEMP (Linux, nginx, MongoDB, PHP) application, created with the Symfony2 framework. It uses libav-tools (or ffmpeg) to analyze the audiovisual data, as well as to transcode the data.
 
-It is recommended to use Ubuntu 14.04, although another operating system that accomplish the following requirements can be used.
+We recommend to install PuMuKIT on **Ubuntu 14.04** Linux. PuMuKIT 2 has been developed and tested on that Linux distribution and version.
 
-The requirements for installation are linux, nginx (1.4.6), libav-tools (9.18), php5 (5.5.9) and mongo (3.0). Libav-tools with h264 and aac support is needed. Also the following php5 modules are required: php5-json, php5-cli, php5-mongo, php5-ldap, php5-curl, php5-intl, php5-fpm and php5-xdebug. Make sure text search is enabled for your mongodb (version 3.0+).
+Although it is recommended to use Ubuntu 14.04 it's not mandatory. You can try other Linux distributions and versions at you own risk. The raw requirements for PuMuKIT installation at OS level are: Linux, nginx (1.4.6), libav-tools (9.18), php5 (5.5.9) and mongo (3.0). Libav-tools with h264 and aac support is needed. Also the following php5 modules are required: php5-json, php5-cli, php5-mongo, php5-ldap, php5-curl, php5-intl, php5-fpm and php5-xdebug. Make sure text search is enabled for your mongodb (version 3.0+).
 
 Use [composer](https://getcomposer.org/) to check and install the dependencies
 
@@ -24,7 +23,7 @@ PuMuKIT-2 has been developed and is often installed on Linux Ubuntu but its use 
 
 ## 2. Single-node Installation on Linux Ubuntu 14.04
 
-Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#5-faq) if any error is thrown:
+Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#4-faq) if any error is thrown:
 
 1. Update APT source list to install last version of MongoDB.
 
@@ -152,30 +151,7 @@ Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#5-faq) 
 
 [(back to index)](#index)
 
-## 3. Single-node Installation of a development environment
-
-To quick develop you could use the PHP built-in web server.
-
-```
-# Use develop
-git checkout develop
-
-# Create new branch named develop if it is not created in local
-git checkout -b develop
-
-# Cache clear
-php app/console cache:clear
-
-# Execute tests
-php bin/phpunit -c app
-
-# Start server
-php app/console server:run
-```
-
-[(back to index)](#index)
-
-## 4. Multi-node Installation
+## 3. Multi-node Installation
 
 A multi-node installation of PuMuKIT can be done. First you need to install PuMuKIT in a node according to
 [Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404).
@@ -272,7 +248,7 @@ Define each transcoder with a different `name` and add host, max, type, user and
 
 [(back to index)](#index)
 
-## 5. F.A.Q.
+## 4. F.A.Q.
 
 **Configure max upload filesize**
 
