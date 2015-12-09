@@ -23,7 +23,9 @@ PuMuKIT-2 has been developed and is often installed on Linux Ubuntu but its use 
 
 ## 2. Single-node Installation on Linux Ubuntu 14.04
 
-Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#4-faq) if any error is thrown:
+In this section we will describe how to install PuMuKIT in a single server (node) running Ubuntu 14.04. A single-node deployment of PuMuKIT is usually recommended for development, demonstration and small production environments.
+
+Follow the below instructions. If any error is thrown check the [F.A.Q. section](#4-faq) or ask on PuMuKIT community list:
 
 1. Update APT source list to install last version of MongoDB.
 
@@ -153,29 +155,21 @@ Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#4-faq) 
 
 ## 3. Multi-node Installation
 
-A multi-node installation of PuMuKIT can be done. First you need to install PuMuKIT in a node according to
-[Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404).
+In this section we will describe how to install PuMuKIT in a multi server (multi-node) environment. A multi-node deployment of PuMuKIT is usually recommended for real production environments.
 
-On a default standalone installation, the transcoder, the storage of the multimedia files and the database are
+On a default single-node installation, the transcoder, the storage of the multimedia files and the database are
 installed in the same node as PuMuKIT. A different installation can be done. It is possible to set up external nodes
 to install a transcoder or manage the storage of the multimedia files in a NAS (Network Attached Storage) server.
 
-#### 4.1. NAS (Network Attached Storage) Server
+To perform a multi-node installation of PuMuKIT, first you need to install PuMuKIT in a node according to
+[Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404).
 
-Configure your NAS server to give access to PuMuKIT and transcoder nodes according to:
+After having a single-node deployment you can improve it with additional nodes to take care of storage and/or trancoding jobs:
 
-- PuMuKIT uploads, inbox and tmp directories. Defaults:
-    - pumukit2.uploads_dir: '%kernel.root_dir%/../web/uploads'
-    - pumukit2.inbox: '%kernel.root_dir%/../web/storage/inbox'
-    - pumukit2.tmp: '%kernel.root_dir%/../web/storage/tmp'
 
-- Encoders configuration: `dir_out` parameter of each profile defined in your `app/config/encoder.yml` configuration file.
+#### 4.1. External PuMuKIT-Transcoders
 
-PuMuKIT node and transcoder node should mount the NAS server folder where all the multimedia files are shared.
-
-#### 4.2. Transcoder Server
-
-On a default standalone installation, there is only one PuMuKIT transcoder installed in the same node as PuMuKIT.
+On a default standalone installation, there is only one PuMuKIT transcoder installed in the same node as PuMuKIT core.
 
 One or multiple transcoders can be installed in different nodes. An external transcoder node can be configured with the
 following recommendations:
@@ -198,7 +192,7 @@ define("USER", "pumukit");
 define("PASSWORD", "PUMUKIT");
 ```
 
-Give access to the storage system (NAS Server or PuMuKIT server).
+Give access to the storage system (On PuMuKIT server or External NAS).
 
 Configure the `app/config/encoder.yml` file of your PuMuKIT node to add the transcoder server in the `cpus` section.
 To see all the options to configure, type on your PuMuKIT node and see the `cpus` section:
@@ -245,6 +239,21 @@ php app/console config:dump-reference pumukit_encoder
 
 You can add as many transcoders as you want to the configuration of the encoders of PuMuKIT.
 Define each transcoder with a different `name` and add host, max, type, user and password configuration.
+
+
+#### 4.2. External Storage or NAS (Network Attached Storage) Server
+
+Configure your NAS server to give access to PuMuKIT and transcoder nodes according to:
+
+- PuMuKIT uploads, inbox and tmp directories. Defaults:
+    - pumukit2.uploads_dir: '%kernel.root_dir%/../web/uploads'
+    - pumukit2.inbox: '%kernel.root_dir%/../web/storage/inbox'
+    - pumukit2.tmp: '%kernel.root_dir%/../web/storage/tmp'
+
+- Encoders configuration: `dir_out` parameter of each profile defined in your `app/config/encoder.yml` configuration file.
+
+PuMuKIT node and transcoder node should mount the NAS server folder where all the multimedia files are shared.
+
 
 [(back to index)](#index)
 
