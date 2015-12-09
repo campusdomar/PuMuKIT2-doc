@@ -24,7 +24,7 @@ PuMuKIT-2 has been developed and is often installed on Linux Ubuntu but its use 
 
 ## 2. Standalone Installation on Linux Ubuntu 14.04
 
-Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#faq) if any error is thrown:
+Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#5-faq) if any error is thrown:
 
 1. Update APT source list to install last version of MongoDB.
 
