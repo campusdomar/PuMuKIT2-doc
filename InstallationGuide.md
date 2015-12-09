@@ -7,7 +7,7 @@
 1. [Requirements](#1-requirements)
 2. [Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404)
 3. [Multi-node Installation](#3-multi-node-installation)
-4. [F.A.Q.](#5-faq)
+4. [F.A.Q.](#4-faq)
 
 ## 1. Requirements
 
