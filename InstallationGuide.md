@@ -23,7 +23,7 @@ PuMuKIT-2 has been developed and is often installed on Linux Ubuntu but its use 
 
 ## 2. Single-node Installation on Linux Ubuntu 14.04
 
-In this section we will describe how to install PuMuKIT in a single server (node) running Ubuntu 14.04. A single-node deployment of PuMuKIT is usually recommended for development, demonstration, and small production environments.
+In this section we will describe how to install PuMuKIT in a single server (node) running Ubuntu 14.04. A single-node deployment of PuMuKIT is usually recommended for development, demonstration and small production environments.
 
 Follow the below instructions. If any error is thrown check the [F.A.Q. section](#4-faq) or ask on PuMuKIT community list:
 
