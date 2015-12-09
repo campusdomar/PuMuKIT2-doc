@@ -2,19 +2,28 @@
 
 *This page is updated to the PuMuKIT 2.1.0 version*
 
-## Requirements
+## Index
+
+1. [Requirements](#1-requirements)
+2. [Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404)
+3. [Multi-node Installation](#3-multi-node-installation)
+4. [F.A.Q.](#4-faq)
+
+## 1. Requirements
 
 PuMuKIT-2 is a LEMP (Linux, nginx, MongoDB, PHP) application, created with the Symfony2 framework. It uses libav-tools (or ffmpeg) to analyze the audiovisual data, as well as to transcode the data.
 
-The requirements for installation are linux, nginx, libav-tools, php5 and mongo. Libav-tools with h264 and aac support is needed. Also the following php5 modules are required: php5-json, php5-cli, php5-mongo, php5-ldap, php5-curl and php5-intl. Make sure text search is enabled for your mongodb (version 2.6+).
+We recommend to install PuMuKIT on **Ubuntu 14.04** Linux. PuMuKIT 2 has been developed and tested on that Linux distribution and version.
+
+Although it is recommended to use Ubuntu 14.04 it's not mandatory. You can try other Linux distributions and versions at you own risk. The raw requirements for PuMuKIT installation at OS level are: Linux, nginx (1.4.6), libav-tools (9.18), php5 (5.5.9) and mongo (3.0). Libav-tools with h264 and aac support is needed. Also the following php5 modules are required: php5-json, php5-cli, php5-mongo, php5-ldap, php5-curl, php5-intl, php5-fpm and php5-xdebug. Make sure text search is enabled for your mongodb (version 3.0+).
 
 Use [composer](https://getcomposer.org/) to check and install the dependencies
 
 PuMuKIT-2 has been developed and is often installed on Linux Ubuntu but its use is not essential. It is known it works on Ubuntu 14.04. If it is installed on other Linux distributions, additional libraries may be required.
 
-## Installation on Linux Ubuntu 14.04
+## 2. Single-node Installation on Linux Ubuntu 14.04
 
-Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#faq) if any error is thrown:
+Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#4-faq) if any error is thrown:
 
 1. Update APT source list to install last version of MongoDB.
 
@@ -29,7 +38,7 @@ Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#faq) if
     ```
     sudo apt-get install -y git curl nginx-full
     sudo apt-get install -y php5-fpm php5-cli php5-curl php5-intl php5-json
-    sudo apt-get install -y php5-intl php5-xdebug php5-curl
+    sudo apt-get install -y php5-intl php5-xdebug php5-curl php5-ldap
     sudo apt-get install -y mongodb-org php5-mongo
     sudo apt-get install -y libav-tools libavcodec-extra
     ```
@@ -140,29 +149,106 @@ Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#faq) if
     * Connect to the frontend here: `http://{PuMuKIT-2-HOST}/`
     * Connect to the backend (Admin UI) with the user created on step 6 here: `http://{PuMuKIT-2-HOST}/admin`
 
+[(back to index)](#index)
 
-## Installation of a development environment
+## 3. Multi-node Installation
 
-To quick develop you could use the PHP built-in web server.
+A multi-node installation of PuMuKIT can be done. First you need to install PuMuKIT in a node according to
+[Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404).
+
+On a default standalone installation, the transcoder, the storage of the multimedia files and the database are
+installed in the same node as PuMuKIT. A different installation can be done. It is possible to set up external nodes
+to install a transcoder or manage the storage of the multimedia files in a NAS (Network Attached Storage) server.
+
+#### 4.1. NAS (Network Attached Storage) Server
+
+Configure your NAS server to give access to PuMuKIT and transcoder nodes according to:
+
+- PuMuKIT uploads, inbox and tmp directories. Defaults:
+    - pumukit2.uploads_dir: '%kernel.root_dir%/../web/uploads'
+    - pumukit2.inbox: '%kernel.root_dir%/../web/storage/inbox'
+    - pumukit2.tmp: '%kernel.root_dir%/../web/storage/tmp'
+
+- Encoders configuration: `dir_out` parameter of each profile defined in your `app/config/encoder.yml` configuration file.
+
+PuMuKIT node and transcoder node should mount the NAS server folder where all the multimedia files are shared.
+
+#### 4.2. Transcoder Server
+
+On a default standalone installation, there is only one PuMuKIT transcoder installed in the same node as PuMuKIT.
+
+One or multiple transcoders can be installed in different nodes. An external transcoder node can be configured with the
+following recommendations:
+
+- Ubuntu 14.04 although another operating system that accomplish the following recommendations can be used.
+- 8 CPUs
+- 8 GB RAM
+- 20 GB HDD
+- libav / ffmpeg libraries: the ones you have configured into the `app/config/encoder.yml` file of your PuMuKIT node.
+- Being in the same network as the PuMuKIT and NAS nodes.
+
+Configure the transcoder node as a web server with nginx or Apache.
+
+Copy the [webserver.php file](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/doc/conf_files/cpus/webserver.php) of the PuMuKIT node into the web folder of your transcoder node server directory.
+For instance, in a default nginx server configuration on an Ubuntu 14.04 server, should be in `/usr/share/nginx/html/webserver.php`. Change the default user and password of this webserver configuration
+by opening the file and changing these two lines:
 
 ```
-# Use develop
-git checkout develop
-
-# Create new branch named develop if it is not created in local
-git checkout -b develop
-
-# Cache clear
-php app/console cache:clear
-
-# Execute tests
-php bin/phpunit -c app
-
-# Start server
-php app/console server:run
+define("USER", "pumukit");
+define("PASSWORD", "PUMUKIT");
 ```
 
-## F.A.Q.
+Give access to the storage system (NAS Server or PuMuKIT server).
+
+Configure the `app/config/encoder.yml` file of your PuMuKIT node to add the transcoder server in the `cpus` section.
+To see all the options to configure, type on your PuMuKIT node and see the `cpus` section:
+
+```
+cd /path/to/pumukit2
+php app/console config:dump-reference pumukit_encoder
+```
+
+```
+    cpus:
+
+        # Prototype
+        name:
+
+            # Encoder Hostnames (or IPs)
+            host:                 ~ # Required
+
+            # Deprecated since version 2, to be removed in 2.2.
+            number:               1
+
+            # Top for the maximum number of concurrent encoding jobs
+            max:                  1
+
+            # Type of the encoder host (linux, windows or gstreamer)
+            type:                 ~ # One of "linux"; "windows"; "gstreamer"
+
+            # Specifies the user to log in as on the remote encoder host
+            user:                 ~
+
+            # Specifies the user to log in as on the remote encoder host
+            password:             ~
+
+            # Encoder host description
+            description:          ''
+```
+
+* `name`: name of your transcoder server. E.g.: transcoder. Replace the word `name` with the name you give.
+* `host`: IP or hostname of your transcoder server
+* `max`: maximum number of concurrent jobs
+* `type`: type of the transcoder host
+* `user`: username defined in the webserver.php file of your transcoder server
+* `password`: password defined in the webserver.php file of your transcoder server
+
+You can add as many transcoders as you want to the configuration of the encoders of PuMuKIT.
+Define each transcoder with a different `name` and add host, max, type, user and password configuration.
+
+[(back to index)](#index)
+
+## 4. F.A.Q.
 
 **Configure max upload filesize**
 
@@ -289,3 +375,5 @@ if (!in_array(@$_SERVER['REMOTE_ADDR'], array(
 }
 */
 ```
+
+[(back to index)](#index)
