@@ -7,7 +7,7 @@
 1. [Requirements](#1-requirements)
 2. [Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404)
 3. [Single-node Installation of a development environment](#3-single-node-installation-of-a-development-environment)
-4. [Multi-node Setup](#4-multi-node-setup)
+4. [Multi-node Installation](#4-multi-node-installation)
 5. [F.A.Q.](#5-faq)
 
 ## 1. Requirements
@@ -175,7 +175,7 @@ php app/console server:run
 
 [(back to index)](#index)
 
-## 4. Multi-node Setup
+## 4. Multi-node Installation
 
 A multi-node installation of PuMuKIT can be done. First you need to install PuMuKIT in a node according to
 [Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404).
