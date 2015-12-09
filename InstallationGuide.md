@@ -4,13 +4,13 @@
 
 ## Index
 
-1. [Requirements](#requirements)
-2. [Standalone Installation on Linux Ubuntu 14.04](#standalone-installation-on-linux-ubuntu-1404)
-3. [Standalone Installation of a development environment](#standalone-installation-of-a-development-environment)
-4. [Multi-node Setup](#multi-node-setup)
-5. [F.A.Q.](#faq)
+1. [Requirements](#1-requirements)
+2. [Standalone Installation on Linux Ubuntu 14.04](#2-standalone-installation-on-linux-ubuntu-1404)
+3. [Standalone Installation of a development environment](#3-standalone-installation-of-a-development-environment)
+4. [Multi-node Setup](#4-multi-node-setup)
+5. [F.A.Q.](#5-faq)
 
-## Requirements
+## 1. Requirements
 
 PuMuKIT-2 is a LEMP (Linux, nginx, MongoDB, PHP) application, created with the Symfony2 framework. It uses libav-tools (or ffmpeg) to analyze the audiovisual data, as well as to transcode the data.
 
@@ -22,7 +22,7 @@ Use [composer](https://getcomposer.org/) to check and install the dependencies
 
 PuMuKIT-2 has been developed and is often installed on Linux Ubuntu but its use is not essential. It is known it works on Ubuntu 14.04. If it is installed on other Linux distributions, additional libraries may be required.
 
-## Standalone Installation on Linux Ubuntu 14.04
+## 2. Standalone Installation on Linux Ubuntu 14.04
 
 Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#faq) if any error is thrown:
 
@@ -152,7 +152,7 @@ Setup a development environment on Ubuntu 14.04. Go to [F.A.Q. section](#faq) if
 
 [(back to index)](#index)
 
-## Standalone Installation of a development environment
+## 3. Standalone Installation of a development environment
 
 To quick develop you could use the PHP built-in web server.
 
@@ -175,7 +175,7 @@ php app/console server:run
 
 [(back to index)](#index)
 
-## Multi-node Setup
+## 4. Multi-node Setup
 
 A multi-node installation of PuMuKIT can be done. First you need to install PuMuKIT in a node according to
 [Standalone Installation on Linux Ubuntu 14.04](#standalone-installation-on-linux-ubuntu-1404).
@@ -184,7 +184,7 @@ On a default standalone installation, the transcoder, the storage of the multime
 installed in the same node as PuMuKIT. A different installation can be done. It is possible to set up external nodes
 to install a transcoder or manage the storage of the multimedia files in a NAS (Network Attached Storage) server.
 
-### NAS (Network Attached Storage) Server
+#### 4.1. NAS (Network Attached Storage) Server
 
 Configure your NAS server to give access to PuMuKIT and transcoder nodes according to:
 
@@ -197,7 +197,7 @@ Configure your NAS server to give access to PuMuKIT and transcoder nodes accordi
 
 PuMuKIT node and transcoder node should mount the NAS server folder where all the multimedia files are shared.
 
-### Transcoder Server
+#### 4.2. Transcoder Server
 
 On a default standalone installation, there is only one PuMuKIT transcoder installed in the same node as PuMuKIT.
 
@@ -272,7 +272,7 @@ Define each transcoder with a different `name` and add host, max, type, user and
 
 [(back to index)](#index)
 
-## F.A.Q.
+## 5. F.A.Q.
 
 **Configure max upload filesize**
 
