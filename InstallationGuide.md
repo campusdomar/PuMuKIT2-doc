@@ -149,7 +149,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 18. Connect and enjoy
 
     * Connect to the frontend here: `http://{PuMuKIT-2-HOST}/`
-    * Connect to the backend (Admin UI) with the user created on step 6 here: `http://{PuMuKIT-2-HOST}/admin`
+    * Connect to the back-office (Admin UI) with the user created on step 13 here: `http://{PuMuKIT-2-HOST}/admin`
 
 [(back to index)](#index)
 
