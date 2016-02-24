@@ -126,7 +126,11 @@ The PuMuKIT back-office is a modular web application designed to manage the mult
 
 There are two types of users at the back-office level:
 
--   Administrator: Has full access to the platform
+-   **Administrator**: Has full access to the platform.
+
+-   **Publisher**: Has access to the Media Management functions but not to the administration menu (create and delete users, transcode parameter definition, etc...).
+
+The different modules of this back-office are listed in its main menu. Just click on any of them to start working.
 
 The Web TV application is made up of several applications:
 
