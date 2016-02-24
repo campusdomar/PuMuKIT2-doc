@@ -34,6 +34,10 @@ PuMuKIT-2 User Guide
   2.3.2 [Videos Template-Tab](#232-videos-template-tab)
   
 3. [Multimedia Objects Management](#3-multimedia-objects-management)
+
+  3.1 [Multimedia object List area](#31-multimedia-object-list-area)
+  
+  3.1.1 [MO-list main elements](#311-mo-list-main-elements)
   
   2.1.2 [Importing videos from Opencast](#212-importing-videos-from-opencast)
   
@@ -269,6 +273,58 @@ It allows you to set a common metadata template for each new multimedia object c
 -   When creating or importing MOs to a series from Opencast, this default metadata will be assigned to each one of them. If the "Description" field is present in OC Metadata it will be kept and not overwritten.
  
 # 3 Multimedia Objects Management 
+
+This is a module to manage the multimedia-objects of a given series. Usually you will get access to this module by double.clicking a series row in the series management interface.The title of the series whose objects are being managed is displayed on the header of this page. In addition, there is a button that allows you to go back to the series-management module.
+
+The user interface of this module is very similar to the series-management one. It is divided into the multimedia-objects listing area, the preview area and the metadata and media admin area. This module does not have a filtering form because generally a series does not hold a high number of multimedia objects and filtering is not necessary. 
+
+![](images/multimedia_object_general_edition.png)
+
+<div align="center"><font size=1 color="Blue">Figure 9. MO management module</font></div>
+
+When you click on an item of the MO-list, this MO will be selected, updating the preview and Metadata-editing area with this MO data. The preview area will show a video player and some metadata (tags, people...) of the MO. 
+
+## 3.1 Multimedia object List area
+
+The MO-List is the main part of this screen and is made up of a table with a row for each MO. The order of multimedia objects shown in this list will also be used to display the series in any publication channel (video-portal, iTunesU, etc...).
+
+### 3.1.1 MO-list main elements
+
+In the MO-List area each row represents a MO. In each of those rows you will find the following elements:
+
+-   **Checkbox**: Used to select a MO for group-operations (to delete several MO at the same time, for instance).
+
+-   **Indicator of the multimedia object broadcasting. Announcement indicator**: A black <<A>> indicates that the MO is announced in the "Reciently Added" area of the home page.
+
+-   **Hamburger Icon**: Quick access to multiple MO-Management functions.
+
+     - **Delete MO**: Delete the MO. A recursive delete is performed, deleting all video files, materials (attachments) and images included in the MO. If the multimedia objects include Opencast videos, PuMuKIT will not delete those videos from the Opencast system, just the linked PuMuKIT-MO (created in the import-process) will be deleted.
+     
+     - **Clone MO**: (multimedia objects cloning) an intelligent cloning is performed and the same images and people are linked. Multimedia files are not copied.
+     
+-   **Move up icon**: It moves the multimedia object up in the list. It is used to modify the order of multimedia objects in the series.
+
+-   **Move down icon**: It moves the multimedia object down in the list. It is used to modify the order of multimedia objects in the series.
+
+-   **Thumbnail**: Small picture that represents the multimedia object.
+
+-   **Title**: Title of the multimedia object.
+
+-   **Publication date**: Publication date of the multimedia object.
+
+-   **Recording date**: Recording Date of the multimedia object.
+
+Below this list, there is a **"+ wizard"** button. You can use this button to add new MOs to this series.
+
+There is also a **"Select action"** box. This control allows you to delete or modify the state of several multimedia objects at a time (the ones with the checkbox selected).
+
+
+
+
+
+
+
+
 
 
 
