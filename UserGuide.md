@@ -19,7 +19,7 @@ PuMuKIT-2 User Guide
   
   1.3.1 [PuMuKIT Back-Office URL](#131-pumukit-back-office-url)
   
-2. [PuMuKIT User Manual](#2-pumukit-user-manual)
+2. [Series Management](#2-series-management)
 
   2.1 [Content Import](#21-content-import)
   
@@ -65,7 +65,7 @@ PuMuKIT-2 User Guide
 
   2.4.13 [Opencast ingester module](#2413-opencast-ingester-module)
   
-# 1.  General Overview
+# 1  General Overview
 
 
 ## 1.1  Terminology 
@@ -145,7 +145,13 @@ The URL to access the PuMuKIT back-office is:
 (http://{MyPuMuKIT\_IP}/admin)
 
 
-# 2. PuMuKIT User Manual
+# 2 Series Management
+
+One of the main modules of the PuMuKIT Back-Office is the Series Management module. This module is divided into 4 main areas: Series-listing, Preview of the selected series, filtering form and Metadata editing form for the selected series.
+
+![](images/back-office-general_edition.png)
+
+<div align="center"><font size=1 color="Blue">Figure 3. Multimedia Series-List</font></div>
 
 ## 2.1. Content Import
 
