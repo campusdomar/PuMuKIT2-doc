@@ -268,7 +268,7 @@ It allows you to set a common metadata template for each new multimedia object c
 
 -   When creating or importing MOs to a series from Opencast, this default metadata will be assigned to each one of them. If the "Description" field is present in OC Metadata it will be kept and not overwritten.
  
- # 3 Multimedia Objects Management 
+# 3 Multimedia Objects Management 
 
 
 
