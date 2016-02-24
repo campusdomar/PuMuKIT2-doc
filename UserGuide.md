@@ -17,6 +17,8 @@ PuMuKIT-2 User Guide
   
   1.3 [PuMuKIT Back-Office](#13-pumukit-back-office)
   
+  1.3.1 [PuMuKIT Back-Office URL](#131-pumukit-back-office-url)
+  
 2. [PuMuKIT User Manual](#2-pumukit-user-manual)
 
   2.1 [Content Import](#21-content-import)
@@ -132,33 +134,15 @@ There are two types of users at the back-office level:
 
 The different modules of this back-office are listed in its main menu. Just click on any of them to start working.
 
-The Web TV application is made up of several applications:
+![](images/back-office_modules.png)
 
--   **FRONTEND**: Public portal where users can surf the series and see
-    the videos. (http://{MyPuMuKIT\_IP}/)
+<div align="center"><font size=1 color="Blue">Figure 2. PuMuKIT Back-Office menu</font></div>
 
+### 1.3.1 PuMuKIT Back-Office URL
 
--   **BACKEND**: Private portal of administration where multimedia
-    contents of the database are catalogued and published. It also
-    allows you to modify the configuration and appearance of the Web
-    portal. (http://{MyPuMuKIT\_IP}/admin)
+The URL to access the PuMuKIT back-office is:
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m44fbcb69.png)
-
-<div align="center"><font size=1 color="Blue">Figure 2. PuMuKit’s backend</font></div>
-
-
-The backend, or application of administration, is a modular Web and an interactive application with two main functions: administrating and cataloguing. It has a private access. Thus, it’s necessary to be registered and to initialize a session. Due to these two functions, the backend is used by two types of users:
-
--   **Content manager**: he is in charge of configuring the users with access and their priorities, the real-time channels, the news and the design of the Web portal.
-
--   **Publisher**: he is in charge of administrating the series and multimedia objects employed as sources in the application of publication.
-
-This application is divided into independent modules. These modules can have a section associated and share a common layout. This layout contains a header, an access menu to different modules and a link to logging off and closes the application.
-
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_5926ae12.png)
-
-<div align="center"><font size=1 color="Blue">Figure 3. Backend modules</font></div>
+(http://{MyPuMuKIT\_IP}/admin)
 
 
 # 2. PuMuKIT User Manual
