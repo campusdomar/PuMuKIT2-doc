@@ -21,9 +21,19 @@ PuMuKIT-2 User Guide
   
 2. [Series Management](#2-series-management)
 
-  2.1 [Content Import](#21-content-import)
+  2.1 [Series-List](#21-series-list)
   
-  2.1.1 [Manual import of mono-stream content](#211-manual-import-of-mono-stream-content)
+  2.1.1 [Series-list main elements](#211-series-list-main-elements)
+  
+  2.2 [Series Filter](#22-series-filter)
+  
+  2.3 [Series metadata edition](#23-series-metadata-edition)
+  
+  2.3.1 [Info-tab (Metadata form)](#231-info-tab-metadata-form)
+  
+  2.3.2 [Videos Template-Tab](#232-videos-template-tab)
+  
+3. [Multimedia Objects Management](#3-multimedia-objects-management)
   
   2.1.2 [Importing videos from Opencast](#212-importing-videos-from-opencast)
   
@@ -153,11 +163,115 @@ One of the main modules of the PuMuKIT Back-Office is the Series Management modu
 
 <div align="center"><font size=1 color="Blue">Figure 3. Multimedia Series-List</font></div>
 
-## 2.1. Content Import
+## 2.1 Series-List
 
-### 2.1.1. Manual import of mono-stream content
+The Series-List is the main section of the interface and is made up of a table listing with a row per series.
 
-Multimedia objects and series are created from the administration portal inside the module "Multimedia series". To automate the process there is a wizard that guides you through the steps for creating and cataloging content. This wizard will start after clicking the button "Wizard" next to “Create a new series” button, as shown in the picture below:
+![](images/multimedia_series_list.png)
+
+<div align="center"><font size=1 color="Blue">Figure 4. Multimedia Series-List</font></div>
+
+The column names in the header of the table are links that you can use to rearrange the data of the listing in ascending or descending order for: the title of the series or the date of publication. To change this order, you simply have to click on the header of the column you want to sort your data with. If it's already sorted according to this column, data will be sorted in the opposite order.
+
+### 2.1.1 Series-list main elements
+
+On the Series-Listing area each row represents a series. In each of those rows you will find the following elements:
+
+-   **Checkbox**: Used to select a series or group-operations (to delete several series at the same time, for instance).
+
+-   **Announcement indicator**: A blue <<A>> indicates that the series itself is announced in the "Recently Added" area of the home page. A grey <<A>> indicates that the series has some multimedia objects that are announced in the same area of the home page. Refer to section 2.3.1 for more information.
+
+-   **Broadcast level icon**: The broadcast level of a series depends on the broadcast level of its multimedia objects and it is represented by this icon. Clicking on the icon it allows you to modify the broadcast-status of several multimedia objects from the series simultaneously, e.g. to change several multimedia objects from "Blocked" to "Published" status. See section 3.2.1. Refer to Annex 11: Diffusion-icons for a Broadcast-level icons list. 
+
+-   **Hamburger Icon**: Quick access to multiple Series-Management funtions (only the delete funtion is available yet):
+
+     - Delete series: Delete the series and all its multimedia objects. If the multimedia objects include Opencast videos, PuMuKIT will not delete those videos from the Opencast system. Just the linked PuMuKIT-MO (created in the import-process) will be deleted.
+     
+-   **Link to "videos"**: It provides access to the multimedia objects (videos) management module for this series. Double clicking anywhere on the row listing of a series in the Series-Listing, you will also open the MO management module.
+
+-   **Thumbnail**: A small picture representing the serie content.
+
+-   **Title**: Title of the series.
+
+-   **Date**: Date of publication of the series.
+
+-   **NumObj**: Number of multimedia objects in the series.
+
+## 2.2 Series Filter
+
+Thanks to these filters, you can narrow down results on the Series-List area and easily locate the series you are looking for. Using this filter-form, you can create filters based on the title, date or broadcast-states. To optimize the size on screen of the Series filter-form it works as an accordion collapsing the non used fields. The fields of the filter-ignore accent marks and are case insensitive you can use "*" as the wildcard character.
+
+![](images/mulimedia_series_filter-form.png)
+
+<div align="center"><font size=1 color="Blue">Figure 5. Multimedia series's filter-form</font></div>
+
+## 2.3 Series metadata edition
+
+By selecting a multimedia series in the Series-list (cliking once in the series row), you will have access to its metadata editing form, below the Series-List area. The metadata editing form is divided into two tabs: "Info" and "VideosTemplate".
+On the top of the metadata editing form there is an Info section which is showing the Id, the URL and the "Magic" URL of the Series:
+
+-   ID: Unique identifier of the series.
+
+-   URL: URL to the series in the public Video portal.
+
+-   Magic URL: Special URL that gives access to all the MO of a series even if they are hidden. Useful when someone should review the MO before being published. You can send the "Magic URL" to the reviewer.
+
+     - Refreshing Magic URLs: You can delete the Magic URL for a given series and create a new one with the "recycle" icon. That way people with the old Magic URL will not be able to obtain access to it anymore.
+
+![](images/info_magic_url.png)
+
+<div align="center"><font size=1 color="Blue">Figure 6. Multimedia series info section</font></div>
+
+### 2.3.1 Info-tab (Metadata form)
+
+Selecting this tab you will have access to the descriptive metadata (title, subtitle, etc...) and presentation metadata (thumbnail, HTML header and footer, etc...) of the series.
+
+As it is shown in the picture below, the form has the identifier of the series you are modifying, as background image. 
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_5bc6c027.png)
+
+<div align="center"><font size=1 color="Blue">Figure 7. Multimedia series metadata editing form</font></div>
+
+You will find the following metadata fields in the form:
+
+-   **Last Added checkbox**: If you select it, this series will be included in the "Recently Added" area of the video portal home page.
+
+-   **Title**: It is used to define the title of the series and it is mandatory. Several title-fields are available for the different languages defined in the platform.
+
+-   **Subtitle**: It is used to define the subtitle of the series, if it has one. Several subtitle-fields are available for the different languages defined in the platform.
+
+-   **Keywords**: Include here any keywords for the series separated by semicolons. It is used to improve the efficiency of the searches.
+
+-   **Copyright**: Field where the copyright owner of the contents of a series is defined.
+
+-   **License**: Field where the license of the media is defined (Creative Commons, etc...)
+
+-   **Channel**: Useless field that will soon be removed.
+
+-   **Date of publication**: It is initialized with the date of the creation of the series. It's easy to modify thanks to the calendar widget.
+
+-   **Description**: Include here a short description of the series. Several description-fields are available for the different languages defined in the platform.
+
+-   **Images**: One or more small images (thumbnails) related to the series. You can modify the order, delete or insert new ones. See section 3.3.
+
+-   **HTML texts**: In these text boxes, you can add raw HTML content both to the header and footer of the series for decoration purposes.
+
+-   **Headline**: Text that replaces the subtitle of the series when it is listed in the "Recently added" area of the video-portal homepage.
+
+### 2.3.2 Videos Template-Tab
+
+It allows you to set a common metadata template for each new multimedia object created in that series. This is a very powerful tool that saves a lot of time in daily operation.
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m281cc647.png)
+
+<div align="center"><font size=1 color="Blue">Figure 8. Default video metadata template</font></div>
+
+-   When creating or importing MOs to a series from Opencast, this default metadata will be assigned to each one of them. If the "Description" field is present in OC Metadata it will be kept and not overwritten.
+ 
+ # 3 Multimedia Objects Management 
+
+
+
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_2fab8148.png)
 
