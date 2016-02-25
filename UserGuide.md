@@ -209,7 +209,7 @@ On the Series-Listing area each row represents a series. In each of those rows y
 
 -   **Checkbox**: Used to select a series or group-operations (to delete several series at the same time, for instance).
 
--   **Announcement indicator**: A blue <<A>> indicates that the series itself is announced in the "Recently Added" area of the home page. A grey <<A>> indicates that the series has some multimedia objects that are announced in the same area of the home page. Refer to section 2.3.1 for more information.
+-   **Announcement indicator**: A blue "A" indicates that the series itself is announced in the "Recently Added" area of the home page. A grey "A" indicates that the series has some multimedia objects that are announced in the same area of the home page. Refer to section 2.3.1 for more information.
 
 -   **Broadcast level icon**: The broadcast level of a series depends on the broadcast level of its multimedia objects and it is represented by this icon. Clicking on the icon it allows you to modify the broadcast-status of several multimedia objects from the series simultaneously, e.g. to change several multimedia objects from "Blocked" to "Published" status. See section 3.2.1. Refer to Annex 11: Diffusion-icons for a Broadcast-level icons list. 
 
@@ -320,7 +320,7 @@ In the MO-List area each row represents a MO. In each of those rows you will fin
 
 -   **Checkbox**: Used to select a MO for group-operations (to delete several MO at the same time, for instance).
 
--   **Indicator of the multimedia object broadcasting. Announcement indicator**: A black <<A>> indicates that the MO is announced in the "Reciently Added" area of the home page.
+-   **Indicator of the multimedia object broadcasting. Announcement indicator**: A black "A" indicates that the MO is announced in the "Reciently Added" area of the home page.
 
 -   **Hamburger Icon**: Quick access to multiple MO-Management functions.
 
