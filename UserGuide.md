@@ -67,11 +67,11 @@ PuMuKIT-2 User Guide
   
   4.2 [Importing videos from Opencast](#42-importing-videos-from-opencast)
   
-  2.2 [Metadata edition](#22-metadata-edition)
+  4.2.1 [First video of a series](#421-first-video-of-a-series)
   
-  2.2.1 [Series metadata edition](#221-series-metadata-edition)
+  4.2.2 [Additional videos of a series](#422-additional-videos-of-a-series)
   
-  2.2.2 [Multimedia object metadata edition](#222-multimedia-object-metadata-edition)
+  4.2.3 [Video without a series in Opencast](#423-video-without-a-series-in-opencast)
 
   2.2.3 [Series and multimedia object image edition](#223-series-and-multimedia-object-image-edition)
 
@@ -634,34 +634,37 @@ There is also a search form that allows you to find OC-videos sorted by any of t
 
 <div align="center"><font size=1 color="Blue">Figure 29. Opencast video search</font></div>
 
+For each imported video there are three possibilities:
 
-When importing the video, the program will behave differently depending on which of these cases is true:
+-   It is the first imported video from its Opencast-series.
 
--   It is the first imported video of the series.
+-   There are already more videos imported from that Opencast-series.
 
--   There are already more videos of the series.
+-   The video doesn't have a series defined in Opencast.
 
--   The video doesn’t have a series in Opencast.
 
-#### 2.1.2.1 First video of the series
+### 4.2.1 First video of a series
 
-In this case, a new series will have been created in PuMuKIT associated to the Opencast series (from now on all the videos from that Opencast series will be imported in this series).
+In this case, a new PuMuKIT-series will be created in PuMuKIT associated to the Opencast-series (from now on, all the videos from that OC-series will be imported in this PuMuKIT-series).
 
-In this case, the data of the series in PuMuKIT and the metadata of the video must be edited. Both the series and the video will keep some of the data they had in Opencast: title, description, date... However, other fields must be filled in, like person, photo…
+In this case, the data of the series in PuMuKIT and the metadata of the video must be edited. Both the series and the video will keep some of the data they previously had in Opencast: title, description, date... However, other fields must be filled in manually: person, thumbnail...
 
-In series with more than one video, it is recommended to edit the default values of the multimedia objects before importing the rest of the videos of the series.
+In series with more than one video, it is recommended to edit the default values of the multimedia objects before importing the rest of the videos of the series to speed up the metadata improvement process. 
+See section 4.1 to edit series and section 4.2 to edit the data of the video. 
 
-#### 2.1.2.2 More videos of the same series
 
-In this case, it is only necessary to edit the metadata of the video (because the series will be already created in PuMuKIT). The generic data of the series will be updated automatically when importing the video and will also keep the data from Opencast: title, description, date...
+### 4.2.2 Additional videos of a series
 
-#### 2.1.2.3 Videos without a series in Opencast
+In this case, it is only necessary to edit the metadata of the video (because the series will be already created in PuMuKIT). The generic data of the series will be updated automatically when importing the video and will also keep the data from Opencast: title, description, date... See section 4.2.
 
-In this case, a new series (“MediaPackages without series”) without any kind of information will be created in PuMuKIT. (See more in editing metadata of a series).
+### 4.2.3 Video without a series in Opencast
 
-If you don’t edit any metadata of this series, the following videos without a series in Opencast will be added to this series after import them. When you edit any metadata of this default series, another series with this name will be created with the following video imported.
+In this case, a new series without any kind of information will be created in PuMuKIT. See section 4 to edit the data of the series.
 
-If you wanted to move the video to other series, you would have to select the video, cut the multimedia object, go to the new series and paste it there.
+For each video without a series in Opencast, you will have a new series in PuMuKIT.
+
+If you want to move the video to other series, you will have to select the video, cut the multimedia object, go to the new series and paste it there. The ad-hoc created series should be removed after moving the multimedia object.
+
 
 ## 2.2 Metadata edition
 
