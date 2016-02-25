@@ -59,7 +59,13 @@ PuMuKIT-2 User Guide
   
   3.3.1 [Linking a thumbnail picture to an object (Series or   	MO)](#331-linking-a-thumbnail-picture-to-an-object-series-or-mo)
   
-  2.1.2 [Importing videos from Opencast](#212-importing-videos-from-opencast)
+4. [Ingesting and importing content](#4-ingesting-and-importing-content)
+
+  4.1 [Ingesting "mono-stream" content (regular videos)](#41-ingesting-mono-stream-content-regular-videos)
+  
+  4.1.1 [Running the Ingest-wizard](#411-running-the-ingest-wizard)
+  
+  4.2 [Importing videos from Opencast](#42-importing-videos-from-opencast)
   
   2.2 [Metadata edition](#22-metadata-edition)
   
@@ -510,113 +516,123 @@ In the MO management module, the new thumbnail can be posted in two different wa
 
 <div align="center"><font size=1 color="Blue">Figure 21. Picture edition form</font></div>
 
+# 4 Ingesting and importing content
 
+## 4.1 Ingesting "mono-stream" content (regular videos)
 
+Multimedia objects and series are created using the "Multimedia series" module. From the PuMuKIT-Backoffice to automate the process there is a wizard that will guide you through the steps of the creation and cataloging of mono-stream content. You can launch the Ingest-Wizard from the Series Management or the MO Management module.
 
+If you run the Ingest-Wizard from the Series-module you will be prompted to create a new series or select an existing one. If you run it from the MO-module of a given series the wizard will assume that you intend to ingest a new object in that specific series and will skip the Series selection step (**STEP I**).
 
+### 4.1.1 Running the Ingest-wizard
 
-
-
-
-
-
-
-
+The wizard will launch after clicking the button "Wizard", as shown in the picture below:
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_2fab8148.png)
 
-<div align="center"><font size=1 color="Blue">Figure 4. Wizard button</font></div>
+<div align="center"><font size=1 color="Blue">Figure 22. Wizard button</font></div>
 
+This Ingest-wizard  is composed of three steps:
 
-This wizard is composed of three steps:
-
--   **STEP 0**: The wizard will show you a new window to complete the metadata title and description of the series that will contain the new multimedia object. If the wizard is run from within an existing series this step will not be displayed and the new media object is stored in said series.
+-   **STEP 0**: Series selection or creation: The wizard will show you a pop-up window to complete the title and description of the series that will contain the new multimedia object. (If the wizard is run from within an existing series MO management module this step will not be displayed and the new media objects will be stored in said series).
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m23c5cf20.png)
 
-<div align="center"><font size=1 color="Blue">Figure 5. Wizard Step 1</font></div>
+<div align="center"><font size=1 color="Blue">Figure 23. Wizard Step</font></div>
 
 
--   **STEP 1**: In this step, you can select if you want to upload one single multimedia object or a group of them in the series.
+-   **STEP I**: In this step, you can choose to upload one single multimedia object or a group of them to the series.
     
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6aa0e25d.png)
 
-<div align="center"><font size=1 color="Blue">Figure 6. Wizard Step 2</font></div>
+<div align="center"><font size=1 color="Blue">Figure 24. Wizard Step I</font></div>
 
 
--   **STEP 2**: A window to complete the metadata title, subtitle, description of new object and headline. This step will not be displayed if you select “Add multiple multimedia objects” in the previous step.
+-   **STEP II**: Basic MO metadata: A second window will be shown to complete the title, subtitle, description and headline of the new multimedia object.This step will not be displayed if you select "Add multiple multimedia objects" in the previous step.
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_684d7db7.png)
 
-<div align="center"><font size=1 color="Blue">Figure 7. Wizard Step 3</font></div>
+<div align="center"><font size=1 color="Blue">Figure 25. Wizard Step II</font></div>
 
 
--   **STEP 3**: Finally, a window to complete technical metadata about the publication of the video. The metadata to complete are:
+-   **STEP III**: Technical Metadata and Media uploading: Finally, a third window will be shown to complete technical metadata about the publication and processing. It will be possible as well to select the video that will be uploaded. The fields to complete are:
 
-    -   *Master*: Quality video/audio master; you can store a copy of the video to catalog with "master-copy" or compress a bit using "master-video-h264". If the video takes up much space you should use "master-video-h264". You can upload audio files using “master-audio-aac” profile.
+    -   **Master**: Defines the quality of the master video you will store.You can store a direct copy of the ingested video choosing "master_copy" or a compressed copy by choosing "master_h264".
 
-    -   *Publication**Channels*: Multimedia channels where newly created object will be published: Web TV, ARCA…
+    -   **Publication**Channels**: Multimedia channels where newly created object will be published: Web TV.
 
-    -   *Priority*: Priority of transcoding. It is used to set the priority of the video in the transcode queue.
+    -   **Priority**: Priority of transcoding. It is used to set the priority of the video in the transcode queue.
 
-    -   *Language*: Audio language of multimedia files being catalogued with the wizard.
+    -   **Language**: Language spoken in the video.
 
-    -   *Mode*: The way in which the file is uploaded to create the multimedia object. It may be "Local hard drive" to upload a file stored on the local computer or "Inbox on Server" to select a file stored on the server file.
+    -   **Mode**: The way the media file will be uploaded to the new multimedia object. It may be:
+    
+       - **Local Hard Drive**: To upload a file stored in the user's computer.
+       
+       - **Inbox on Server**:  To select a single file stored the server file folder.
 
-    -   *Resource (local or server):* Field used to select the local file or server, depending on the selected mode.
+    -   **Resource (local or server)**: Field used to select the local media file or server directory.
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m3ce9bdda.png)
 
-<div align="center"><font size=1 color="Blue">Figure 8. Wizard Step 4</font></div>
+<div align="center"><font size=1 color="Blue">Figure 26. Wizard Step IV</font></div>
 
 
--   **FINAL STEP**: This window shows the result of the wizard and it allows you to choose some actions:
+-   **FINAL STEP**: This window shows the result of the wizard and it allows you to choose several new actions:
 
-    -   See Multimedia Object data
+    -   Review the created Multimedia Object data.
 
-    -   Create another Multimedia Object in same Series
+    -   Create another Multimedia Object in same Series.
 
-    -   Create another Multimedia Object in a new Series
+    -   Create another Multimedia Object in a new Series.
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m3ac7e07c.png)
 
-<div align="center"><font size=1 color="Blue">Figure 9. Wizard Final Step</font></div>
+<div align="center"><font size=1 color="Blue">Figure 27. Wizard Final Step</font></div>
 
 
-After completing the wizard, the multimedia object with the specified metadata is created, the file is transcoded, catalogued and when it ends you can see in the "Multimedia" tab on the block “Video Files”.
+After completing the steps of the Ingest-wizard, the multimedia object with the specified metadata will be created and the uploaded video file transcoded and catalogued. When the media process finishes you will see the media ready in the "Multimedia" tab ("Video Files" block) of the newly created MO.
 
-### 2.1.2 Importing videos from Opencast
-
-Once the video processing has finished in Opencast, click on the “Ingester” module to go to the next window:
-
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m32076da.png)
-
-<div align="center"><font size=1 color="Blue">Figure 10. Opencast Ingester module</font></div>
+The ingestion process automatically generates a thumbnail-image for the multimedia object by capturing a frame of the video. It is recommended to review it and capture another manually, if required.The thumbnail-image for the series must be manually selected (See section 3.3).
 
 
-A list of the videos already processed in Opencast can be seen sorted by recording date.
+## 4.2 Importing videos from Opencast
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_71e2c3e.png)
+This module gives you the possibility to import in PuMuKIT, videos produced by an Opencast system that is integrated with your PuMuKIT platform.
 
-Information showed about the video:
+Once the video processing has finished in Opencast, click on the "Ingester" PuMuKIT module and you will see this window:
 
--   Opencast id.
 
--   Title of the video in Opencast.
+![](images/opencast.importer.module.png)
 
--   Opencast series name.
+<div align="center"><font size=1 color="Blue">Figure 28. Opencast importer module</font></div>
 
--   Duration of the video.
 
--   Recording date.
+A list of the videos processed and ready to import in Opencast can be seen, sorted by recording date.
 
--   “Import” (or “Imported”) and “play”. Click on “play” to open a window with the playback of the video in Opencast. Click on “import” to add the video to its corresponding series and ready to be edited, changing its state to “Imported”. Click on “Imported” to go to the PuMuKIT series where the video is placed (see sections 2.1.2.1, 2.1.2.2 and 2.1.2.3).
+The Information and controls shown for every Opencast video (MH-video) listed are:
 
-There is also a searcher that allows us to find videos sorted by any of the Opencast data (presenter, title, id…).
+-   **Opencast id**.
+
+-   **Title of the MH-video (Name)**.
+
+-   **Duration of the video**.
+
+-   **Recording date (Date)**.
+
+-   **"Import" (or "imported") and "play" controls:**
+
+     - Click on "play" to open a window with the Opencast-player for the video.
+     
+     - Click on "import" to import the video and add it to its corresponding PuMuKIT series. The control will change to "imported".
+     
+     - Click on "imported" to go to the PuMuKIT series where the video now is placed (see sections 3.2.1, 3.2.2 and 3.2.3).
+     
+There is also a search form that allows you to find OC-videos sorted by any of the Opencast metadata fields (presenter, title, id...).
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m4b356bdf.png)
 
-<div align="center"><font size=1 color="Blue">Figure 11. Opencast Ingester video searcher</font></div>
+<div align="center"><font size=1 color="Blue">Figure 29. Opencast video search</font></div>
 
 
 When importing the video, the program will behave differently depending on which of these cases is true:
