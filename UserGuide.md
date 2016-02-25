@@ -39,6 +39,26 @@ PuMuKIT-2 User Guide
   
   3.1.1 [MO-list main elements](#311-mo-list-main-elements)
   
+  3.2 [Multimedia-object metadata edition](#32-multimedia-object-metadata-edition)
+  
+  3.2.1 [Publication Tab](#321-publication-tab)
+  
+  3.2.2 [Metadata Tab](#322-metadata-tab)
+  
+  3.2.3 [Tags](#323-tags)
+  
+  3.2.3.1 [Sync KA tags button](#3231-sync-ka-tags-button)
+  
+  3.2.3.2 [Default KA tags](#3232-default-ka-tags)
+  
+  3.2.4 [People](#324-people)
+  
+  3.2.5 [Multimedia tab](#325-multimedia-tab)
+  
+  3.3 [Series and multimedia object thumbnails module](#33-series-and-multimedia-object-thumbnails-module)
+  
+  3.3.1 [Linking a thumbnail picture to an object (Series or   	MO)](#331-linking-a-thumbnail-picture-to-an-object-series-or-mo)
+  
   2.1.2 [Importing videos from Opencast](#212-importing-videos-from-opencast)
   
   2.2 [Metadata edition](#22-metadata-edition)
@@ -317,6 +337,179 @@ In the MO-List area each row represents a MO. In each of those rows you will fin
 Below this list, there is a **"+ wizard"** button. You can use this button to add new MOs to this series.
 
 There is also a **"Select action"** box. This control allows you to delete or modify the state of several multimedia objects at a time (the ones with the checkbox selected).
+
+![](images/multimedia_objects_info_section.png)
+
+<div align="center"><font size=1 color="Blue">Figure 10. Multimedia object's info section</font></div>
+
+By selecting a MO in the MO-list (clicking once in the MO row), you will have access to its metadata editing form, below the MO-List area. The metadata editing form is divided into five tabs: "Publication", "Metadata";"Tags","People", and "Multimedia".
+
+On the top of the metadata editing form there is an Info section which is showing the Id, the URL and the "Magic" URL of the MO:
+
+-   ID: Unique identifier of the MO.
+
+-   URL: URL to the MO page in the public Video portal.
+
+-   Magic URL: Special URL that gives access to the MO even if it is hiden. Useful when someone should review the MO before being published. (You can send the "Magic URL" to the reviewer to give him private access to the video).
+
+     - Refreshing Magic URLs: You can delete the Magic URL for a given MO and create a new one with the "recycle" icon. That way people with the old Magic URL will not be able to access to it anymore. 
+
+## 3.2 Multimedia-object metadata edition
+
+Selecting a multimedia object in the MO-list (clicking once on the row), you will have access to its metadata editing form, below the MO-List area. Since the multimedia object (MO) is the main part of the PuMuKIT database and holds lots of information, the Metadata & Media editing section is quite large. Therefore, it is divided into five tabs and as background image the ID of the multimedia object is shown. The tabs are: Publication, Metadada, Knowledge areas, People and Multimedia (media files). 
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m33e5f137.png)
+
+<div align="center"><font size=1 color="Blue">Figure 11. MO Metadata & Media tabs</font></div>
+
+### 3.2.1 Publication Tab
+
+This first tab includes metadata related to the publication of a multimedia object.
+
+-   **Status**: It indicates the Publication-state of a multimedia object. The possible publication-states of a MO are "Published", "Blocked" or "Hidden".  Publication-Status affects to all the Publication-Channels. You can select the "Blocked" status to temporarely un-publish a MO on all the channels, for instance.
+
+-   **Publication channels**: a set of selectors that allow you to publish a multimedia object in the different online channels.
+
+-   **Publishing decisions**: Set of selectors that allow to catalogue the multimedia object by globalizing it into one category as the frontend of the website is displayed. 
+
+-   **Broadcast**: Through this, you can modify the ACLs of the video (public, password locked, etc...). In some PuMuKIT deployments the LDAP profile is available so users in a LDAP server will be able to access the MO using their LDAP user and password.
+
+![](images/publication.tab.png)
+
+<div align="center"><font size=1 color="Blue">Figure 12. Multimedia objects publication tab</font></div>
+
+As you can see, there are different publication channels where you can publish multimedia objects. A multimedia object can be published in one or several channels like the internally generated Video-portal (WebTV), iTunesU RSS or YouTube. When a publication channel is selected, before publishing it, the file is automatically transcoded if required to match the specifications of the channel (MP4-H264 for iTunes, for instance) .The MO will not be published until this transcoding task is finished.
+
+### 3.2.2 Metadata Tab
+
+This tab gives access to descriptive and presentation related metadata of the MO. The form in this tab includes the following fields:
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m1e20cbe8.png)
+
+<div align="center"><font size=1 color="Blue">Figure 13. Metadata edition form</font></div>
+
+-   **Title**: It is used to define the title of the MO and it is mandatory. Several title-fields are available for the different languages defined in the platform.
+
+-   **Subtitle**: It is used to define the subtitle of the MO if it has one. Several subtitle-fields are available for the different languages defined in the platform.
+
+-   **Keywords**: Include here any keywords for the MO separated by semicolons. It is used to improve the efficiency of the searches.
+
+-   **Copyright**: Field where the copyright of the MO is defined.
+
+-   **License**: Text field for licensing information (Creative Commons-SA-BY, etc...).
+
+-   **Public date**: It is initialized with the date of the creation of the series. It's easy to modify using the calendar widget.
+
+-   **Record date**: Recording date of the multimedia object. It is initialized with the creation date of the multimedia object. Mandatory field.
+
+-   **Description**: Include here a short description of the MO. Several description-fields are available for the different languages defined in the platform. 
+
+-   **Headline**: Text that replaces the subtitle of a MO when it is listed in the "Recently added" area of the video-portal homepage.
+
+### 3.2.3 Tags
+
+The "Tags" tab allows you to catalogue a multimedia object in the defined knowledge categories. Knowledge areas (KA) are divided in "domains". A MO can be catalogued in one or several domains. A MO can be catalogued in more than one knowledge area at the same time for each domain.
+
+In this user interface, for each "domain" you will see 2 areas:
+
+-   Knowledge areas list (right box): lists all the tags available.
+
+-   Knowledge areas selected (left one): lists the selected tags for this MO.
+
+If you want to catalogue a multimedia object (MO) in a specific area, you just have to select it in the listing on the right and click on the arrow to include it in the left listing. If you want to remove a KA tag from a multimedia object then you have to do the opposite.
+
+#### 3.2.3.1 Sync KA tags button
+
+In the upper right corner of this tab you can see the button "SYNC IN THIS SERIES". By clicking on this button the KA tags of all the MO the Series will be substituted by the current KA tags of this object. This is another way to tag all the multimedia objects of a Series at once.
+
+#### 3.2.3.2 Default KA tags
+
+If the KA tags of all the MO of a series are going to be the same, you can modify the default
+"Video Template" of the Series (Section 2.3.2) specially the default "Tags-Tab" for that series (this is especially helpful when importing Opencast recordings). Doing that, every new multimedia object of the series will have these KA tags set by default when it is created.
+
+![](images/tags.png)
+
+<div align="center"><font size=1 color="Blue">Figure 14. Multimedia object's areas tab</font></div>
+
+### 3.2.4 People
+
+In this tab you can include people related to the MO in different roles. It is divided in blocks, each one corresponding to the different roles that a person can have related to a video (actor, organizer, producer...). You can modify the order of the people listed in each role with the arrows in the list. You can also edit the attributes of the people, without using the "people module". In addition, you can remove a person from the multimedia object. (NOTE: If you remove a person that is not related to another multimedia object, you will be deleting him/her from the database). Using the "new" button, you can add a new person to the MO while creating it in the database or add an already existing person to the object.
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_41cbe086.png)
+
+<div align="center"><font size=1 color="Blue">Figure 15. Multimedia object’s people tab</font></div>
+
+If you click on the "new" button, you will access to a form where you can write the name of people you wish to add; while you start typing the name, you will see a list of people already in the database with a name matching the written caracters. For example, after typing "Rubén" you will see listed all "Rubén" in the database and after typing "Ruben go" you will only see listed those people named "Rubén" and with a surname starting with "go" as González or Gómez.
+
+After typing the full name, if the person is already in the database, he or she will be listed. After selecting the person and pressing the "use" button, he/she will be linked to the multimedia object. If he or she is not in the database, after typing the full name you will see an empty list, at that point you can click on the "new" button to create this new person in the database. A new form will open and you will finish filling the relevant data for the person.Once you are done the person will be created and linked to the multimedia object. You have to be careful with the position you give to the people because it's not the same Rubén González González as a student or as a programmer. A person in PuMuKIT is a combination of name and position.
+
+The next image illustrates this process:
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m5b9ec300.png)
+
+<div align="center"><font size=1 color="Blue">Figure 16. People search form</font></div>
+
+### 3.2.5 Multimedia tab
+
+This tab gives you access to the MO media files (the essence of the digital object), and also to other attached files. It is formed by four areas:
+
+-   **Images**: A list of thumbnails or small images linked to the multimedia object. You can modify its order, delete them or insert new images. See section 3.3.
+
+-   **Video files**: List of media files of the multimedia object. You can upload new "master" video files, modify, arrange, preview or delete them.
+
+-   **Materials**: List of additional files (attachments) of the multimedia objects (PowerPoint files, PDFs...). You can create new ones, modify, arrange or delete them.
+
+-   **Links**: List of URLs related to the multimedia object. You can create new ones, modify, arrange or delete them.
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6fdd7353.png)
+
+<div align="center"><font size=1 color="Blue">Figure 17. Multimedia object’s multimedia tab</font></div>
+
+## 3.3 Series and multimedia object thumbnails module
+
+This module is used by the series-module and the MO-module to list thumbnail images linked to the different MO or series. It also allows you to link new images.
+
+Both series and multimedia objects have a certain number of representative thumbnails assigned, mainly obtained from a frame of the video or the logo of the event.
+
+### 3.3.1 Linking a thumbnail picture to an object (Series or MO)
+
+There are three different ways to link a thumbnail picture to a MO or Series:
+
+-   **Using an external URL**: This is used to link to an existing image hosted in an external HTTP server.
+
+-   **Uploading a local image**: You can upload an image file from your local hard drive. The image will be resized by the PuMuKIT server to save space and optimize page loading speed. 
+
+-   **Using an existing image**: The last used images are listed in pages so you could reuse them. You can advance through the different pages with the "previous" and "next" buttons.
+
+These three methods to link images correspond to the three areas of the thumbnail management form.
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png)
+
+<div align="center"><font size=1 color="Blue">Figure 18. Thumbnail management form</font></div>
+
+After linking one or more Thumbnails to a MO or series using this module, you will be able to see those linked thumbnails in the Multimedia-Tab of the referred object:
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_73582573.png)
+
+<div align="center"><font size=1 color="Blue">Figure 19. Thumbnails in the Multimedia-Tab of a MO</font></div>
+
+A thumbnail can be linked to more than a multimedia object. If a thumbnail image is removed from an item, but it is linked to another one, it is not deleted. If it is only linked to an item and the link is removed the image will be deleted.
+
+In the MO management module, the new thumbnail can be posted in two different ways:
+
+-   If the content of the multimedia object is a video, you can extract a thumbnail from the video frames. Using the "Photo" button, an image will be extracted at the selected instant of the video.
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m190fe2b4.png)
+
+<div align="center"><font size=1 color="Blue">Figure 20. Photo tool (Frame Capture tool)</font></div>
+
+-   The thumbnail can be uploaded to the server from your computer by clicking on "New Image". These images are resized on the server to optimize space and reduce the bandwidth needed to display the portal.
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png)
+
+<div align="center"><font size=1 color="Blue">Figure 21. Picture edition form</font></div>
+
+
 
 
 
