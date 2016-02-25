@@ -74,6 +74,18 @@ PuMuKIT-2 User Guide
   4.2.3 [Video without a series in Opencast](#423-video-without-a-series-in-opencast)
 
   2.2.3 [Series and multimedia object image edition](#223-series-and-multimedia-object-image-edition)
+  
+5. [Live Streaming](#5-live-streaming)
+
+  5.1 [Live channel module](#51-live-channel-module)
+  
+  5.2 [Streaming encoder configuration](#52-streaming-encoder-configuration)
+  
+  5.3 [Live events module](#53-live-events-module)
+  
+6. [System management modules](#6-system-management-modules)
+
+  6.1 [Encoder jobs module](#61-encoder-jobs-module)
 
   2.3 [Content publication](#23-content-publication)
 
@@ -664,6 +676,112 @@ In this case, a new series without any kind of information will be created in Pu
 For each video without a series in Opencast, you will have a new series in PuMuKIT.
 
 If you want to move the video to other series, you will have to select the video, cut the multimedia object, go to the new series and paste it there. The ad-hoc created series should be removed after moving the multimedia object.
+
+
+# 5 Live Streaming
+
+The "Live Broadcast" module allows you to manage the live streaming channels of the PuMuKIT video-portal. 
+
+![](images/live_channels_module.png)
+
+<div align="center"><font size=1 color="Blue">Figure 30. Live channels module</font></div>
+
+## 5.1 Live channel module
+
+The Live channels module can be configured using the following parameters:
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_34781e32.png)
+
+<div align="center"><font size=1 color="Blue">Figure 31. Live channel edition form</font></div>
+
+-   **Name**: Live channel name shown in the frontend.
+
+-   **Description**: Information about the channel.
+
+-   **Status**: There are two possible states for the channel:
+
+     - Live broadcasting: Enables live streaming on the channel.
+     
+     - On Hold: Disables live streaming on the channel. It can be configured to play videos (waiting playlist) while there is not any live streaming being published on the channel.
+
+       NOTE: When the live streaming source is not available it is recommended to change the channel state to "Waiting".
+
+-   **URL**: Streaming server's URL. You can only use RTMP based urls. We recommend using the AMS technology (Adobe Media Server) because it can deliver live streaming content to both desktop and mobile devices. The URL by default is rtmp://<URL>/livepkgr .
+
+      PuMuKIT also supports FMS technology (Flash Media Server).
+      
+-   **Resolution**: Player resolution of the live channel in the Video-Portal.
+
+-   **Technology**: It supports FMS technology (Flash Media Server) and WMS technology (Windows Media Services). To use AMS technology chooses FMS. AMS is the new version of FMS that is able to deliver multimedia content to mobile devices as well.
+
+-   **STREAM**: Name that identifies the video flow on the streaming server.
+
+-   **IP Source**: IP address of the streaming server. This parameter configures the live channel to only accept the video stream from the Ip address introduced.
+
+-   **Qualities**: It allows multi-quality streams. Multi-quality streams are useful to deliver video streaming to slow Internet conections or mobile devices. Bandwidth in kbps and Width in pixels. If Bandwidth is not configured, by default it is set-up to 1 Mbps.
+
+-   **Index play**: The live streaming event is announced in the home page of the PuMuKIT Video-portal while it is happening. A live event must be created and configured with date and duration.
+
+## 5.2 Streaming encoder configuration
+
+The streaming encoder delivers multimedia content to the streaming server. The streaming server relays the multimedia content to the users desktop computers or mobile device. We recommend Adobe Media Server (AMS) as Pumukit live streaming server.
+
+As streaming encoders, Adobe Flash Media Live Encoder (FME), Wirecast and other applications can be used.
+
+Streaming encoder configuration recommendations for AMS:
+
+-   Select AMS technology.
+
+-   Select H.264 video codec with the following parameters:
+
+     - Profile: Main
+     
+     - Level: 4.1
+     
+     - KeyframeFrecuency: 4 seconds
+     
+-   Select AAC audio codec if available. AAC format is fully compatible with desktop computers, Android and iOS devices. Mp3 format at 44100 Hz sample rate can also be used but it might have problems with older devices (iPad 1). 
+
+## 5.3 Live events module
+
+It is a module that allows you to manage the announcement of the next events that will be broadcasted through live channels. 
+
+![](images/live_broadcasts_announcements_module.png)
+
+<div align="center"><font size=1 color="Blue">Figure 32. Live broadcasts announcements module</font></div>
+
+If you click on the edit button, a window will be shown where you can edit the following settings of the live event:
+
+![](images/window_edit_live_broadcasts_announcements_module.png)
+
+<div align="center"><font size=1 color="Blue">Figure 33. Window edit live broadasts announcements module</font></div>
+
+-   **Event**: name of the next event shown in the frontend.
+
+-   **Place**: shows the place where the event will take place.
+
+-   **Channel**: it's the channel you can follow the event through.
+
+-   **Schedule**: in this field we can edit the date and time of the event and its duration.
+
+-   **Display**: if we select it, the information of the broadcast will be shown in the channel as the next event.
+
+![](images/announcements_of_the_next_live_event.png)
+
+<div align="center"><font size=1 color="Blue">Figure 34. Announcement of the next live event</font></div>
+
+# 6 System management modules
+
+PuMuKIT's Back-office has other modules to perform less common system management tasks. In this section, the different admin existing modules will be summarized just for informational proposes. 
+
+## 6.1 Encoder jobs module
+
+It is a module that summarizes transcoding jobs: those in progress, those pending for transcoding and those finished (both correctly and incorrectly).
+
+![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_1172fa0c.png)
+
+<div align="center"><font size=1 color="Blue">Figure 35. Encoder jobs module</font></div>
+
 
 
 ## 2.2 Metadata edition
