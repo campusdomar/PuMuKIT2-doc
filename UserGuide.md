@@ -72,8 +72,6 @@ PuMuKIT-2 User Guide
   4.2.2 [Additional videos of a series](#422-additional-videos-of-a-series)
   
   4.2.3 [Video without a series in Opencast](#423-video-without-a-series-in-opencast)
-
-  2.2.3 [Series and multimedia object image edition](#223-series-and-multimedia-object-image-edition)
   
 5. [Live Streaming](#5-live-streaming)
 
