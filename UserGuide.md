@@ -232,9 +232,13 @@ On the Series-Listing area each row represents a series. In each of those rows y
 
 Thanks to these filters, you can narrow down results on the Series-List area and easily locate the series you are looking for. Using this filter-form, you can create filters based on the title, date or broadcast-states. To optimize the size on screen of the Series filter-form it works as an accordion collapsing the non used fields. The fields of the filter-ignore accent marks and are case insensitive you can use "*" as the wildcard character.
 
+<p align="center">
+
 ![](images/mulimedia_series_filter-form.png)
 
 <div align="center"><font size=1 color="Blue">Figure 5. Multimedia series's filter-form</font></div>
+
+</p>
 
 ## 2.3 Series metadata edition
 
