@@ -265,6 +265,7 @@ As it is shown in the picture below, the form has the identifier of the series y
 
 <div align="center"><font size=1 color="Blue">Figure 7. Multimedia series metadata editing form</font></div>
 
+<p>
 You will find the following metadata fields in the form:
 
 -   **Last Added checkbox**: If you select it, this series will be included in the "Recently Added" area of the video portal home page.
@@ -290,6 +291,7 @@ You will find the following metadata fields in the form:
 -   **HTML texts**: In these text boxes, you can add raw HTML content both to the header and footer of the series for decoration purposes.
 
 -   **Headline**: Text that replaces the subtitle of the series when it is listed in the "Recently added" area of the video-portal homepage.
+<p>
 
 ### 2.3.2 Videos Template-Tab
 
