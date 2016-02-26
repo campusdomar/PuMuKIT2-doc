@@ -684,6 +684,7 @@ In this case, a new PuMuKIT-series will be created in PuMuKIT associated to the 
 In this case, the data of the series in PuMuKIT and the metadata of the video must be edited. Both the series and the video will keep some of the data they previously had in Opencast: title, description, date... However, other fields must be filled in manually: person, thumbnail...
 
 In series with more than one video, it is recommended to edit the default values of the multimedia objects before importing the rest of the videos of the series to speed up the metadata improvement process. 
+
 See section 4.1 to edit series and section 4.2 to edit the data of the video. 
 
 
