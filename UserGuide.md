@@ -200,7 +200,7 @@ The Series-List is the main section of the interface and is made up of a table l
 
 <div align="center"><font size=1 color="Blue">Figure 4. Multimedia Series-List</font></div>              
 
- The column names in the header of the table are links that you can use to rearrange the data of the listing in ascending or descending order for: the title of the series or the date of publication. To change this order, you simply have to click on the header of the column you want to sort your data with. If it's already sorted according to this column, data will be sorted in the opposite order.
+    The column names in the header of the table are links that you can use to rearrange the data of the listing in ascending or descending order for: the title of the series or the date of publication. To change this order, you simply have to click on the header of the column you want to sort your data with. If it's already sorted according to this column, data will be sorted in the opposite order.
 
 ### 2.1.1 Series-list main elements
 
