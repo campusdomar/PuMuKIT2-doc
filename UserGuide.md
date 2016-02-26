@@ -814,9 +814,9 @@ Using this module you can configure users who have access to the administration 
 
 There are three user types:
 
--   Administrator: has full acces.
+-   **Administrator**: has full acces.
 
--   Publisher: has no access to the administration menu.
+-   **Publisher**: has no access to the administration menu.
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_1c9b8e45.png)
 
@@ -826,9 +826,9 @@ There are three user types:
 
 It is a module that allows you to manage roles with people linked to multimedia objects. These roles can be as follows:
 
--   Public: these are shown to everybody through the feeds and the Web portal.
+-   **Public**: these are shown to everybody through the feeds and the Web portal.
 
--   Private: these are used internally to manage and catalogue multimedia objects in a better way. They are not shown in the Web portal.
+-   **Private**: these are used internally to manage and catalogue multimedia objects in a better way. They are not shown in the Web portal.
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_4973185c.png)
 
