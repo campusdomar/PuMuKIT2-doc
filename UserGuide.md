@@ -375,7 +375,7 @@ On the top of the metadata editing form there is an Info section which is showin
 
 Selecting a multimedia object in the MO-list (clicking once on the row), you will have access to its metadata editing form, below the MO-List area. Since the multimedia object (MO) is the main part of the PuMuKIT database and holds lots of information, the Metadata & Media editing section is quite large. Therefore, it is divided into five tabs and as background image the ID of the multimedia object is shown. The tabs are: Publication, Metadada, Knowledge areas, People and Multimedia (media files).
 
-<align="center">
+<p align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m33e5f137.png)
 
 <div align="center"><font size=1 color="Blue">Figure 11. MO Metadata & Media tabs</font></div>
@@ -392,7 +392,7 @@ This first tab includes metadata related to the publication of a multimedia obje
 
 -   **Broadcast**: Through this, you can modify the ACLs of the video (public, password locked, etc...). In some PuMuKIT deployments the LDAP profile is available so users in a LDAP server will be able to access the MO using their LDAP user and password.
 
-<align="center">
+<p align="center">
 ![](images/publication.tab.png)
 
 <div align="center"><font size=1 color="Blue">Figure 12. Multimedia objects publication tab</font></div>
@@ -468,7 +468,7 @@ After typing the full name, if the person is already in the database, he or she 
 
 The next image illustrates this process:
 
-<align="center">
+<p align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m5b9ec300.png)
 
 <div align="center"><font size=1 color="Blue">Figure 16. People search form</font></div>
