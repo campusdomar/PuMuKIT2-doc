@@ -507,17 +507,22 @@ There are three different ways to link a thumbnail picture to a MO or Series:
 
 These three methods to link images correspond to the three areas of the thumbnail management form.
 
+<p align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png)
 
 <div align="center"><font size=1 color="Blue">Figure 18. Thumbnail management form</font></div>
 
+<p>
 After linking one or more Thumbnails to a MO or series using this module, you will be able to see those linked thumbnails in the Multimedia-Tab of the referred object:
+<p>
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_73582573.png)
 
 <div align="center"><font size=1 color="Blue">Figure 19. Thumbnails in the Multimedia-Tab of a MO</font></div>
 
+<p>
 A thumbnail can be linked to more than a multimedia object. If a thumbnail image is removed from an item, but it is linked to another one, it is not deleted. If it is only linked to an item and the link is removed the image will be deleted.
+<p>
 
 In the MO management module, the new thumbnail can be posted in two different ways:
 
@@ -527,8 +532,11 @@ In the MO management module, the new thumbnail can be posted in two different wa
 
 <div align="center"><font size=1 color="Blue">Figure 20. Photo tool (Frame Capture tool)</font></div>
 
+<p>
 -   The thumbnail can be uploaded to the server from your computer by clicking on "New Image". These images are resized on the server to optimize space and reduce the bandwidth needed to display the portal.
+<p>
 
+<p align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png)
 
 <div align="center"><font size=1 color="Blue">Figure 21. Picture edition form</font></div>
@@ -545,11 +553,14 @@ If you run the Ingest-Wizard from the Series-module you will be prompted to crea
 
 The wizard will launch after clicking the button "Wizard", as shown in the picture below:
 
+<p align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_2fab8148.png)
 
 <div align="center"><font size=1 color="Blue">Figure 22. Wizard button</font></div>
 
+<p>
 This Ingest-wizard  is composed of three steps:
+<p>
 
 -   **STEP 0**: Series selection or creation: The wizard will show you a pop-up window to complete the title and description of the series that will contain the new multimedia object. (If the wizard is run from within an existing series MO management module this step will not be displayed and the new media objects will be stored in said series).
 
@@ -557,15 +568,17 @@ This Ingest-wizard  is composed of three steps:
 
 <div align="center"><font size=1 color="Blue">Figure 23. Wizard Step</font></div>
 
-
+<p>
 -   **STEP I**: In this step, you can choose to upload one single multimedia object or a group of them to the series.
+<p>
     
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6aa0e25d.png)
 
 <div align="center"><font size=1 color="Blue">Figure 24. Wizard Step I</font></div>
 
-
+<p>
 -   **STEP II**: Basic MO metadata: A second window will be shown to complete the title, subtitle, description and headline of the new multimedia object.This step will not be displayed if you select "Add multiple multimedia objects" in the previous step.
+<p>
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_684d7db7.png)
 
@@ -607,11 +620,11 @@ This Ingest-wizard  is composed of three steps:
 
 <div align="center"><font size=1 color="Blue">Figure 27. Wizard Final Step</font></div>
 
-
+<p>
 After completing the steps of the Ingest-wizard, the multimedia object with the specified metadata will be created and the uploaded video file transcoded and catalogued. When the media process finishes you will see the media ready in the "Multimedia" tab ("Video Files" block) of the newly created MO.
 
 The ingestion process automatically generates a thumbnail-image for the multimedia object by capturing a frame of the video. It is recommended to review it and capture another manually, if required.The thumbnail-image for the series must be manually selected (See section 3.3).
-
+<p>
 
 ## 4.2 Importing videos from Opencast
 
@@ -624,8 +637,9 @@ Once the video processing has finished in Opencast, click on the "Ingester" PuMu
 
 <div align="center"><font size=1 color="Blue">Figure 28. Opencast importer module</font></div>
 
-
+<p>
 A list of the videos processed and ready to import in Opencast can be seen, sorted by recording date.
+<p>
 
 The Information and controls shown for every Opencast video (MH-video) listed are:
 
@@ -647,11 +661,14 @@ The Information and controls shown for every Opencast video (MH-video) listed ar
      
 There is also a search form that allows you to find OC-videos sorted by any of the Opencast metadata fields (presenter, title, id...).
 
+<p align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m4b356bdf.png)
 
 <div align="center"><font size=1 color="Blue">Figure 29. Opencast video search</font></div>
 
+<p>
 For each imported video there are three possibilities:
+<p>
 
 -   It is the first imported video from its Opencast-series.
 
@@ -695,6 +712,7 @@ The "Live Broadcast" module allows you to manage the live streaming channels of 
 
 The Live channels module can be configured using the following parameters:
 
+<p align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_34781e32.png)
 
 <div align="center"><font size=1 color="Blue">Figure 31. Live channel edition form</font></div>
@@ -755,7 +773,9 @@ It is a module that allows you to manage the announcement of the next events tha
 
 <div align="center"><font size=1 color="Blue">Figure 32. Live broadcasts announcements module</font></div>
 
+<p>
 If you click on the edit button, a window will be shown where you can edit the following settings of the live event:
+<p>
 
 ![](images/window_edit_live_broadcasts_announcements_module.png)
 
@@ -835,7 +855,9 @@ It is a module to manage people data linked to a multimedia object, whether they
 
 <div align="center"><font size=1 color="Blue">Figure 39. People module</font></div>
 
+<p>
 This module allows the creation, edition and removal of information related to people. It should also be noted that each entry is a combination of a person and its "position" (professor, chancellor, etc...) so a person with two different positions will have two different entries. This makes easier to solve issues with temporary positions as Chancellor of the Univerity. This particular person will have two entries: one as chancellor and another as professor. 
+<p>
 
 ### 7.2.2 Tags module
 
@@ -845,7 +867,9 @@ This is a module that allows you to manage Tags areas used to catalogue multimed
 
 <div align="center"><font size=1 color="Blue">Figure 40. Areas ok knowledge module</font></div>
 
+<p>
 Different Knowledge Areas (KA) "types" or taxonomies can be managed in PuMuKIT. A KA "type" can be the UNESCO schema, etc... or even a custom designed one (based on the departments of your institution, etc...). Moreover, you can create relationships among areas to make recommendations when a multimedia object is catalogued in a specific area.
+<p>
 
 ### 7.2.3 Broadcast profile module
 
@@ -855,9 +879,11 @@ It is a module that allows you to manage the broadcasting of multimedia objects.
 
 <div align="center"><font size=1 color="Blue">Figure 41. Broadcast profiles module</font></div>
 
-
+<p>
 Click on “new” to create a new broadcast profile, the next window will open:
+<p>
 
+<p align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m64d6a754.png)
 
 <div align="center"><font size=1 color="Blue">Figure 42. Broadcast edition form</font></div>
