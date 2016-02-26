@@ -728,7 +728,7 @@ The Live channels module can be configured using the following parameters:
      
      - On Hold: Disables live streaming on the channel. It can be configured to play videos (waiting playlist) while there is not any live streaming being published on the channel.
 
-       NOTE: When the live streaming source is not available it is recommended to change the channel state to "Waiting".
+       **NOTE**: When the live streaming source is not available it is recommended to change the channel state to "Waiting".
 
 -   **URL**: Streaming server's URL. You can only use RTMP based urls. We recommend using the AMS technology (Adobe Media Server) because it can deliver live streaming content to both desktop and mobile devices. The URL by default is rtmp://<URL>/livepkgr .
 
