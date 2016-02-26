@@ -200,7 +200,6 @@ The Series-List is the main section of the interface and is made up of a table l
 ![](images/multimedia_series_list.png)
 
 <div align="center"><font size=1 color="Blue">Figure 4. Multimedia Series-List</font></div>
-
 </p>
 
 
