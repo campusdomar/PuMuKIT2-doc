@@ -301,7 +301,9 @@ It allows you to set a common metadata template for each new multimedia object c
 
 <div align="center"><font size=1 color="Blue">Figure 8. Default video metadata template</font></div>
 
+<p>
 -   When creating or importing MOs to a series from Opencast, this default metadata will be assigned to each one of them. If the "Description" field is present in OC Metadata it will be kept and not overwritten.
+<p>
  
 # 3 Multimedia Objects Management 
 
@@ -313,7 +315,9 @@ The user interface of this module is very similar to the series-management one. 
 
 <div align="center"><font size=1 color="Blue">Figure 9. MO management module</font></div>
 
+<p>
 When you click on an item of the MO-list, this MO will be selected, updating the preview and Metadata-editing area with this MO data. The preview area will show a video player and some metadata (tags, people...) of the MO. 
+<p>
 
 ## 3.1 Multimedia object List area
 
@@ -353,6 +357,7 @@ There is also a **"Select action"** box. This control allows you to delete or mo
 
 <div align="center"><font size=1 color="Blue">Figure 10. Multimedia object's info section</font></div>
 
+<p>
 By selecting a MO in the MO-list (clicking once in the MO row), you will have access to its metadata editing form, below the MO-List area. The metadata editing form is divided into five tabs: "Publication", "Metadata";"Tags","People", and "Multimedia".
 
 On the top of the metadata editing form there is an Info section which is showing the Id, the URL and the "Magic" URL of the MO:
@@ -364,11 +369,13 @@ On the top of the metadata editing form there is an Info section which is showin
 -   Magic URL: Special URL that gives access to the MO even if it is hiden. Useful when someone should review the MO before being published. (You can send the "Magic URL" to the reviewer to give him private access to the video).
 
      - Refreshing Magic URLs: You can delete the Magic URL for a given MO and create a new one with the "recycle" icon. That way people with the old Magic URL will not be able to access to it anymore. 
+<p>
 
 ## 3.2 Multimedia-object metadata edition
 
-Selecting a multimedia object in the MO-list (clicking once on the row), you will have access to its metadata editing form, below the MO-List area. Since the multimedia object (MO) is the main part of the PuMuKIT database and holds lots of information, the Metadata & Media editing section is quite large. Therefore, it is divided into five tabs and as background image the ID of the multimedia object is shown. The tabs are: Publication, Metadada, Knowledge areas, People and Multimedia (media files). 
+Selecting a multimedia object in the MO-list (clicking once on the row), you will have access to its metadata editing form, below the MO-List area. Since the multimedia object (MO) is the main part of the PuMuKIT database and holds lots of information, the Metadata & Media editing section is quite large. Therefore, it is divided into five tabs and as background image the ID of the multimedia object is shown. The tabs are: Publication, Metadada, Knowledge areas, People and Multimedia (media files).
 
+<align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m33e5f137.png)
 
 <div align="center"><font size=1 color="Blue">Figure 11. MO Metadata & Media tabs</font></div>
@@ -385,11 +392,14 @@ This first tab includes metadata related to the publication of a multimedia obje
 
 -   **Broadcast**: Through this, you can modify the ACLs of the video (public, password locked, etc...). In some PuMuKIT deployments the LDAP profile is available so users in a LDAP server will be able to access the MO using their LDAP user and password.
 
+<align="center">
 ![](images/publication.tab.png)
 
 <div align="center"><font size=1 color="Blue">Figure 12. Multimedia objects publication tab</font></div>
 
+<p>
 As you can see, there are different publication channels where you can publish multimedia objects. A multimedia object can be published in one or several channels like the internally generated Video-portal (WebTV), iTunesU RSS or YouTube. When a publication channel is selected, before publishing it, the file is automatically transcoded if required to match the specifications of the channel (MP4-H264 for iTunes, for instance) .The MO will not be published until this transcoding task is finished.
+<p>
 
 ### 3.2.2 Metadata Tab
 
@@ -450,12 +460,15 @@ In this tab you can include people related to the MO in different roles. It is d
 
 <div align="center"><font size=1 color="Blue">Figure 15. Multimedia object’s people tab</font></div>
 
+<p>
 If you click on the "new" button, you will access to a form where you can write the name of people you wish to add; while you start typing the name, you will see a list of people already in the database with a name matching the written caracters. For example, after typing "Rubén" you will see listed all "Rubén" in the database and after typing "Ruben go" you will only see listed those people named "Rubén" and with a surname starting with "go" as González or Gómez.
 
 After typing the full name, if the person is already in the database, he or she will be listed. After selecting the person and pressing the "use" button, he/she will be linked to the multimedia object. If he or she is not in the database, after typing the full name you will see an empty list, at that point you can click on the "new" button to create this new person in the database. A new form will open and you will finish filling the relevant data for the person.Once you are done the person will be created and linked to the multimedia object. You have to be careful with the position you give to the people because it's not the same Rubén González González as a student or as a programmer. A person in PuMuKIT is a combination of name and position.
+<p>
 
 The next image illustrates this process:
 
+<align="center">
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m5b9ec300.png)
 
 <div align="center"><font size=1 color="Blue">Figure 16. People search form</font></div>
