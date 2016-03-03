@@ -34,6 +34,6 @@ Here we describe the process to upgrade from PuMuKIT 2.1 to PuMuKIT 2.2. If you 
     ```
 
 ## Notes
-* There were major changes in the WebTVBundle (including a new responsive design). If you have a custom WebTVBundle for the 2.1 version, check our [Legacy WebTVBundle Documentation](https://github.com/campusdomar/PuMuKIT2/tree/master/src/Pumukit/Legacy/WebTVBundle/Resources/doc) for instructions on how to keep it working with the 2.2 version
+* There were major changes in the WebTVBundle (including a new responsive design). If you have a custom WebTVBundle for the 2.1 version, check our [Legacy WebTVBundle Documentation](https://github.com/campusdomar/PuMuKIT2/tree/2.2.x/src/Pumukit/Legacy/WebTVBundle/Resources/doc) for instructions on how to keep it working with the 2.2 version
 
 * The PuMuKIT 2.2 version comes with soft-editing capabilities. Check the [Video Editor Bundle](https://github.com/teltek/PuMuKIT2-video-editor-bundle) to know more about it.
