@@ -28,6 +28,7 @@ Here we describe the process to upgrade from PuMuKIT 2.1 to PuMuKIT 2.2. If you 
 5. Finally, we run these commands to update our existing database with the latest changes.
 
     ```bash
+    php app/console pumukit:init:repo role --force
     php app/console pumukit:init:repo permissionprofile --force
     php doc/updateModel_2.1_to_2.2.php update:model:2.1to2.2
     ```
