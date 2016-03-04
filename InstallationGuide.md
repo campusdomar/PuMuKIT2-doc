@@ -1,6 +1,6 @@
 # PuMuKIT-2 Installation Guide
 
-*This page is updated to the PuMuKIT 2.1.0 version*
+*This page is updated to the PuMuKIT 2.2.0 version*
 
 ## Index
 
@@ -61,11 +61,11 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     git clone https://github.com/campusdomar/PuMuKIT2.git /var/www/pumukit2
     ```
 
-5. Activate the 2.1.0 tag:
+5. Activate the 2.2.0 tag:
 
     ```
     cd /var/www/pumukit2
-    git checkout 2.1.0
+    git checkout 2.2.0
     ```
 
 6. Install [composer](https://getcomposer.org/).
@@ -87,8 +87,8 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 9. Set the `"date.timezone"` setting in all the `php.ini` files with your timezone (e.g. `Europe/Madrid`):
 
     ```
-    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/cli/php.ini 
-    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/fpm/php.ini 
+    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/cli/php.ini
+    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/fpm/php.ini
     ```
 
 10. Set "xdebug.max_nesting_level" to "1000" in PHP configuration to stop Xdebug's infinite recursion protection erroneously throwing a fatal error:
@@ -130,7 +130,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 15. [Optional] Load example data (series and multimedia objects)
 
     ```
-    php app/console pumukit:init:example  --force    
+    php app/console pumukit:init:example  --force
     ```
 
 16. Add NGINX config file.
