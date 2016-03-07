@@ -82,7 +82,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 
 8. Give cache and log directories the right permissions.
 
-   * Follow the instructions at Symfony [documentation](http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup).
+   * Follow the instructions at Symfony [documentation](http://symfony.com/doc/2.6/book/installation.html#checking-symfony-application-configuration-and-setup).
 
 9. Set the `"date.timezone"` setting in all the `php.ini` files with your timezone (e.g. `Europe/Madrid`):
 
@@ -299,7 +299,7 @@ sudo service ningx restart
 
 **Setting up Permissions?**
 
- * http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup
+ * http://symfony.com/doc/2.6/book/installation.html#checking-symfony-application-configuration-and-setup
  * http://symfony.es/documentacion/como-solucionar-el-problema-de-los-permisos-de-symfony2/
  * Setting up ownership of upload directories
 
