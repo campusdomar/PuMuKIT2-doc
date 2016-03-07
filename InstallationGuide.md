@@ -82,13 +82,13 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 
 8. Give cache and log directories the right permissions.
 
-   * Follow the instructions at Symfony [documentation](http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup).
+   * Follow the instructions at Symfony [documentation](http://symfony.com/doc/2.6/book/installation.html#checking-symfony-application-configuration-and-setup).
 
 9. Set the `"date.timezone"` setting in all the `php.ini` files with your timezone (e.g. `Europe/Madrid`):
 
     ```
-    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/cli/php.ini 
-    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/fpm/php.ini 
+    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/cli/php.ini
+    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/fpm/php.ini
     ```
 
 10. Set "xdebug.max_nesting_level" to "1000" in PHP configuration to stop Xdebug's infinite recursion protection erroneously throwing a fatal error:
@@ -130,7 +130,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 15. [Optional] Load example data (series and multimedia objects)
 
     ```
-    php app/console pumukit:init:example  --force    
+    php app/console pumukit:init:example  --force
     ```
 
 16. Add NGINX config file.
@@ -299,7 +299,7 @@ sudo service ningx restart
 
 **Setting up Permissions?**
 
- * http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup
+ * http://symfony.com/doc/2.6/book/installation.html#checking-symfony-application-configuration-and-setup
  * http://symfony.es/documentacion/como-solucionar-el-problema-de-los-permisos-de-symfony2/
  * Setting up ownership of upload directories
 
