@@ -79,6 +79,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     ```
     php composer.phar install
     ```
+    In case it gives a token error, check the [solution in the F.A.Q](#add-github-token)
 
 8. Give cache and log directories the right permissions.
 
@@ -315,7 +316,7 @@ Use MongoDB 2.6 or upper, the text search feature is enabled by default. In Ubun
  * http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
 
-**Add GitHub token**
+#####Add GitHub token
 
 In case the `php composer.phar install` asks for a token with a  message like:
 
