@@ -140,14 +140,27 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     sudo cp doc/conf_files/nginx/default /etc/nginx/sites-available/default
     ```
 
-17. Restart server
+17. Edit php-ini configuration
+
+    * Execute the following command
+    ```
+    php --ini | grep "Loaded"
+    ```
+    * It will display the 'Loaded Configuration File' for php. Open it and change the following lines:
+    ```
+    upload_max_filesize = 2000M
+    post_max_size = 2000M
+    ```
+    *NOTE: We recommend a default value of 2G (or 2000M). If you are planning to upload bigger files, change the values above to higher ones.*
+
+18. Restart server
 
     ```
     sudo service php5-fpm restart
     sudo service nginx restart
     ```
 
-18. Connect and enjoy
+19. Connect and enjoy
 
     * Connect to the frontend here: `http://{PuMuKIT-2-HOST}/`
     * Connect to the back-office (Admin UI) with the user created on step 13 here: `http://{PuMuKIT-2-HOST}/admin`
