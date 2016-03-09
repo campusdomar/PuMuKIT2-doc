@@ -92,13 +92,23 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/fpm/php.ini
     ```
 
-10. Set "xdebug.max_nesting_level" to "1000" in PHP configuration to stop Xdebug's infinite recursion protection erroneously throwing a fatal error:
+10. Override the 'upload_max_filesize' and 'post_max_size' settings in all the php.ini files to upload bigger files
+
+    ```
+    sudo sed -i "/post_max_size =/c\post_max_size = 2000M" /etc/php5/cli/php.ini
+    sudo sed -i "/upload_max_filesize =/c\upload_max_filesize = 2000M" /etc/php5/cli/php.ini
+    sudo sed -i "/post_max_size =/c\post_max_size = 2000M" /etc/php5/fpm/php.ini
+    sudo sed -i "/upload_max_filesize =/c\upload_max_filesize = 2000M" /etc/php5/fpm/php.ini
+    ```
+    *NOTE: We recommend a default value of 2G (or 2000M). If you are planning to upload bigger files, change the '2000M' values above to higher ones.*
+
+11. Set "xdebug.max_nesting_level" to "1000" in PHP configuration to stop Xdebug's infinite recursion protection erroneously throwing a fatal error:
 
     ```
     echo "xdebug.max_nesting_level=1000" | sudo tee -a /etc/php5/fpm/conf.d/20-xdebug.ini
     ```
 
-11. Check environment requirements:
+12. Check environment requirements:
 
     * Go to `http://{PuMuKIT-2-HOST}/config.php` for checking requirements.
     * Fix errors if any and restart PHP5-FPM service. Fix warnings if necessary (PDO drivers are not necessary for PuMuKIT-2 to work).
@@ -108,7 +118,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     * Check requirements again
     * Repeat all steps until the MAJOR PROBLEMS list disappears.
 
-12. Prepare environment (init mongo db, clear cache)
+13. Prepare environment (init mongo db, clear cache)
 
     ```
     php app/console doctrine:mongodb:schema:create
@@ -116,42 +126,29 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     php app/console cache:clear --env=prod
     ```
 
-13. Create the admin user
+14. Create the admin user
 
     ```
     php app/console fos:user:create admin --super-admin
     ```
 
-14. Load default values (tags, broadcasts and roles).
+15. Load default values (tags, broadcasts and roles).
 
     ```
     php app/console pumukit:init:repo all --force
     ```
 
-15. [Optional] Load example data (series and multimedia objects)
+16. [Optional] Load example data (series and multimedia objects)
 
     ```
     php app/console pumukit:init:example  --force
     ```
 
-16. Add NGINX config file.
+17. Add NGINX config file.
 
     ```
     sudo cp doc/conf_files/nginx/default /etc/nginx/sites-available/default
     ```
-
-17. Edit php-ini configuration
-
-    * Execute the following command
-    ```
-    php --ini | grep "Loaded"
-    ```
-    * It will display the 'Loaded Configuration File' for php. Open it and change the following lines:
-    ```
-    upload_max_filesize = 2000M
-    post_max_size = 2000M
-    ```
-    *NOTE: We recommend a default value of 2G (or 2000M). If you are planning to upload bigger files, change the values above to higher ones.*
 
 18. Restart server
 
