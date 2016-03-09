@@ -108,7 +108,15 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     echo "xdebug.max_nesting_level=1000" | sudo tee -a /etc/php5/fpm/conf.d/20-xdebug.ini
     ```
 
-12. Check environment requirements:
+12. Add NGINX config file and restart php5-fpm and nginx
+
+    ```
+    sudo cp doc/conf_files/nginx/default /etc/nginx/sites-available/default
+    sudo service php5-fpm restart
+    sudo service nginx restart
+    ```
+
+13. Check environment requirements:
 
     * Go to `http://{PuMuKIT-2-HOST}/config.php` for checking requirements.
     * Fix errors if any and restart PHP5-FPM service. Fix warnings if necessary (PDO drivers are not necessary for PuMuKIT-2 to work).
@@ -118,7 +126,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     * Check requirements again
     * Repeat all steps until the MAJOR PROBLEMS list disappears.
 
-13. Prepare environment (init mongo db, clear cache)
+14. Prepare environment (init mongo db, clear cache)
 
     ```
     php app/console doctrine:mongodb:schema:create
@@ -126,28 +134,22 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     php app/console cache:clear --env=prod
     ```
 
-14. Create the admin user
+15. Create the admin user
 
     ```
     php app/console fos:user:create admin --super-admin
     ```
 
-15. Load default values (tags, broadcasts and roles).
+16. Load default values (tags, broadcasts and roles).
 
     ```
     php app/console pumukit:init:repo all --force
     ```
 
-16. [Optional] Load example data (series and multimedia objects)
+17. [Optional] Load example data (series and multimedia objects)
 
     ```
     php app/console pumukit:init:example  --force
-    ```
-
-17. Add NGINX config file.
-
-    ```
-    sudo cp doc/conf_files/nginx/default /etc/nginx/sites-available/default
     ```
 
 18. Restart server
