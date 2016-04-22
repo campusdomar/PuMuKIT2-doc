@@ -399,7 +399,7 @@ if (!in_array(@$_SERVER['REMOTE_ADDR'], array(
 ```
 
 
-**Internal Server Error (500) when search a series or a multimedia object**
+**Internal Server Error (500) when searching a series or a multimedia object**
 
 The mongodb text index is needed for searching. And this error is produced because the text index is not created:
 
@@ -409,7 +409,7 @@ Cannot run command count(): error processing query: ns=pumukit___.MultimediaObje
 planner returned error: need exactly one text index for $text query
 ```
 
-To generate the index execute the command:
+To generate the index execute the following command:
 
 ```
 php app/console doctrine:mongodb:schema:create --index
