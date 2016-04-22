@@ -8,7 +8,7 @@ The migration procedures described here includes the migration of the Essences a
 
 ## Step 1: PuMuKIT 2.1 Installation
 
-Install PuMuKIT 2.1 in a new system following the steps at the [Installation Guide](InstallationGuide.md).
+Install PuMuKIT 2.1 in a new system following the steps at the [Installation Guide](../InstallationGuide.md).
 
 
 ## Step 2: Essences Migration
