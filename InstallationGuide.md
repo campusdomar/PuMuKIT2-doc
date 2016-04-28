@@ -1,6 +1,6 @@
 # PuMuKIT-2 Installation Guide
 
-*This page is updated to the PuMuKIT 2.1.0 version*
+*This page is updated to the PuMuKIT 2.2.0 version*
 
 ## Index
 
@@ -61,11 +61,11 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     git clone https://github.com/campusdomar/PuMuKIT2.git /var/www/pumukit2
     ```
 
-5. Activate the 2.1.0 tag:
+5. Activate the 2.2.0 tag:
 
     ```
     cd /var/www/pumukit2
-    git checkout 2.1.0
+    git checkout 2.2.0
     ```
 
 6. Install [composer](https://getcomposer.org/).
@@ -79,6 +79,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     ```
     php composer.phar install
     ```
+    In case it gives a token error, check the [solution in the F.A.Q](#add-github-token)
 
 8. Give cache and log directories the right permissions.
 
@@ -91,13 +92,31 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php5/fpm/php.ini
     ```
 
-10. Set "xdebug.max_nesting_level" to "1000" in PHP configuration to stop Xdebug's infinite recursion protection erroneously throwing a fatal error:
+10. Override the 'upload_max_filesize' and 'post_max_size' settings in all the php.ini files to upload bigger files
+
+    ```
+    sudo sed -i "/post_max_size =/c\post_max_size = 2000M" /etc/php5/cli/php.ini
+    sudo sed -i "/upload_max_filesize =/c\upload_max_filesize = 2000M" /etc/php5/cli/php.ini
+    sudo sed -i "/post_max_size =/c\post_max_size = 2000M" /etc/php5/fpm/php.ini
+    sudo sed -i "/upload_max_filesize =/c\upload_max_filesize = 2000M" /etc/php5/fpm/php.ini
+    ```
+    *NOTE: We recommend a default value of 2G (or 2000M). If you are planning to upload bigger files, change the '2000M' values above to higher ones.*
+
+11. Set "xdebug.max_nesting_level" to "1000" in PHP configuration to stop Xdebug's infinite recursion protection erroneously throwing a fatal error:
 
     ```
     echo "xdebug.max_nesting_level=1000" | sudo tee -a /etc/php5/fpm/conf.d/20-xdebug.ini
     ```
 
-11. Check environment requirements:
+12. Add NGINX config file and restart php5-fpm and nginx
+
+    ```
+    sudo cp doc/conf_files/nginx/default /etc/nginx/sites-available/default
+    sudo service php5-fpm restart
+    sudo service nginx restart
+    ```
+
+13. Check environment requirements:
 
     * Go to `http://{PuMuKIT-2-HOST}/config.php` for checking requirements.
     * Fix errors if any and restart PHP5-FPM service. Fix warnings if necessary (PDO drivers are not necessary for PuMuKIT-2 to work).
@@ -107,7 +126,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     * Check requirements again
     * Repeat all steps until the MAJOR PROBLEMS list disappears.
 
-12. Prepare environment (init mongo db, clear cache)
+14. Prepare environment (init mongo db, clear cache)
 
     ```
     php app/console doctrine:mongodb:schema:create
@@ -115,38 +134,32 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     php app/console cache:clear --env=prod
     ```
 
-13. Create the admin user
+15. Create the admin user
 
     ```
     php app/console fos:user:create admin --super-admin
     ```
 
-14. Load default values (tags, broadcasts and roles).
+16. Load default values (tags, broadcasts and roles).
 
     ```
     php app/console pumukit:init:repo all --force
     ```
 
-15. [Optional] Load example data (series and multimedia objects)
+17. [Optional] Load example data (series and multimedia objects)
 
     ```
     php app/console pumukit:init:example  --force
     ```
 
-16. Add NGINX config file.
-
-    ```
-    sudo cp doc/conf_files/nginx/default /etc/nginx/sites-available/default
-    ```
-
-17. Restart server
+18. Restart server
 
     ```
     sudo service php5-fpm restart
     sudo service nginx restart
     ```
 
-18. Connect and enjoy
+19. Connect and enjoy
 
     * Connect to the frontend here: `http://{PuMuKIT-2-HOST}/`
     * Connect to the back-office (Admin UI) with the user created on step 13 here: `http://{PuMuKIT-2-HOST}/admin`
@@ -315,7 +328,7 @@ Use MongoDB 2.6 or upper, the text search feature is enabled by default. In Ubun
  * http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
 
-**Add GitHub token**
+#####Add GitHub token
 
 In case the `php composer.phar install` asks for a token with a  message like:
 
@@ -383,6 +396,23 @@ if (!in_array(@$_SERVER['REMOTE_ADDR'], array(
     exit('This script is only accessible from localhost.');
 }
 */
+```
+
+
+**Internal Server Error (500) when searching a series or a multimedia object**
+
+The mongodb text index is needed for searching. And this error is produced because the text index is not created:
+
+```
+Cannot run command count(): error processing query: ns=pumukit___.MultimediaObject limit=0 skip=0
+...
+planner returned error: need exactly one text index for $text query
+```
+
+To generate the index execute the following command:
+
+```
+php app/console doctrine:mongodb:schema:create --index
 ```
 
 [(back to index)](#index)
