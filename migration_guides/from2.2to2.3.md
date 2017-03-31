@@ -2,7 +2,7 @@
 
 *This page is updated to the PuMuKIT 2.3.0 version*
 
-Here we describe the process to upgrade from PuMuKIT 2.2 to PuMuKIT 2.3. If you are trying to upgrade from PuMuKIT 1, please check out [this guide](from1.7to2.1) instead and then [this_guide](from2.1to2.2).
+Here we describe the process to upgrade from PuMuKIT 2.2 to PuMuKIT 2.3. If you are trying to upgrade from PuMuKIT 1, please check out [this guide](from1.7to2.1.md) instead of [this_guide](from2.1to2.2.md).
 
 1. First let's open the PuMuKIT 2 folder on our terminal.
 
