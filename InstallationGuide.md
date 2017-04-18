@@ -7,7 +7,8 @@
 1. [Requirements](#1-requirements)
 2. [Single-node Installation on Linux Ubuntu 14.04](#2-single-node-installation-on-linux-ubuntu-1404)
 3. [Multi-node Installation](#3-multi-node-installation)
-4. [F.A.Q.](#4-faq)
+4. [Opencast integration](#4-opencast-integration)
+5. [F.A.Q.](#5-faq)
 
 ## 1. Requirements
 
@@ -25,7 +26,7 @@ PuMuKIT-2 has been developed and is often installed on Linux Ubuntu but its use 
 
 In this section we will describe how to install PuMuKIT in a single server (node) running Ubuntu 14.04. A single-node deployment of PuMuKIT is usually recommended for development, demonstration and small production environments.
 
-Follow the below instructions. If any error is thrown check the [F.A.Q. section](#4-faq) or ask on PuMuKIT community list:
+Follow the below instructions. If any error is thrown check the [F.A.Q. section](#5-faq) or ask on PuMuKIT community list:
 
 1. Update APT source list to install last version of MongoDB.
 
@@ -270,7 +271,12 @@ PuMuKIT node and transcoder node should mount the NAS server folder where all th
 
 [(back to index)](#index)
 
-## 4. F.A.Q.
+## 4. Opencast integration
+
+To add [Opencast](http://www.opencast.org/) support to the PuMuKIT platform use the Opencast Bundle. The Opencast Bundle is included in PuMuKIT but it's not activated by default. To activate and configure, follow the instructions in the guide of the bundle: https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/OpencastBundle/Resources/doc/README.md
+
+
+## 5. F.A.Q.
 
 **Configure max upload filesize**
 
