@@ -273,7 +273,7 @@ PuMuKIT node and transcoder node should mount the NAS server folder where all th
 
 ## 4. Opencast integration
 
-To add [Opencast](http://www.opencast.org/) support to the PuMuKIT platform use the Opencast Bundle. The Opencast Bundle is included in PuMuKIT but it's not activated by default. To activate and configure, follow the instructions in the guide of the bundle: https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/OpencastBundle/Resources/doc/README.md
+To add [Opencast](http://www.opencast.org/) integration features to the PuMuKIT platform use the Opencast Bundle. The Opencast Bundle is included in PuMuKIT standard installation but it's not activated by default. To activate and configure it, follow the instructions in the Opencast bundle: https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/OpencastBundle/Resources/doc/README.md
 
 
 ## 5. F.A.Q.
