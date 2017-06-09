@@ -1,6 +1,6 @@
 # PuMuKIT-2 Installation Guide
 
-*This page is updated to the PuMuKIT 2.2.0 version*
+*This page is updated to the PuMuKIT 2.3.0 version*
 
 ## Index
 
