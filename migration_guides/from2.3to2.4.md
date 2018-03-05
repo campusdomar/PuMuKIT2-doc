@@ -31,12 +31,18 @@ Here we describe the process to upgrade from PuMuKIT 2.3 to PuMuKIT 2.4. If you 
     ```bash
     php doc/updateModel_2.3_to_2.4.php update:model:2.3to2.4 --env=prod
     ```
-6. Sync repository in case it was not in production:
+6. Drop and create indexes in MongoDB (It should take 30 seconds):
+
+    ```bash
+    php app/console doctrine:mongodb:schema:drop --index
+    time php app/console doctrine:mongodb:schema:create --index
+    ```
+7. Sync repository in case it was not in production:
 
     ```bash
     php app/console pumukit:sync:repository
     ```
-7. Clean cache:
+8. Clean cache:
 
     ```bash
     php app/console cache:clear && php app/console cache:clear --env=prod
