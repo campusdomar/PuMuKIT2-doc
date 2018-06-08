@@ -1,6 +1,6 @@
 # PuMuKIT-2 Installation Guide
 
-*This page is updated to the PuMuKIT 2.3.0 version*
+*This page is updated to the PuMuKIT 2.4.x version*
 
 ## Index
 
@@ -62,11 +62,11 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     git clone https://github.com/campusdomar/PuMuKIT2.git /var/www/pumukit2
     ```
 
-5. Activate the 2.3.0 tag:
+5. Activate the 2.4.x branch:
 
     ```
     cd /var/www/pumukit2
-    git checkout 2.3.0
+    git checkout 2.4.x
     ```
 
 6. Install [composer](https://getcomposer.org/).
