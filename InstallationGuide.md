@@ -242,6 +242,9 @@ php app/console config:dump-reference pumukit_encoder
 
             # Encoder host description
             description:          ''
+
+            # Valid profiles
+            profiles:          
 ```
 
 * `name`: name of your transcoder server. E.g.: transcoder. Replace the word `name` with the name you give.
@@ -250,6 +253,7 @@ php app/console config:dump-reference pumukit_encoder
 * `type`: type of the transcoder host
 * `user`: username defined in the webserver.php file of your transcoder server
 * `password`: password defined in the webserver.php file of your transcoder server
+* `profiles` (optional): array of valid profiles. If this parameter exists, the cpu will only accept tasks for the specified profiles.
 
 You can add as many transcoders as you want to the configuration of the encoders of PuMuKIT.
 Define each transcoder with a different `name` and add host, max, type, user and password configuration.
