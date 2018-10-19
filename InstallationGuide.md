@@ -31,8 +31,8 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 1. Update APT source list to install last version of MongoDB.
 
     ```
-    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-    echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+    echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
     sudo apt-get update
     ```
 
@@ -40,10 +40,10 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 
     ```
     sudo apt-get install -y git curl nginx-full
-    sudo apt-get install -y php5-fpm php5-cli php5-curl php5-intl php5-json
-    sudo apt-get install -y php5-intl php5-xdebug php5-curl php5-ldap
-    sudo apt-get install -y mongodb-org php5-mongo
-    sudo apt-get install -y libav-tools libavcodec-extra
+    sudo apt-get install -y php7.2-fpm php7.2-cli php7.2-curl php7.2-intl php7.2-json
+    sudo apt-get install -y php7.2-intl php7.2-xdebug php7.2-curl php7.2-ldap 
+    sudo apt-get install -y mongodb-org php7.2-mongodb
+    sudo apt-get install -y ffmpeg x264
     ```
 
 3. Create web directory and give the right permissions:
