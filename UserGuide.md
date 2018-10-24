@@ -374,8 +374,7 @@ On the top of the metadata editing form there is an Info section which is showin
 
 Selecting a multimedia object in the MO-list (clicking once on the row), you will have access to its metadata editing form, below the MO-List area. Since the multimedia object (MO) is the main part of the PuMuKIT database and holds lots of information, the Metadata & Media editing section is quite large. Therefore, it is divided into five tabs and as background image the ID of the multimedia object is shown. The tabs are: Publication, Metadada, Knowledge areas, People and Multimedia (media files).
 
-<p align="center">
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m33e5f137.png)
+<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m33e5f137.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 11. MO Metadata & Media tabs</font></div>
 
@@ -391,8 +390,7 @@ This first tab includes metadata related to the publication of a multimedia obje
 
 -   **Broadcast**: Through this, you can modify the ACLs of the video (public, password locked, etc...). In some PuMuKIT deployments the LDAP profile is available so users in a LDAP server will be able to access the MO using their LDAP user and password.
 
-<p align="center">
-![](images/publication.tab.png)
+<p align="center"><img src="images/publication.tab.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 12. Multimedia objects publication tab</font></div>
 
@@ -467,8 +465,7 @@ After typing the full name, if the person is already in the database, he or she 
 
 The next image illustrates this process:
 
-<p align="center">
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m5b9ec300.png)
+<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m5b9ec300.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 16. People search form</font></div>
 
@@ -506,8 +503,7 @@ There are three different ways to link a thumbnail picture to a MO or Series:
 
 These three methods to link images correspond to the three areas of the thumbnail management form.
 
-<p align="center">
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png)
+<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 18. Thumbnail management form</font></div>
 
@@ -535,8 +531,8 @@ In the MO management module, the new thumbnail can be posted in two different wa
 -   The thumbnail can be uploaded to the server from your computer by clicking on "New Image". These images are resized on the server to optimize space and reduce the bandwidth needed to display the portal.
 <p>
 
-<p align="center">
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png)
+<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png"></p>
+
 
 <div align="center"><font size=1 color="Blue">Figure 21. Picture edition form</font></div>
 
@@ -552,8 +548,7 @@ If you run the Ingest-Wizard from the Series-module you will be prompted to crea
 
 The wizard will launch after clicking the button "Wizard", as shown in the picture below:
 
-<p align="center">
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_2fab8148.png)
+<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_2fab8148.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 22. Wizard button</font></div>
 
@@ -660,8 +655,7 @@ The Information and controls shown for every Opencast video (MH-video) listed ar
      
 There is also a search form that allows you to find OC-videos sorted by any of the Opencast metadata fields (presenter, title, id...).
 
-<p align="center">
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m4b356bdf.png)
+<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m4b356bdf.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 29. Opencast video search</font></div>
 
@@ -712,8 +706,8 @@ The "Live Broadcast" module allows you to manage the live streaming channels of 
 
 The Live channels module can be configured using the following parameters:
 
-<p align="center">
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_34781e32.png)
+<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_34781e32.png"></p>
+
 
 <div align="center"><font size=1 color="Blue">Figure 31. Live channel edition form</font></div>
 
@@ -883,8 +877,7 @@ It is a module that allows you to manage the broadcasting of multimedia objects.
 Click on “new” to create a new broadcast profile, the next window will open:
 <p>
 
-<p align="center">
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m64d6a754.png)
+<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m64d6a754.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 42. Broadcast edition form</font></div>
 
