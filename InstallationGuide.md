@@ -30,79 +30,78 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 
 1. Update APT source list to install last version of MongoDB.
 
-```
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
-echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
-sudo apt-get update
-```
+    ```
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+    echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+    sudo apt-get update
+    ```
 
 2. Update APT source list to install last version of Nginx.
 
-```
-sudo wget https://nginx.org/keys/nginx_signing.key
-sudo apt-key add nginx_signing.key
-echo "deb https://nginx.org/packages/mainline/ubuntu bionic nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
-sudo apt-get update
-```
+    ```
+    sudo wget https://nginx.org/keys/nginx_signing.key
+    sudo apt-key add nginx_signing.key
+    echo "deb https://nginx.org/packages/mainline/ubuntu bionic nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
+    sudo apt-get update
+    ```
 
 3. Install dependencies of PuMuKIT-2 (see requirements):
 
-```
-sudo apt-get install -y git curl nginx unzip
-sudo apt-get install -y php7.2-fpm php7.2-cli php7.2-curl php7.2-intl php7.2-json
-sudo apt-get install -y php7.2-intl php7.2-xdebug php7.2-curl php7.2-ldap
-sudo apt-get install -y ffmpeg php-pear php7.2-dev php7.2-mbstring php7.2-zip
-```
+    ```
+    sudo apt-get install -y git curl nginx unzip
+    sudo apt-get install -y php7.2-fpm php7.2-cli php7.2-curl php7.2-intl php7.2-json
+    sudo apt-get install -y php7.2-intl php7.2-xdebug php7.2-curl php7.2-ldap
+    sudo apt-get install -y ffmpeg php-pear php7.2-dev php7.2-mbstring php7.2-zip
+    ```
 
 4. Install MongoDB Server and Driver
 
-```
-sudo apt-get install -y mongodb-org
-sudo systemctl enable mongod.service
-sudo systemctl start mongod.service
-sudo pecl install mongodb-1.5.3
-sudo echo "extension=mongodb.so" | sudo tee /etc/php/7.2/mods-available/mongodb.ini
-sudo ln -s /etc/php/7.2/mods-available/mongodb.ini /etc/php/7.2/cli/conf.d/20-mongodb.ini
-sudo ln -s /etc/php/7.2/mods-available/mongodb.ini /etc/php/7.2/fpm/conf.d/20-mongodb.ini
-sudo systemctl restart php7.2-fpm.service
-```
+    ```
+    sudo apt-get install -y mongodb-org
+    sudo systemctl enable mongod.service
+    sudo systemctl start mongod.service
+    sudo pecl install mongodb-1.5.3
+    sudo echo "extension=mongodb.so" | sudo tee /etc/php/7.2/mods-available/mongodb.ini
+    sudo ln -s /etc/php/7.2/mods-available/mongodb.ini /etc/php/7.2/cli/conf.d/20-mongodb.ini
+    sudo ln -s /etc/php/7.2/mods-available/mongodb.ini /etc/php/7.2/fpm/conf.d/20-mongodb.ini
+    sudo systemctl restart php7.2-fpm.service
+    ```
 
 5. Create web directory and give the right permissions:
 
-```
-sudo mkdir -p /var/www
-sudo adduser `whoami` www-data
-sudo chown `whoami`:www-data -R /var/www
-sudo chmod 0755 -R /var/www
-sudo chmod g+s -R /var/www
-```
->>>>>>> update install doc php7
+    ```
+    sudo mkdir -p /var/www
+    sudo adduser `whoami` www-data
+    sudo chown `whoami`:www-data -R /var/www
+    sudo chmod 0755 -R /var/www
+    sudo chmod g+s -R /var/www
+    ```
 
 6. Download the last version of PuMuKIT:
 
-```
-git clone https://github.com/campusdomar/PuMuKIT.git /var/www/pumukit
-```
+    ```
+    git clone https://github.com/campusdomar/PuMuKIT.git /var/www/pumukit
+    ```
 
 7. Activate the master tag:
 
-```
-cd /var/www/pumukit
-git checkout master
-```
+    ```
+    cd /var/www/pumukit
+    git checkout master
+    ```
 
 8. Install [composer](https://getcomposer.org/).
 
-```
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
-```
+    ```
+    curl -sS https://getcomposer.org/installer | php
+    sudo mv composer.phar /usr/local/bin/composer
+    ```
 
 9. Install dependencies and provide PuMuKIT basic parameters:
 
-```
-composer install
-```
+    ```
+    composer install
+    ```
 In case it gives a token error, check the [solution in the F.A.Q](#add-github-token)
 
 10. Give cache and log directories the right permissions.
@@ -111,19 +110,19 @@ In case it gives a token error, check the [solution in the F.A.Q](#add-github-to
 
 11. Set the `"date.timezone"` setting in all the `php.ini` files with your timezone (e.g. `Europe/Madrid`):
 
-```
-sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php/7.2/cli/php.ini
-sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php/7.2/fpm/php.ini
-```
+    ```
+    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php/7.2/cli/php.ini
+    sudo sed -i "s/;date.timezone =/date.timezone = Europe\/Madrid/g" /etc/php/7.2/fpm/php.ini
+    ```
 
 12. Override the 'upload_max_filesize' and 'post_max_size' settings in all the php.ini files to upload bigger files
 
-```
-sudo sed -i "/post_max_size =/c\post_max_size = 2000M" /etc/php/7.2/cli/php.ini
-sudo sed -i "/upload_max_filesize =/c\upload_max_filesize = 2000M" /etc/php/7.2/cli/php.ini
-sudo sed -i "/post_max_size =/c\post_max_size = 2000M" /etc/php/7.2/fpm/php.ini
-sudo sed -i "/upload_max_filesize =/c\upload_max_filesize = 2000M" /etc/php/7.2/fpm/php.ini
-```
+    ```
+    sudo sed -i "/post_max_size =/c\post_max_size = 2000M" /etc/php/7.2/cli/php.ini
+    sudo sed -i "/upload_max_filesize =/c\upload_max_filesize = 2000M" /etc/php/7.2/cli/php.ini
+    sudo sed -i "/post_max_size =/c\post_max_size = 2000M" /etc/php/7.2/fpm/php.ini
+    sudo sed -i "/upload_max_filesize =/c\upload_max_filesize = 2000M" /etc/php/7.2/fpm/php.ini
+    ```
 *NOTE: We recommend a default value of 2G (or 2000M). If you are planning to upload bigger files, change the '2000M' values above to higher ones.*
 
 13. Set "xdebug.max_nesting_level" to "1000" in PHP configuration to stop Xdebug's infinite recursion protection erroneously throwing a fatal error:
