@@ -135,55 +135,45 @@ sudo sed -i "/upload_max_filesize =/c\upload_max_filesize = 2000M" /etc/php/7.2/
 
     ```
     sudo cp doc/conf_files/nginx/default /etc/nginx/conf.d/default.conf
-    sudo service php/7.2-fpm restart
-sudo systemctl restart php7.2-fpm.service
+    sudo sed -i "s/^user.*/user www-data;/" /etc/nginx/nginx.conf
+    sudo systemctl restart php7.2-fpm.service
     sudo systemctl restart  nginx.service
     ```
 
-15. Check environment requirements:
-
-    * Go to `http://{PuMuKIT-2-HOST}/config.php` for checking requirements.
-    * Fix errors if any and restart PHP-FPM service. Fix warnings if necessary (PDO drivers are not necessary for PuMuKIT-2 to work).
-      ```
-      sudo systemctl restart php7.2-fpm.service
-      ```
-    * Check requirements again
-    * Repeat all steps until the MAJOR PROBLEMS list disappears.
-
-16. Prepare environment (init mongo db, clear cache)
+15. Prepare environment (init mongo db, clear cache)
 
     ```
-    php app/console doctrine:mongodb:schema:create
-    php app/console cache:clear
-    php app/console cache:clear --env=prod
+    php bin/console doctrine:mongodb:schema:create
+    php bin/console cache:clear
+    php bin/console cache:clear --env=prod
     ```
 
-17. Create the admin user
+16. Create the admin user
 
     ```
-    php app/console fos:user:create admin --super-admin
+    php bin/console fos:user:create admin --super-admin
     ```
 
-18. Load default values (tags, broadcasts and roles).
+17. Load default values (tags, broadcasts and roles).
 
     ```
-    php app/console pumukit:init:repo all --force
+    php bin/console pumukit:init:repo all --force
     ```
 
-19. [Optional] Load example data (series and multimedia objects)
+18. [Optional] Load example data (series and multimedia objects)
 
     ```
-    php app/console pumukit:init:example  --force
+    php bin/console pumukit:init:example  --force
     ```
 
-20. Restart server
+19. Restart server
 
     ```
-    sudo service php/7.2-fpm restart
-    sudo service nginx restart
+    sudo systemctl restart php7.2-fpm.service
+    sudo systemctl restart  nginx.service
     ```
 
-21. Connect and enjoy
+20. Connect and enjoy
 
     * Connect to the frontend here: `http://{PuMuKIT-2-HOST}/`
     * Connect to the back-office (Admin UI) with the user created on step 13 here: `http://{PuMuKIT-2-HOST}/admin`
@@ -236,7 +226,7 @@ To see all the options to configure, type on your PuMuKIT node and see the `cpus
 
 ```
 cd /path/to/pumukit2
-php app/console config:dump-reference pumukit_encoder
+php bin/console config:dump-reference pumukit_encoder
 ```
 
 ```
@@ -445,7 +435,7 @@ planner returned error: need exactly one text index for $text query
 To generate the index execute the following command:
 
 ```
-php app/console doctrine:mongodb:schema:create --index
+php bin/console doctrine:mongodb:schema:create --index
 ```
 
 [(back to index)](#index)
