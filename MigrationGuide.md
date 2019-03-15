@@ -6,3 +6,4 @@
 2. [Guide to migrate from PuMuKIT 2.1 to PuMuKIT 2.2](migration_guides/from2.1to2.2.md)
 3. [Guide to migrate from PuMuKIT 2.2 to PuMuKIT 2.3](migration_guides/from2.2to2.3.md)
 4. [Guide to migrate from PuMuKIT 2.3 to PuMuKIT 2.4](migration_guides/from2.3to2.4.md)
+4. [Guide to migrate from PuMuKIT 2.3 to PuMuKIT 2.4](migration_guides/from2.4to2.5.md)
