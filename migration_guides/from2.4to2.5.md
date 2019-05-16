@@ -22,4 +22,4 @@ Here we describe the process to upgrade from PuMuKIT 2.4 to PuMuKIT 2.5.
     ```
 4. Connect to MongoDB and execute the queries of 
     
-    [PuMuKIT-Migration-2.5](https://github.com/campusdomar/PuMuKIT2/blob/master/doc/updateModel_2.4_to_2.5.md)
+    [PuMuKIT-Migration-2.5](https://github.com/campusdomar/PuMuKIT2/blob/2.5.x/doc/updateModel_2.4_to_2.5.md)
