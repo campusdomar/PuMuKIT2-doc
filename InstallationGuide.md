@@ -1,11 +1,11 @@
 # PuMuKIT-2 Installation Guide
 
-*This page is updated to the PuMuKIT 2.3.0 version*
+*This page is updated to the PuMuKIT 2.4.x version*
 
 ## Index
 
 1. [Requirements](#1-requirements)
-2. [Single-node Installation on Linux Ubuntu 18.04](#2-single-node-installation-on-linux-ubuntu-1404)
+2. [Single-node Installation on Linux Ubuntu 18.04](#2-single-node-installation-on-linux-ubuntu-1804)
 3. [Multi-node Installation](#3-multi-node-installation)
 4. [Opencast integration](#4-opencast-integration)
 5. [F.A.Q.](#5-faq)
@@ -189,7 +189,7 @@ installed in the same node as PuMuKIT. A different installation can be done. It 
 to install a transcoder or manage the storage of the multimedia files in a NAS (Network Attached Storage) server.
 
 To perform a multi-node installation of PuMuKIT, first you need to install PuMuKIT in a node according to
-[Single-node Installation on Linux Ubuntu 18.04](#2-single-node-installation-on-linux-ubuntu-1404).
+[Single-node Installation on Linux Ubuntu 18.04](#2-single-node-installation-on-linux-ubuntu-1804).
 
 After having a single-node deployment you can improve it with additional nodes to take care of storage and/or trancoding jobs:
 
