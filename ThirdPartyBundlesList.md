@@ -15,7 +15,6 @@ List of third party bundles
 * [LmsBundle] (https://github.com/teltek/PumukitLmsBundle): merge the common APIs between the Moodle bundle and the OpenEDX bundle into single generic bundle.
 * [OaiBundle] (https://github.com/pumukit/PumukitOaiBundle):
 * [OpencastBundle] (https://github.com/pumukit/PumukitOpencastBundle): allows to connect to PuMuKIT with Opencast.
-* [OpenEdxBundle] (https://github.com/teltek/PuMuKIT2-open-edx-bundle): adds an API for an Open edX instance to be able to connect to Media Manager.
 * [PaellaPlayerBundle](https://github.com/teltek/PuMuKIT2-paella-player-bundle/blob/1.0.x/README.md): changes the default PuMuKIT JWPlayer for the PaellaPlayer to visualize videos.
 * [PaellaStatsBundle] (https://github.com/teltek/PumukitPaellaStatsBundle):
 * [PaellaStatsUIBundle] (https://github.com/teltek/PumukitPaellaStatsUIBundle):
