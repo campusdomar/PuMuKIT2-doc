@@ -1,3 +1,5 @@
+NOTE: The repository for PuMUKIT-doc has moved to namespace [PuMuKIT](https://github.com/pumukit/PuMuKIT-doc)!
+
 PuMuKIT-2 Documentation Project
 ===============================
 
