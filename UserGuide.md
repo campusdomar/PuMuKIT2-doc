@@ -569,7 +569,7 @@ These two methods to link images correspond to the two areas of the thumbnail ma
 After linking one or more Thumbnails to a MO or series using this module, you will be able to see those linked thumbnails in the Multimedia-Tab of the referred object:
 <p>
 
-<p align="center">![](images/PuMuKit_3_Content_Admin_Guide_v1.1_html_73582573.png)</p>
+<p align="center"><img src="images/PuMuKit_3_Content_Admin_Guide_v1.1_html_73582573.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 19. Thumbnails in the Multimedia-Tab of a MO</font></div>
 
@@ -702,7 +702,7 @@ The Statistics window has two main views:
 
 To the right of the search parameters there are two info boxes; the orange box indicates the total number of multimedia objects or series found for your search parameters and the green box shows the total number of views for all these objects during the date range you selected.
 
-<p align="center">![](images/info_box_statistics.png)</p>
+<p align="center"><img src="images/info_box_statistics.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 30. Info box</font></div>
 
@@ -710,7 +710,7 @@ To the right of the search parameters there are two info boxes; the orange box i
 
 Thanks to this filter, you can narrow down results and easily locate the series or objects you are looking for. This search filter allows you to execute searches based on the title and date range.
 
-<p align="center">![](images/statistics_search_form.png)</p>
+<p align="center"><img src="images/statistics_search_form.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 31. Series and objects search-form</font></div>
 
@@ -828,7 +828,7 @@ Next, we detailed the configuration options of an event:
      - Event poster: Image shown in the player previously and after the event.
      - Poster text color: Select the text color to the messages.
 
-<p align="center">![](images/poster_configuration_options.png)</p>
+<p align="center"><img src="images/poster_configuration_options.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 38. Poster configuration options</font></div>
 
@@ -840,7 +840,7 @@ Once the event is configured in necessary create the sessions of that event. Cli
 
 To create a new session simply click on "New event session" and the time of the session can be configured.
 
-<p align="center">![](images/session_configuration_options.png)</p>
+<p align="center"><img src="images/session_configuration_options.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 40. Session configure options</font></div>
 
@@ -853,7 +853,7 @@ In this module there is also a search filter to facilitate find the events by na
 - Future events: Events that have sessions to broadcast in the future
 - Today events list: Events that have sessions today
 
-<p align="center">![](images/filter_events.png)</p>
+<p align="center"><img src="images/filter_events.png)"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 41. Search filter in events module</font></div>
 

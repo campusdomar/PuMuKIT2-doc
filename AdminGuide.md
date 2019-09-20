@@ -140,7 +140,7 @@ Finally, click on "Save Changes" to create the user and save it to PuMuKIT.
 
 The edit and the delete icons are located in the left side of the users table:
 
-<p align="center">![](images/edit_delete_icons.png)</p>
+<p align="center"><img src="images/edit_delete_icons.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 4. Edit/delete icons</font></div>
 
@@ -151,7 +151,7 @@ Clicking on the delete icon will permanently delete the user from PuMuKIT.
 
 At the right side of the screen, there is a search filter that allows you to filter the users that are displayed at the users table.
 
-<p align="center">![](images/admin_user_search.png)</p>
+<p align="center"><img src="images/admin_user_search.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 5. Admin User Search</font></div>
 
@@ -166,7 +166,7 @@ If you click on the ‘Select an action...’ option, a pull-down list will be s
 
 An example of this pull-down list is shown in the image below:
 
-<p align="center">![](images/action_option.png)</p>
+<p align="center"><img src="images/action_option.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 6. Select an action option</font></div>
 
@@ -201,7 +201,7 @@ After clicking on "Save Changes" a new Permission Profile with "Personal Scope" 
 
 After a Permission Profile is created, you can add new permissions to it. To add or remove permission, use the checkboxes below the Permission profile to select the permissions you want that Permission Profile to have. 
 
-<p align="center">![](images/edit_permission.png)</p>
+<p align="center"><img src="images/edit_permission.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 9. Editing new Permission profile</font></div>
 
@@ -249,7 +249,7 @@ A user with No Scope only has access to the video portal.
 
 The permissions that you can assign to each profile are displayed in the Permission Profiles table. Some Permission are only listed if the correspondent bundle is installed.
 
-<p align="center">![](images/permission_list.png)</p>
+<p align="center"><img src="images/permission_list.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 12. Permission List</font></div>
 
