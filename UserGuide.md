@@ -175,11 +175,11 @@ There are 5 default Permission-Profiles to define users:
 
 -   **Administrator**: Has full access to the platform.
 
--   **Publisher**: This person is the content administrator of the platform. It has access to all the modules except the “Management” menu. (Including Admin users, Groups, Permission Profiles editing and Roles editing).
+-   **Publisher**: This person is the content administrator of the platform. It has access to all the modules except the "Management" menu. (Including Admin users, Groups, Permission Profiles editing and Roles editing).
 
--   **Ingestor**: Users that mainly upload and catalog content in the platform. They can not publish new videos, (a Publisher should do after reviewing the ingested content) they only have restricted access to manage the multimedia content in the back office. It does not have access to the “Management” menu (as before), it cannot access the tags and series types Tables. It cannot change the multimedia object status. It can only upload videos through the Wizard or through the OC-Importer.
+-   **Ingestor**: Users that mainly upload and catalog content in the platform. They can not publish new videos, (a Publisher should do after reviewing the ingested content) they only have restricted access to manage the multimedia content in the back office. It does not have access to the "Management" menu (as before), it cannot access the tags and series types Tables. It cannot change the multimedia object status. It can only upload videos through the Wizard or through the OC-Importer.
 
--   **Autopublisher**: They are users that can manage only their own multimedia content. This Permission-profile can be used for Professors and instructors. It has the same restrictions as the “Ingestor”. It cannot access the “Live” menu (live channels and events). It cannot access the OC-Importer. It only has access to the series and multimedia objects he creates (“Owner” role) or he can manage (“Admin Groups”).
+-   **Autopublisher**: They are users that can manage only their own multimedia content. This Permission-profile can be used for Professors and instructors. It has the same restrictions as the "Ingestor". It cannot access the "Live" menu (live channels and events). It cannot access the OC-Importer. It only has access to the series and multimedia objects he creates ("Owner" role) or he can manage ("Admin Groups").
 
 -   **Viewer**: Users that only has authenticated access to video portal so they can watch videos restricted to authenticated users. They can not access to PuMuKIT back office.
 
@@ -247,9 +247,9 @@ On the Series-Listing area each row represents a series. In each of those rows y
 
 ## 2.2 Series Filter
 
-Thanks to these filters, the number of the series on the Series-List area can be narrowed down to easily locate the wanted ones. Using the filter form, a filter based on the title or date can be set up. To optimize the size on the Series view screen, the filter form works as an accordion, which means it can be collapsed the “Search” filter forms if they are not going to be used. The filter‟s title field ignores accent marks and is case insensitive. There is also a wild
-character "*" (meaning it matches any character, e.g. "n*a” would match “Noa”, “nana” and “nigeria”).
-The option “Show empty series” shows all the series that do not have any multimedia objects.
+Thanks to these filters, the number of the series on the Series-List area can be narrowed down to easily locate the wanted ones. Using the filter form, a filter based on the title or date can be set up. To optimize the size on the Series view screen, the filter form works as an accordion, which means it can be collapsed the "Search" filter forms if they are not going to be used. The filter‟s title field ignores accent marks and is case insensitive. There is also a wild
+character "*" (meaning it matches any character, e.g. "n*a" would match "Noa", "nana" and "nigeria").
+The option "Show empty series" shows all the series that do not have any multimedia objects.
 
 <p align="center"><img src="images/mulimedia_series_filter-form.png"></p>
 
@@ -505,8 +505,8 @@ Users that can admin the multimedia object (or the series). The following option
 
 -   **Delete owner**: Click X icon to delete the selected owner.
 -   **Add new owner**: Click NEW to add a new owner. A form like the one in figure X will open and the following options will be available:
-     - ***Search people***: Write the name of people you wish to add; while you start typing the name, you will see a list of people already in the database with a name matching the written characters. For example, after typing “Juan” you will see listed all “Juan” in the database and after typing «Juan go» you will only see listed those people named “Juan” and with a surname starting with “go” as González or Gómez.
-     - ***Create people***: Create new people in the database by clicking in the NEW button. A new form (figure 19) will open where you can finish filling the relevant data for that person. Once you are done the person will be created and linked to the multimedia object. You have to be careful with the position (Post field in the form) you give to the people because it‟s not the same Rubén González as a student or as a programmer. A person in PuMuKIT is a combination of name and position (which means you can “duplicate” a person if their position changes).
+     - ***Search people***: Write the name of people you wish to add; while you start typing the name, you will see a list of people already in the database with a name matching the written characters. For example, after typing "Juan" you will see listed all "Juan" in the database and after typing «Juan go» you will only see listed those people named "Juan" and with a surname starting with "go" as González or Gómez.
+     - ***Create people***: Create new people in the database by clicking in the NEW button. A new form (figure 19) will open where you can finish filling the relevant data for that person. Once you are done the person will be created and linked to the multimedia object. You have to be careful with the position (Post field in the form) you give to the people because it‟s not the same Rubén González as a student or as a programmer. A person in PuMuKIT is a combination of name and position (which means you can "duplicate" a person if their position changes).
 -   **Edit owner: Click "pencil" icon to edit the selected owner. The same form as the one in figure 21 will open. All fields can be changed but be careful if it is not your user.
 
 #### 3.2.4.2 Admin Groups
@@ -733,7 +733,7 @@ These views can be grouped by day, month (by default) or year. You can change th
 
 # 6 Live Streaming
 
-The "Live Management" module allows you to manage the live streaming channels of the PuMuKIT video-portal. It is divided in two different “tools”, the Channel configuration and the Live Events.
+The "Live Management" module allows you to manage the live streaming channels of the PuMuKIT video-portal. It is divided in two different "tools", the Channel configuration and the Live Events.
 
 ![](images/live_channels_module.png)
 
@@ -838,7 +838,7 @@ Once the event is configured in necessary create the sessions of that event. Cli
 
 <div align="center"><font size=1 color="Blue">Figure 39. Session configuration tab</font></div>
 
-To create a new session simply click on “New event session” and the time of the session can be configured.
+To create a new session simply click on "New event session" and the time of the session can be configured.
 
 ![](images/session_configuration_options.png)
 
@@ -877,11 +877,11 @@ There are five user types:
 
 -   **Administrator**: Has full access to the platform.
 
--   **Publisher**: This person is the content administrator of the platform. It has access to all the modules except the “Management” menu. (Including Admin users, Groups, Permission Profiles editing and Roles editing).
+-   **Publisher**: This person is the content administrator of the platform. It has access to all the modules except the "Management" menu. (Including Admin users, Groups, Permission Profiles editing and Roles editing).
 
--   **Ingestor**: Users that mainly upload and catalog content in the platform. They can not publish new videos, (a Publisher should do after reviewing the ingested content) they only have restricted access to manage the multimedia content in the back office. It does not have access to the “Management” menu (as before), it cannot access the tags and series types Tables. It cannot change the multimedia object status. It can only upload videos through the Wizard or through the OC-Importer.
+-   **Ingestor**: Users that mainly upload and catalog content in the platform. They can not publish new videos, (a Publisher should do after reviewing the ingested content) they only have restricted access to manage the multimedia content in the back office. It does not have access to the "Management" menu (as before), it cannot access the tags and series types Tables. It cannot change the multimedia object status. It can only upload videos through the Wizard or through the OC-Importer.
 
--   **Autopublisher**: They are users that can manage only their own multimedia content. This Permission-profile can be used for Professors and instructors. It has the same restrictions as the “Ingestor”. It cannot access the “Live” menu (live channels and events). It cannot access the OC-Importer. It only has access to the series and multimedia objects he creates (“Owner” role) or he can manage (“Admin Groups”).
+-   **Autopublisher**: They are users that can manage only their own multimedia content. This Permission-profile can be used for Professors and instructors. It has the same restrictions as the "Ingestor". It cannot access the "Live" menu (live channels and events). It cannot access the OC-Importer. It only has access to the series and multimedia objects he creates ("Owner" role) or he can manage ("Admin Groups").
 
 -   **Viewer**: Users that only has authenticated access to video portal so they can watch videos restricted to authenticated users. They can not access to PuMuKIT back office.
 
