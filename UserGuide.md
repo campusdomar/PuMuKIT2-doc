@@ -853,7 +853,7 @@ In this module there is also a search filter to facilitate find the events by na
 - Future events: Events that have sessions to broadcast in the future
 - Today events list: Events that have sessions today
 
-<p align="center"><img src="images/filter_events.png)"></p>
+<p align="center"><img src="images/filter_events.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 41. Search filter in events module</font></div>
 
