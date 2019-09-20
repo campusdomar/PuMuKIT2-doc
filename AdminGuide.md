@@ -16,40 +16,40 @@ PuMuKIT-2 SysAdmin Guide
 2. [Pumukit Software Management Tools](#2-pumukit-software-management-tools)
 
   2.1 [Admin users tool](#21-admin-users-tool)
-  
-    2.1.1 [How to create a new user](#211-how-to-create-a-new-user)
-    
-    2.1.2 [Edit and delete users](#212-edit-and-delete-users)
 
-    2.1.3 [Filtering users](#213-filtering-users)
+  2.1.1 [How to create a new user](#211-how-to-create-a-new-user)
 
-    2.1.4 [Executing an action on several users](#214-executing-an-action-on-several-users)
+  2.1.2 [Edit and delete users](#212-edit-and-delete-users)
+
+  2.1.3 [Filtering users](#213-filtering-users)
+
+  2.1.4 [Executing an action on several users](#214-executing-an-action-on-several-users)
   
   2.2 [Permission Profiles Management](#22-permission-profiles-management)
 
-    2.2.1 [Managing Permission Profiles](#221-managing-permission-profiles)
+  2.2.1 [Managing Permission Profiles](#221-managing-permission-profiles)
 
-        2.2.1.1 [Create new permission profile](#2221-create-nee-permission-profile)
+  2.2.1.1 [Create new permission profile](#2221-create-nee-permission-profile)
 
-        2.2.1.2 [Edit an existing permission profile](#2212-edit-an-existing-permission-profile)
+  2.2.1.2 [Edit an existing permission profile](#2212-edit-an-existing-permission-profile)
 
-        2.2.1.3 [Deleting a Permission Profile](#2213-deleting-a-permission-profile)
+  2.2.1.3 [Deleting a Permission Profile](#2213-deleting-a-permission-profile)
 
-        2.2.1.4 [Default Permission Profile](#2214-default-permission-profile)
+  2.2.1.4 [Default Permission Profile](#2214-default-permission-profile)
 
-    2.2.2 [Types of Scope](#222-types-of-scope)
+  2.2.2 [Types of Scope](#222-types-of-scope)
 
-        2.2.2.1 [Global Scope](#2221-global-scope)
+  2.2.2.1 [Global Scope](#2221-global-scope)
 
-        2.2.2.2 [Personal Scope](#2222-personal-scope)
+  2.2.2.2 [Personal Scope](#2222-personal-scope)
 
-        2.2.2.3 [No scope](#2223-no-scope)
+  2.2.2.3 [No scope](#2223-no-scope)
 
-    2.2.3 [Permissions explained](#223-permission-explained)
+  2.2.3 [Permissions explained](#223-permission-explained)
 
   2.3 [Roles tool](#23-roles-tool)
   
-    2.3.1 [The owner role](#231-the-owner-role)
+  2.3.1 [The owner role](#231-the-owner-role)
   
 3. [Other Management Tools](#3-other-management-tools)
 
@@ -57,15 +57,15 @@ PuMuKIT-2 SysAdmin Guide
   
   3.2 [Tables](#32-multimedia-object-metadata-edition)
   
-    3.2.1 [People table](#321-people-table)
+  3.2.1 [People table](#321-people-table)
     
-    3.2.2 [Tags table](#322-tags-table)
+  3.2.2 [Tags table](#322-tags-table)
 
   
-# 1  General Overview
+# 1 General Overview
 
 
-## 1.1  Terminology 
+## 1.1 Terminology 
 
 
 -   **Series**: Ordered collection of multimedia objects.
@@ -104,7 +104,7 @@ PuMuKIT can automate the publication process of your media through different onl
 
 <div align="center"><font size=1 color="Blue">Figure 1. PuMuKit’s frontend</font></div>
 
-# 2  Pumukit Software Management Tools
+# 2 Pumukit Software Management Tools
 
 PuMuKIT"s back-office offers several tools to perform most of the GaliSERVER management tasks. In this section, the different management tools available will be explained.
 For common media management tasks please check "PuMuKIT Content Manager Guide".
@@ -140,7 +140,7 @@ Finally, click on "Save Changes" to create the user and save it to PuMuKIT.
 
 The edit and the delete icons are located in the left side of the users table:
 
-![](images/edit_delete_icons.png)
+<p align="center">![](images/edit_delete_icons.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 4. Edit/delete icons</font></div>
 
@@ -151,7 +151,7 @@ Clicking on the delete icon will permanently delete the user from PuMuKIT.
 
 At the right side of the screen, there is a search filter that allows you to filter the users that are displayed at the users table.
 
-![](images/admin_user_search.png)
+<p align="center">![](images/admin_user_search.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 5. Admin User Search</font></div>
 
@@ -166,7 +166,7 @@ If you click on the ‘Select an action...’ option, a pull-down list will be s
 
 An example of this pull-down list is shown in the image below:
 
-![](images/action_option.png)
+<p align="center">![](images/action_option.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 6. Select an action option</font></div>
 
@@ -201,7 +201,7 @@ After clicking on "Save Changes" a new Permission Profile with "Personal Scope" 
 
 After a Permission Profile is created, you can add new permissions to it. To add or remove permission, use the checkboxes below the Permission profile to select the permissions you want that Permission Profile to have. 
 
-![](images/edit_permission.png)
+<p align="center">![](images/edit_permission.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 9. Editing new Permission profile</font></div>
 
@@ -249,7 +249,7 @@ A user with No Scope only has access to the video portal.
 
 The permissions that you can assign to each profile are displayed in the Permission Profiles table. Some Permission are only listed if the correspondent bundle is installed.
 
-![](images/permission_list.png)
+<p align="center">![](images/permission_list.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 12. Permission List</font></div>
 

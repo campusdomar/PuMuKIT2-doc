@@ -108,10 +108,10 @@ PuMuKIT User Guide
   8.2.2 [Tags table](#822-tags-table)
 
   
-# 1  General Overview
+# 1 General Overview
 
 
-## 1.1  Terminology 
+## 1.1 Terminology 
 
 
 -   **Series**: Ordered collection of multimedia objects.
@@ -411,7 +411,7 @@ On the top of the metadata editing form there is an Info section which is showin
 
 Selecting a multimedia object in the MO-list (clicking once on the row), you will have access to its metadata editing form, below the MO-List area. Since the multimedia object (MO) is the main part of the PuMuKIT database and holds lots of information, the Metadata & Media editing section is quite large. Therefore, it is divided into five tabs and as background image the ID of the multimedia object is shown. The tabs are: Publication, Metadada, Knowledge areas, People and Multimedia (media files).
 
-<p align="center"><img src="images/PuMuKit_3_Content_Admin_Guide_v1.1_html_m33e5f137.png"></p>
+<p align="center"><img src="images/PuMuKit_3_Content_Admin_Guide_v1.1_html_m33e5f13.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 11. MO Metadata & Media tabs</font></div>
 
@@ -569,7 +569,7 @@ These two methods to link images correspond to the two areas of the thumbnail ma
 After linking one or more Thumbnails to a MO or series using this module, you will be able to see those linked thumbnails in the Multimedia-Tab of the referred object:
 <p>
 
-![](images/PuMuKit_3_Content_Admin_Guide_v1.1_html_73582573.png)
+<p align="center">![](images/PuMuKit_3_Content_Admin_Guide_v1.1_html_73582573.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 19. Thumbnails in the Multimedia-Tab of a MO</font></div>
 
@@ -702,7 +702,7 @@ The Statistics window has two main views:
 
 To the right of the search parameters there are two info boxes; the orange box indicates the total number of multimedia objects or series found for your search parameters and the green box shows the total number of views for all these objects during the date range you selected.
 
-![](images/info_box_statistics.png)
+<p align="center">![](images/info_box_statistics.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 30. Info box</font></div>
 
@@ -710,7 +710,7 @@ To the right of the search parameters there are two info boxes; the orange box i
 
 Thanks to this filter, you can narrow down results and easily locate the series or objects you are looking for. This search filter allows you to execute searches based on the title and date range.
 
-![](images/statistics_search_form.png)
+<p align="center">![](images/statistics_search_form.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 31. Series and objects search-form</font></div>
 
@@ -828,7 +828,7 @@ Next, we detailed the configuration options of an event:
      - Event poster: Image shown in the player previously and after the event.
      - Poster text color: Select the text color to the messages.
 
-![](images/poster_configuration_options.png)
+<p align="center">![](images/poster_configuration_options.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 38. Poster configuration options</font></div>
 
@@ -840,7 +840,7 @@ Once the event is configured in necessary create the sessions of that event. Cli
 
 To create a new session simply click on "New event session" and the time of the session can be configured.
 
-![](images/session_configuration_options.png)
+<p align="center">![](images/session_configuration_options.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 40. Session configure options</font></div>
 
@@ -853,7 +853,7 @@ In this module there is also a search filter to facilitate find the events by na
 - Future events: Events that have sessions to broadcast in the future
 - Today events list: Events that have sessions today
 
-![](images/filter_events.png)
+<p align="center">![](images/filter_events.png)</p>
 
 <div align="center"><font size=1 color="Blue">Figure 41. Search filter in events module</font></div>
 
