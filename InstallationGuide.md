@@ -1,6 +1,4 @@
-# PuMuKIT-2 Installation Guide
-
-*This page is updated to the PuMuKIT 2.4.x version*
+# PuMuKIT Installation Guide
 
 ## Index
 
@@ -12,15 +10,15 @@
 
 ## 1. Requirements
 
-PuMuKIT-2 is a LEMP (Linux, nginx, MongoDB, PHP) application, created with the Symfony2 framework. It uses libav-tools (or ffmpeg) to analyze the audiovisual data, as well as to transcode the data.
+PuMuKIT is a LEMP (Linux, nginx, MongoDB, PHP) application, created with the Symfony2 framework. It uses libav-tools (or ffmpeg) to analyze the audiovisual data, as well as to transcode the data.
 
-We recommend to install PuMuKIT on **Ubuntu 18.04** Linux. PuMuKIT 2 has been developed and tested on that Linux distribution and version.
+We recommend to install PuMuKIT on **Ubuntu 18.04** Linux. PuMuKIT has been developed and tested on that Linux distribution and version.
 
-Although it is recommended to use Ubuntu 18.04 it's not mandatory. You can try other Linux distributions and versions at you own risk. The raw requirements for PuMuKIT installation at OS level are: Linux, nginx (1.4.6), libav-tools (9.18), php5 (5.5.9) and mongo (3.0). Libav-tools with h264 and aac support is needed. Also the following php5 modules are required: php5-json, php5-cli, php5-mongo, php5-ldap, php5-curl, php5-intl, php5-fpm and php5-xdebug. Make sure text search is enabled for your mongodb (version 3.0+).
+Although it is recommended to use Ubuntu 18.04 it's not mandatory. You can try other Linux distributions and versions at you own risk. The raw requirements for PuMuKIT installation at OS level are: Linux, nginx (1.4.6), libav-tools (9.18), php7 (7.2) and mongo (3.0). Libav-tools with h264 and aac support is needed. Also the following php5 modules are required: php7.2-json, php7.2-cli, php5-mongo, php7.2-ldap, php7.2-curl, php7.2-intl, php7.2-fpm and php7.2-xdebug. Make sure text search is enabled for your mongodb (version 3.0+).
 
 Use [composer](https://getcomposer.org/) to check and install the dependencies
 
-PuMuKIT-2 has been developed and is often installed on Linux Ubuntu but its use is not essential. It is known it works on Ubuntu 18.04. If it is installed on other Linux distributions, additional libraries may be required.
+PuMuKIT has been developed and is often installed on Linux Ubuntu but its use is not essential. It is known it works on Ubuntu 18.04. If it is installed on other Linux distributions, additional libraries may be required.
 
 ## 2. Single-node Installation on Linux Ubuntu 18.04
 
@@ -45,7 +43,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     sudo apt-get update
     ```
 
-3. Install dependencies of PuMuKIT-2 (see requirements):
+3. Install dependencies of PuMuKIT (see requirements):
 
     ```
     sudo apt-get install -y git curl nginx unzip
@@ -175,8 +173,8 @@ In case it gives a token error, check the [solution in the F.A.Q](#add-github-to
 
 20. Connect and enjoy
 
-    * Connect to the frontend here: `http://{PuMuKIT-2-HOST}/`
-    * Connect to the back-office (Admin UI) with the user created on step 13 here: `http://{PuMuKIT-2-HOST}/admin`
+    * Connect to the frontend here: `http://{PuMuKIT-HOST}/`
+    * Connect to the back-office (Admin UI) with the user created on step 13 here: `http://{PuMuKIT-HOST}/admin`
 
 [(back to index)](#index)
 
@@ -210,7 +208,7 @@ following recommendations:
 
 Configure the transcoder node as a web server with nginx or Apache.
 
-Copy the [webserver.php file](https://github.com/campusdomar/PuMuKIT2/blob/2.1.x/doc/conf_files/cpus/webserver.php) of the PuMuKIT node into the web folder of your transcoder node server directory.
+Copy the [webserver.php file](https://github.com/pumukit/PuMuKIT/blob/3.0.x/doc/conf_files/cpus/webserver.php) of the PuMuKIT node into the web folder of your transcoder node server directory.
 For instance, in a default nginx server configuration on an Ubuntu 18.04 server, should be in `/usr/share/nginx/html/webserver.php`. Change the default user and password of this webserver configuration
 by opening the file and changing these two lines:
 
@@ -225,7 +223,7 @@ Configure the `app/config/encoder.yml` file of your PuMuKIT node to add the tran
 To see all the options to configure, type on your PuMuKIT node and see the `cpus` section:
 
 ```
-cd /path/to/pumukit2
+cd /path/to/pumukit
 php bin/console config:dump-reference pumukit_encoder
 ```
 
@@ -277,9 +275,9 @@ Define each transcoder with a different `name` and add host, max, type, user and
 Configure your NAS server to give access to PuMuKIT and transcoder nodes according to:
 
 - PuMuKIT uploads, inbox and tmp directories. Defaults:
-    - pumukit2.uploads_dir: '%kernel.root_dir%/../web/uploads'
-    - pumukit2.inbox: '%kernel.root_dir%/../web/storage/inbox'
-    - pumukit2.tmp: '%kernel.root_dir%/../web/storage/tmp'
+    - pumukit.uploads_dir: '%kernel.root_dir%/../web/uploads'
+    - pumukit.inbox: '%kernel.root_dir%/../web/storage/inbox'
+    - pumukit.tmp: '%kernel.root_dir%/../web/storage/tmp'
 
 - Encoders configuration: `dir_out` parameter of each profile defined in your `app/config/encoder.yml` configuration file.
 
@@ -290,7 +288,7 @@ PuMuKIT node and transcoder node should mount the NAS server folder where all th
 
 ## 4. Opencast integration
 
-To add [Opencast](http://www.opencast.org/) integration features to the PuMuKIT platform use the Opencast Bundle. The Opencast Bundle is included in PuMuKIT standard installation but it's not activated by default. To activate and configure it, follow the instructions in the Opencast bundle: https://github.com/campusdomar/PuMuKIT2/blob/master/src/Pumukit/OpencastBundle/Resources/doc/README.md
+To add [Opencast](http://www.opencast.org/) integration features to the PuMuKIT platform use the Opencast Bundle. The Opencast Bundle is included in PuMuKIT standard installation but it's not activated by default. To activate and configure it, follow the instructions in the Opencast bundle: https://github.com/pumukit/PumukitOpencastBundle/blob/master/Resources/doc/README.md
 
 
 ## 5. F.A.Q.
@@ -380,7 +378,7 @@ Now Composer should install/update without asking for authentication.
 
 **Not allowed to access app_dev.php via web**
 
-If you get this message when trying to access http://{PuMuKIT-2-HOST}/app_dev.php:
+If you get this message when trying to access http://{PuMuKIT-HOST}/app_dev.php:
 ```
 You are not allowed to access this file. Check app_dev.php for more information.
 ```
@@ -402,7 +400,7 @@ exit('You are not allowed to access this file. Check '.basename(FILE).' for more
 
 **Not allowed to access config.php via web**
 
-If you get this message when trying to access http://{PuMuKIT-2-HOST}/config.php:
+If you get this message when trying to access http://{PuMuKIT-HOST}/config.php:
 ```
 This script is only accessible from localhost.
 ```

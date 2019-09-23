@@ -1,15 +1,15 @@
-PuMuKIT-2 User Guide
+PuMuKIT User Guide
 ====================
 
-*This page is updated to the PuMuKIT 2.1.0 version*
+*This page has been updated on September 18th , 2019*
 
 # PuMuKIT Content Manager Manual
 
 ## Table of contents
 
-1. [General Overview](#1--general-overview)
+1. [General Overview](#1-general-overview)
 
-  1.1 [Terminology](#11--terminology)
+  1.1 [Terminology](#11-terminology)
   
   1.2 [PuMuKIT Overview](#12-pumukit-overview)
   
@@ -29,7 +29,7 @@ PuMuKIT-2 User Guide
   
   2.3 [Series metadata edition](#23-series-metadata-edition)
   
-  2.3.1 [Info-tab (Metadata form)](#231-info-tab-metadata-form)
+  2.3.1 [Series Metadata tab (Metadata edition)](#231-series-metadata-tab-metadata-edition)
   
   2.3.2 [Videos Template-Tab](#232-videos-template-tab)
   
@@ -43,76 +43,80 @@ PuMuKIT-2 User Guide
   
   3.2.1 [Publication Tab](#321-publication-tab)
   
-  3.2.2 [Metadata Tab](#322-metadata-tab)
+  3.2.2 [Basic Metadata Tab](#322-basic-metadata-tab)
   
   3.2.3 [Tags](#323-tags)
   
   3.2.3.1 [Sync KA tags button](#3231-sync-ka-tags-button)
   
   3.2.3.2 [Default KA tags](#3232-default-ka-tags)
+
+  3.2.4 [Owners & groups](#324-owners-&-groups)
+
+  3.2.4.1 [Owners](#3241-owners)
+
+  3.2.4.2 [Admin Groups](#3242-admin-groups)
   
-  3.2.4 [People](#324-people)
+  3.2.5 [People](#325-people)
   
-  3.2.5 [Multimedia tab](#325-multimedia-tab)
+  3.2.6 [Multimedia tab](#326-multimedia-tab)
   
   3.3 [Series and multimedia object thumbnails module](#33-series-and-multimedia-object-thumbnails-module)
   
-  3.3.1 [Linking a thumbnail picture to an object (Series or   	MO)](#331-linking-a-thumbnail-picture-to-an-object-series-or-mo)
+  3.3.1 [Linking a thumbnail picture to an object (Series or MO)](#331-linking-a-thumbnail-picture-to-an-object-series-or-mo)
+
+  3.4 [UNESCO Catalogue View](#34-unesco-catalogue-view)
   
 4. [Ingesting and importing content](#4-ingesting-and-importing-content)
 
   4.1 [Ingesting "mono-stream" content (regular videos)](#41-ingesting-mono-stream-content-regular-videos)
   
   4.1.1 [Running the Ingest-wizard](#411-running-the-ingest-wizard)
-  
-  4.2 [Importing videos from Opencast](#42-importing-videos-from-opencast)
-  
-  4.2.1 [First video of a series](#421-first-video-of-a-series)
-  
-  4.2.2 [Additional videos of a series](#422-additional-videos-of-a-series)
-  
-  4.2.3 [Video without a series in Opencast](#423-video-without-a-series-in-opencast)
-  
-5. [Live Streaming](#5-live-streaming)
 
-  5.1 [Live channel module](#51-live-channel-module)
-  
-  5.2 [Streaming encoder configuration](#52-streaming-encoder-configuration)
-  
-  5.3 [Live events module](#53-live-events-module)
-  
-6. [System management modules](#6-system-management-modules)
+5. [Statistics](#5-statistics)
 
-  6.1 [Encoder jobs module](#61-encoder-jobs-module)
-  
-  6.2 [Admin users module](#62-admin-users-module)
-  
-  6.3 [Roles module](#63-roles-module)
-  
-7. [Other management modules](#7-other-management-modules)
+  5.1 [Series and objects search filter](#51-series-and-objects-search-filter)
 
-  7.1 [Dashboard module](#71-dashboard-module)
+  5.2 [Most viewed](#52-most-viewed)
+
+  5.3 [Views by time period](#53-views-by-time-period)
   
-  7.2 [Tables module](#72-tables-module)
+6. [Live Streaming](#6-live-streaming)
+
+  6.1 [Live channel module](#61-live-channel-module)
   
-  7.2.1 [People module](#721-people-module)
+  6.2 [Streaming encoder configuration](#62-streaming-encoder-configuration)
   
-  7.2.2 [Tags module](#722-tags-module)
+  6.3 [Advanced Live events module](#63-advanced-live-events-module)
   
-  7.2.3 [Broadcast Profile module](#723-broadcast-profile-module)
+7. [System management modules](#7-system-management-modules)
+
+  7.1 [Encoder jobs module](#71-encoder-jobs-module)
   
-  7.2.4 [Series types module](#724-series-types-module)
+  7.2 [Admin users module](#72-admin-users-module)
+  
+  7.3 [Roles module](#73-roles-module)
+  
+8. [Other management modules](#8-other-management-modules)
+
+  8.1 [Dashboard module](#81-dashboard-module)
+  
+  8.2 [Tables module](#82-tables-module)
+  
+  8.2.1 [People table](#821-people-table)
+  
+  8.2.2 [Tags table](#822-tags-table)
 
   
-# 1  General Overview
+# 1 General Overview
 
 
-## 1.1  Terminology 
+## 1.1 Terminology 
 
 
 -   **Series**: Ordered collection of multimedia objects.
 
--   **Multimedia Objects**: Set of media files (audio or video files), metadata and attachments (related files like ppts, pdfs, etc...). A multimedia object is composed by:
+-   **Multimedia Objects**: Set of media files (audio or video files), metadata and attachments (related files like ppts, pdfs, etc...). A multimedia object is composed of:
 	
     - Several multimedia files: the "master" copy with maximum quality and one or several "distribution" or "delivery" copies, of the same media, encoded with different qualities or codecs.
 
@@ -123,6 +127,8 @@ PuMuKIT-2 User Guide
     - Metadata about the people that takes part in the multimedia object production and their roles.
 
     - Attached files (PDF, PPT, etc...) and URLs that complete the content of the multimedia object.
+
+-   **PuMuKIT (Back-Office):** The PuMuKIT back-office is a modular web application designed to manage the series and multimedia objects of a PuMuKIT video platform. Using this back-office you will be able to ingest, catalogue and publish your media (audio and video assets) to different channels: The internal Video Portal, iTunesU, YouTube, etc...
 
 -   **Video-Portal (Web-TV):** The video focused, youtube-like, website generated by PuMuKIT.
 
@@ -140,7 +146,7 @@ PuMuKIT is a powerful Open-Source video platform, it provides great media catalo
 
 PuMuKIT can automate the publication process of your media through different online publishing channels such as Video-Portals (WebTV), different RSS feeds, iTunesU sites, YouTube channels or DSpace repositories.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m25972adc.png)
+![](images/frontendPumukit.png)
 
 <div align="center"><font size=1 color="Blue">Figure 1. PuMuKit’s frontend</font></div>
 
@@ -163,13 +169,19 @@ Multimedia objects with a common event (symposium, meeting, etc...) or topic (su
 
 ### 1.3 PuMuKIT Back-Office
 
-The PuMuKIT back-office is a modular web application designed to manage the multimedia Series and objects of a PuMuKIT video platform. Using this back-office you will be able to ingest, catalogue and publish your media (audio and video assets) to different channels: The internal Video-Portal, iTunesU, Youtube, etc...
+The PuMuKIT back-office is a web application designed to manage the multimedia series and objects of a PuMuKIT video platform. Using this back-office you will be able to ingest, catalogue and publish your media (audio and video assets) to different channels: The internal Video-Portal, iTunesU, Youtube, etc...
 
-There are two types of users at the back-office level:
+There are 5 default Permission-Profiles to define users:
 
 -   **Administrator**: Has full access to the platform.
 
--   **Publisher**: Has access to the Media Management functions but not to the administration menu (create and delete users, transcode parameter definition, etc...).
+-   **Publisher**: This person is the content administrator of the platform. It has access to all the modules except the "Management" menu. (Including Admin users, Groups, Permission Profiles editing and Roles editing).
+
+-   **Ingestor**: Users that mainly upload and catalog content in the platform. They can not publish new videos, (a Publisher should do after reviewing the ingested content) they only have restricted access to manage the multimedia content in the back office. It does not have access to the "Management" menu (as before), it cannot access the tags and series types Tables. It cannot change the multimedia object status. It can only upload videos through the Wizard or through the OC-Importer.
+
+-   **Autopublisher**: They are users that can manage only their own multimedia content. This Permission-profile can be used for Professors and instructors. It has the same restrictions as the "Ingestor". It cannot access the "Live" menu (live channels and events). It cannot access the OC-Importer. It only has access to the series and multimedia objects he creates ("Owner" role) or he can manage ("Admin Groups").
+
+-   **Viewer**: Users that only has authenticated access to video portal so they can watch videos restricted to authenticated users. They can not access to PuMuKIT back office.
 
 The different modules of this back-office are listed in its main menu. Just click on any of them to start working.
 
@@ -190,7 +202,7 @@ One of the main modules of the PuMuKIT Back-Office is the Series Management modu
 
 ![](images/back-office-general_edition.png)
 
-<div align="center"><font size=1 color="Blue">Figure 3. Multimedia Series-List</font></div>
+<div align="center"><font size=1 color="Blue">Figure 3. Series-List</font></div>
 
 ## 2.1 Series-List
 
@@ -198,7 +210,7 @@ The Series-List is the main section of the interface and is made up of a table l
 
 ![](images/multimedia_series_list.png)
 
-<div align="center"><font size=1 color="Blue">Figure 4. Multimedia Series-List</font></div>              
+<div align="center"><font size=1 color="Blue">Figure 4. Series-List</font></div>              
 
 <p>
 The column names in the header of the table are links that you can use to rearrange the data of the listing in ascending or descending order for: the title of the series or the date of publication. To change this order, you simply have to click on the header of the column you want to sort your data with. If it's already sorted according to this column, data will be sorted in the opposite order.
@@ -210,27 +222,34 @@ On the Series-Listing area each row represents a series. In each of those rows y
 
 -   **Checkbox**: Used to select a series or group-operations (to delete several series at the same time, for instance).
 
--   **Announcement indicator**: A blue "A" indicates that the series itself is announced in the "Recently Added" area of the home page. A grey "A" indicates that the series has some multimedia objects that are announced in the same area of the home page. Refer to section 2.3.1 for more information.
+-   **Announcement indicator**: A blue "A" indicates that the series itself is announced in the "Recently Added" area of the home page. A grey "A" indicates that the series has some multimedia objects that are announced in the same area of the home page. 
 
--   **Broadcast level icon**: The broadcast level of a series depends on the broadcast level of its multimedia objects and it is represented by this icon. Clicking on the icon it allows you to modify the broadcast-status of several multimedia objects from the series simultaneously, e.g. to change several multimedia objects from "Blocked" to "Published" status. See section 3.2.1. Refer to Annex 11: Diffusion-icons for a Broadcast-level icons list. 
+-   **Publication level icon**: The publication status of a series depends on the publication status of its multimedia objects and it is represented by this icon. By placing the mouse pointer over the icon, it is possible to see how many multimedia objects are Published, Blocked or Hidden inside the selected series. An example can be seen in the following figure. 
 
--   **Hamburger Icon**: Quick access to multiple Series-Management funtions (only the delete funtion is available yet):
+-   **Hamburger Icon**: Quick access to multiple Series-Management funtions:
+     - List multimedia objects of the series: Provides access to the multimedia objects (videos) view for this series. You can also open the MO view by double clicking anywhere on the row of a series in the Series-List.
+
+     - Modify all multimedia objects status: Modify the status of all multimedia objects in this series.
+
+     - Modify all broadcast: Modify broadcast profile of all multimedia objects in this Series.
 
      - Delete series: Delete the series and all its multimedia objects. If the multimedia objects include Opencast videos, PuMuKIT will not delete those videos from the Opencast system. Just the linked PuMuKIT-MO (created in the import-process) will be deleted.
-     
--   **Link to "videos"**: It provides access to the multimedia objects (videos) management module for this series. Double clicking anywhere on the row listing of a series in the Series-Listing, you will also open the MO management module.
 
--   **Thumbnail**: A small picture representing the serie content.
+     - Show properties: Show the Series properties. The information of this field can be diverse and variable.
+
+-   **Img**: A small picture representing the serie content.
 
 -   **Title**: Title of the series.
 
 -   **Date**: Date of publication of the series.
 
--   **NumObj**: Number of multimedia objects in the series.
+-   **Mm.Obj.**: Number of multimedia objects in the series.
 
 ## 2.2 Series Filter
 
-Thanks to these filters, you can narrow down results on the Series-List area and easily locate the series you are looking for. Using this filter-form, you can create filters based on the title, date or broadcast-states. To optimize the size on screen of the Series filter-form it works as an accordion collapsing the non used fields. The fields of the filter-ignore accent marks and are case insensitive you can use "*" as the wildcard character.
+Thanks to these filters, the number of the series on the Series-List area can be narrowed down to easily locate the wanted ones. Using the filter form, a filter based on the title or date can be set up. To optimize the size on the Series view screen, the filter form works as an accordion, which means it can be collapsed the "Search" filter forms if they are not going to be used. The filter‟s title field ignores accent marks and is case insensitive. There is also a wild
+character "*" (meaning it matches any character, e.g. "n*a" would match "Noa", "nana" and "nigeria").
+The option "Show empty series" shows all the series that do not have any multimedia objects.
 
 <p align="center"><img src="images/mulimedia_series_filter-form.png"></p>
 
@@ -239,10 +258,12 @@ Thanks to these filters, you can narrow down results on the Series-List area and
 
 ## 2.3 Series metadata edition
 
-By selecting a multimedia series in the Series-list (cliking once in the series row), you will have access to its metadata editing form, below the Series-List area. The metadata editing form is divided into two tabs: "Info" and "VideosTemplate".
-On the top of the metadata editing form there is an Info section which is showing the Id, the URL and the "Magic" URL of the Series:
+By selecting a multimedia series in the Series-list (clicking once in the series row), you will have access to its metadata editing form, below the Series-List area. The metadata editing form is divided into two tabs: "Metadata" and "Videos Metadata Template".
+At the top of the metadata editing form there is an Metadata section which is showing the Id, the URL and the "Magic" URL of the Series:
 
 -   ID: Unique identifier of the series.
+
+-   Title: The title of the series.
 
 -   URL: URL to the series in the public Video portal.
 
@@ -252,15 +273,15 @@ On the top of the metadata editing form there is an Info section which is showin
 
 ![](images/info_magic_url.png)
 
-<div align="center"><font size=1 color="Blue">Figure 6. Multimedia series info section</font></div>
+<div align="center"><font size=1 color="Blue">Figure 6. Multimedia series metadata section</font></div>
 
-### 2.3.1 Info-tab (Metadata form)
+### 2.3.1 Series Metadata tab (Metadata Edition)
 
-Selecting this tab you will have access to the descriptive metadata (title, subtitle, etc...) and presentation metadata (thumbnail, HTML header and footer, etc...) of the series.
+By selecting this tab you will have access to the descriptive metadata (title, subtitle, etc...) and presentation metadata (thumbnail, HTML header and footer, etc...) of the series.
 
 As it is shown in the picture below, the form has the identifier of the series you are modifying, as background image. 
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_5bc6c027.png)
+![](images/PuMuKit_3_Content_Admin_Guide_v1.1_html_5bc6c027.png)
 
 <div align="center"><font size=1 color="Blue">Figure 7. Multimedia series metadata editing form</font></div>
 
@@ -269,9 +290,13 @@ You will find the following metadata fields in the form:
 
 -   **Last Added checkbox**: If you select it, this series will be included in the "Recently Added" area of the video portal home page.
 
+-   **Hide**: If this checkbox is marked, all the series info is hidden in the frontend but the published MO of the series are visible.
+
 -   **Title**: It is used to define the title of the series and it is mandatory. Several title-fields are available for the different languages defined in the platform.
 
 -   **Subtitle**: It is used to define the subtitle of the series, if it has one. Several subtitle-fields are available for the different languages defined in the platform.
+
+-   **Description**: Include here a short description of the series. Several description-fields are available for the different languages defined in the platform.
 
 -   **Keywords**: Include here any keywords for the series separated by semicolons. It is used to improve the efficiency of the searches.
 
@@ -281,22 +306,24 @@ You will find the following metadata fields in the form:
 
 -   **Channel**: Useless field that will soon be removed.
 
--   **Date of publication**: It is initialized with the date of the creation of the series. It's easy to modify thanks to the calendar widget.
+-   **Publication Date**: It is initialized with the date of the creation of the series. It's easy to modify thanks to the calendar widget.
 
--   **Description**: Include here a short description of the series. Several description-fields are available for the different languages defined in the platform.
-
--   **Images**: One or more small images (thumbnails) related to the series. You can modify the order, delete or insert new ones. See section 3.3.
+-   **Thumbnails**: One or more small images (thumbnails) related to the series. You can modify the order, delete or insert new ones. See section 3.3.
 
 -   **HTML texts**: In these text boxes, you can add raw HTML content both to the header and footer of the series for decoration purposes.
 
 -   **Headline**: Text that replaces the subtitle of the series when it is listed in the "Recently added" area of the video-portal homepage.
+
+-   **Template**: It is used to choose the way of show the series videos in the portal.
+
+-   **Sorting**: It is used to select the order of the series videos in the portal
 <p>
 
 ### 2.3.2 Videos Template-Tab
 
 It allows you to set a common metadata template for each new multimedia object created in that series. This is a very powerful tool that saves a lot of time in daily operation.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m281cc647.png)
+![](images/PuMuKit_3_Content_Admin_Guide_v1.1_html_m281cc647.png)
 
 <div align="center"><font size=1 color="Blue">Figure 8. Default video metadata template</font></div>
 
@@ -310,7 +337,7 @@ This is a module to manage the multimedia-objects of a given series. Usually you
 
 The user interface of this module is very similar to the series-management one. It is divided into the multimedia-objects listing area, the preview area and the metadata and media admin area. This module does not have a filtering form because generally a series does not hold a high number of multimedia objects and filtering is not necessary. 
 
-![](images/multimedia_object_general_edition.png)
+![](images/mo_management.png)
 
 <div align="center"><font size=1 color="Blue">Figure 9. MO management module</font></div>
 
@@ -328,36 +355,46 @@ In the MO-List area each row represents a MO. In each of those rows you will fin
 
 -   **Checkbox**: Used to select a MO for group-operations (to delete several MO at the same time, for instance).
 
--   **Indicator of the multimedia object broadcasting. Announcement indicator**: A black "A" indicates that the MO is announced in the "Reciently Added" area of the home page.
+-   **Publication Status icon**: Publication status of the multimedia object selected. By placing the mouse pointer over the icon, it is possible to see the publication status of the multimedia object. There are three possible status:
+     - Published : The MO is listed in the Series and can be played with published URL.
+     - Blocked : The MO cannot be accessed outside the back-end.
+     - Hidden : The MO is not listed in the Series but can be played with magic URL.
+     - Processing : The MO is generating its masters and/or delivery copies
 
 -   **Hamburger Icon**: Quick access to multiple MO-Management functions.
 
      - **Delete MO**: Delete the MO. A recursive delete is performed, deleting all video files, materials (attachments) and images included in the MO. If the multimedia objects include Opencast videos, PuMuKIT will not delete those videos from the Opencast system, just the linked PuMuKIT-MO (created in the import-process) will be deleted.
+
+     - **Add to playlist****: Add the selected MO to a playlist. This option is only available if Pumoodle bundle is installed.
      
      - **Clone MO**: (multimedia objects cloning) an intelligent cloning is performed and the same images and people are linked. Multimedia files are not copied.
+
+     - **Show properties**: Show some Series properties. The information varies according to the MO origin. For example, if the MO has been imported from Opencast, the information will be related to Opencast (ID, URL, language, etc...). If the MO has been imported from Chaplin, then the information will be related to Chaplin (ID, Title, Author, Subtitle, etc...). And if the MO has been created in PuMuKIT, the information will be related to PuMuKIT (owner‟s id, subseries title, template option, etc...).
      
 -   **Move up icon**: It moves the multimedia object up in the list. It is used to modify the order of multimedia objects in the series.
 
 -   **Move down icon**: It moves the multimedia object down in the list. It is used to modify the order of multimedia objects in the series.
 
--   **Thumbnail**: Small picture that represents the multimedia object.
+-   **Img**: Small picture that represents the multimedia object.
 
 -   **Title**: Title of the multimedia object.
 
--   **Publication date**: Publication date of the multimedia object.
+-   **Duration**: Video duration.
 
--   **Recording date**: Recording Date of the multimedia object.
+-   **RecDate**: Recording Date of the multimedia object.
+
+-   **PubDate**: Publication date of the multimedia object.
 
 Below this list, there is a **"+ wizard"** button. You can use this button to add new MOs to this series.
 
-There is also a **"Select action"** box. This control allows you to delete or modify the state of several multimedia objects at a time (the ones with the checkbox selected).
+There is also a **"Select action"** box. This drop-down list allows you to delete or modify the state of several multimedia objects at a time by first selecting them using the checkbox at their left and then selecting an action from the drop-down list.
 
 ![](images/multimedia_objects_info_section.png)
 
 <div align="center"><font size=1 color="Blue">Figure 10. Multimedia object's info section</font></div>
 
 <p>
-By selecting a MO in the MO-list (clicking once in the MO row), you will have access to its metadata editing form, below the MO-List area. The metadata editing form is divided into five tabs: "Publication", "Metadata";"Tags","People", and "Multimedia".
+By selecting a MO in the MO-list (clicking once in the MO row), you will have access to its metadata editing form, below the MO-List area. The metadata editing form is divided into five tabs: "Publication", "Basic Metadata", "Tags", "Owners & Groups", "People", and "Multimedia (media files)" and Media Edition.
 
 On the top of the metadata editing form there is an Info section which is showing the Id, the URL and the "Magic" URL of the MO:
 
@@ -374,7 +411,7 @@ On the top of the metadata editing form there is an Info section which is showin
 
 Selecting a multimedia object in the MO-list (clicking once on the row), you will have access to its metadata editing form, below the MO-List area. Since the multimedia object (MO) is the main part of the PuMuKIT database and holds lots of information, the Metadata & Media editing section is quite large. Therefore, it is divided into five tabs and as background image the ID of the multimedia object is shown. The tabs are: Publication, Metadada, Knowledge areas, People and Multimedia (media files).
 
-<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m33e5f137.png"></p>
+<p align="center"><img src="images/PuMuKit_3_Content_Admin_Guide_v1.1_html_m33e5f13.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 11. MO Metadata & Media tabs</font></div>
 
@@ -388,9 +425,13 @@ This first tab includes metadata related to the publication of a multimedia obje
 
 -   **Publishing decisions**: Set of selectors that allow to catalogue the multimedia object by globalizing it into one category as the frontend of the website is displayed. 
 
--   **Broadcast**: Through this, you can modify the ACLs of the video (public, password locked, etc...). In some PuMuKIT deployments the LDAP profile is available so users in a LDAP server will be able to access the MO using their LDAP user and password.
+-   **Broadcast profile**: Through this, the access rights to the video can be modified. There are four different broadcasts available.
+     - Public: Any internet user can play this multimedia object.
+     - Password protected: Only users with the defined password can play this multimedia object. The password must be introduced twice. Use the button Show/Hide password to see the password and the Generate random password one to create a strong password.
+     - Only logged in Users: Only logged in users in the system can play this multimedia object.
+     - Only Users in Groups: Only users in the selected groups can play this multimedia object. As shown in figure 15, all the available groups are listed on the left. To add or remove groups from one list to another, double-click on the group name or select the group and click the corresponding arrow.
 
-<p align="center"><img src="images/publication.tab.png"></p>
+<p align="center"><img src="images/publication_tab_OM.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 12. Multimedia objects publication tab</font></div>
 
@@ -398,11 +439,11 @@ This first tab includes metadata related to the publication of a multimedia obje
 As you can see, there are different publication channels where you can publish multimedia objects. A multimedia object can be published in one or several channels like the internally generated Video-portal (WebTV), iTunesU RSS or YouTube. When a publication channel is selected, before publishing it, the file is automatically transcoded if required to match the specifications of the channel (MP4-H264 for iTunes, for instance) .The MO will not be published until this transcoding task is finished.
 <p>
 
-### 3.2.2 Metadata Tab
+### 3.2.2 Basic Metadata Tab
 
 This tab gives access to descriptive and presentation related metadata of the MO. The form in this tab includes the following fields:
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m1e20cbe8.png)
+![](images/PuMuKit_3_Content_Admin_Guide_v1.1_html_m1e20cbe8.png)
 
 <div align="center"><font size=1 color="Blue">Figure 13. Metadata edition form</font></div>
 
@@ -410,17 +451,19 @@ This tab gives access to descriptive and presentation related metadata of the MO
 
 -   **Subtitle**: It is used to define the subtitle of the MO if it has one. Several subtitle-fields are available for the different languages defined in the platform.
 
+-   **Description**: Include here a short description of the MO. Several description-fields are available for the different languages defined in the platform. 
+
+-   **Comments**: Internal notes about the MO. They are not shown in the frontend.
+
 -   **Keywords**: Include here any keywords for the MO separated by semicolons. It is used to improve the efficiency of the searches.
 
 -   **Copyright**: Field where the copyright of the MO is defined.
 
 -   **License**: Text field for licensing information (Creative Commons-SA-BY, etc...).
 
--   **Public date**: It is initialized with the date of the creation of the series. It's easy to modify using the calendar widget.
+-   **Publication date**: It is initialized with the date of the creation of the series. It's easy to modify using the calendar widget.
 
--   **Record date**: Recording date of the multimedia object. It is initialized with the creation date of the multimedia object. Mandatory field.
-
--   **Description**: Include here a short description of the MO. Several description-fields are available for the different languages defined in the platform. 
+-   **Recording date**: Recording date of the multimedia object. It is initialized with the creation date of the multimedia object. Mandatory field.
 
 -   **Headline**: Text that replaces the subtitle of a MO when it is listed in the "Recently added" area of the video-portal homepage.
 
@@ -442,38 +485,55 @@ In the upper right corner of this tab you can see the button "SYNC IN THIS SERIE
 
 #### 3.2.3.2 Default KA tags
 
-If the KA tags of all the MO of a series are going to be the same, you can modify the default
-"Video Template" of the Series (Section 2.3.2) specially the default "Tags-Tab" for that series (this is especially helpful when importing Opencast recordings). Doing that, every new multimedia object of the series will have these KA tags set by default when it is created.
+If the KA tags of all the MO of a series are going to be the same, you can modify the default "Video Template" of the Series (Section 2.3.2) specially the default "Tags-Tab" for that series (this is especially helpful when importing Opencast recordings). Doing that, every new multimedia object of the series will have these KA tags set by default when it is created.
 
 ![](images/tags.png)
 
 <div align="center"><font size=1 color="Blue">Figure 14. Multimedia object's areas tab</font></div>
 
-### 3.2.4 People
+### 3.2.4 Owners & Groups
+
+In this tab there are two sections: Owners and Admin Groups.
+
+![](images/owners_groups.png)
+
+<div align="center"><font size=1 color="Blue">Figure 15. Multimedia object’s owners & groups tab</font></div>
+
+##### 3.2.4.1 Owners 
+
+Users that can admin the multimedia object (or the series). The following options are available in this section:
+
+-   **Delete owner**: Click X icon to delete the selected owner.
+-   **Add new owner**: Click NEW to add a new owner. A form like the one in figure X will open and the following options will be available:
+     - ***Search people***: Write the name of people you wish to add; while you start typing the name, you will see a list of people already in the database with a name matching the written characters. For example, after typing "Juan" you will see listed all "Juan" in the database and after typing «Juan go» you will only see listed those people named "Juan" and with a surname starting with "go" as González or Gómez.
+     - ***Create people***: Create new people in the database by clicking in the NEW button. A new form (figure 19) will open where you can finish filling the relevant data for that person. Once you are done the person will be created and linked to the multimedia object. You have to be careful with the position (Post field in the form) you give to the people because it‟s not the same Rubén González as a student or as a programmer. A person in PuMuKIT is a combination of name and position (which means you can "duplicate" a person if their position changes).
+-   **Edit owner: Click "pencil" icon to edit the selected owner. The same form as the one in figure 21 will open. All fields can be changed but be careful if it is not your user.
+
+#### 3.2.4.2 Admin Groups
+
+A Group is a set of users that can administrate the selected multimedia objects or series. Only the admin users can create groups and add other users to it.
+However, through this tab a Publisher user can select which group can admin a multimedia object (or a series). To know more about the Groups module, see
+Galicaster Media Server-System Admin Guide. 
+
+Adding a group as an Admin Group means that all users in the group can reproduce it in the publication channel selected. Moreover, those ones with a Permission Profile different than Viewer will see the selected MO in the back- office and will be able to edit its characteristics.
+There are two columns the one on the left with all available groups in the system and the one on the right with the selected admin groups.
+
+There are two ways to add/remove groups from one column to another. By double clicking on the desired group or by selecting the desired group and then
+clicking the corresponding arrow (the right one to add and the left one to remove). These actions should be done in the left column to add admin groups and in the right column to remove them.
+
+### 3.2.5 People
 
 In this tab you can include people related to the MO in different roles. It is divided in blocks, each one corresponding to the different roles that a person can have related to a video (actor, organizer, producer...). You can modify the order of the people listed in each role with the arrows in the list. You can also edit the attributes of the people, without using the "people module". In addition, you can remove a person from the multimedia object. (NOTE: If you remove a person that is not related to another multimedia object, you will be deleting him/her from the database). Using the "new" button, you can add a new person to the MO while creating it in the database or add an already existing person to the object.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_41cbe086.png)
+![](images/PuMuKit_3_Content_Admin_Guide_v1.1_html_41cbe086.png)
 
-<div align="center"><font size=1 color="Blue">Figure 15. Multimedia object’s people tab</font></div>
+<div align="center"><font size=1 color="Blue">Figure 16. Multimedia object’s people tab</font></div>
 
-<p>
-If you click on the "new" button, you will access to a form where you can write the name of people you wish to add; while you start typing the name, you will see a list of people already in the database with a name matching the written caracters. For example, after typing "Rubén" you will see listed all "Rubén" in the database and after typing "Ruben go" you will only see listed those people named "Rubén" and with a surname starting with "go" as González or Gómez.
-
-After typing the full name, if the person is already in the database, he or she will be listed. After selecting the person and pressing the "use" button, he/she will be linked to the multimedia object. If he or she is not in the database, after typing the full name you will see an empty list, at that point you can click on the "new" button to create this new person in the database. A new form will open and you will finish filling the relevant data for the person.Once you are done the person will be created and linked to the multimedia object. You have to be careful with the position you give to the people because it's not the same Rubén González González as a student or as a programmer. A person in PuMuKIT is a combination of name and position.
-<p>
-
-The next image illustrates this process:
-
-<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m5b9ec300.png"></p>
-
-<div align="center"><font size=1 color="Blue">Figure 16. People search form</font></div>
-
-### 3.2.5 Multimedia tab
+### 3.2.6 Multimedia tab
 
 This tab gives you access to the MO media files (the essence of the digital object), and also to other attached files. It is formed by four areas:
 
--   **Images**: A list of thumbnails or small images linked to the multimedia object. You can modify its order, delete them or insert new images. See section 3.3.
+-   **Thumbnails**: A list of thumbnails or small images linked to the multimedia object. You can modify its order, delete them or insert new images. See section 3.3.
 
 -   **Video files**: List of media files of the multimedia object. You can upload new "master" video files, modify, arrange, preview or delete them.
 
@@ -481,7 +541,7 @@ This tab gives you access to the MO media files (the essence of the digital obje
 
 -   **Links**: List of URLs related to the multimedia object. You can create new ones, modify, arrange or delete them.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6fdd7353.png)
+![](images/PuMuKit_3_Content_Admin_Guide_v1.1_html_6fdd7353.png)
 
 <div align="center"><font size=1 color="Blue">Figure 17. Multimedia object’s multimedia tab</font></div>
 
@@ -493,17 +553,15 @@ Both series and multimedia objects have a certain number of representative thumb
 
 ### 3.3.1 Linking a thumbnail picture to an object (Series or MO)
 
-There are three different ways to link a thumbnail picture to a MO or Series:
+There are two different ways to link a thumbnail picture to a MO or Series:
 
--   **Using an external URL**: This is used to link to an existing image hosted in an external HTTP server.
-
--   **Uploading a local image**: You can upload an image file from your local hard drive. The image will be resized by the PuMuKIT server to save space and optimize page loading speed. 
+-   **Uploading a local image**: You can upload an image file from your local hard drive. The image will be resized by the PuMuKIT server to save space and optimize page loading speed.
 
 -   **Using an existing image**: The last used images are listed in pages so you could reuse them. You can advance through the different pages with the "previous" and "next" buttons.
 
-These three methods to link images correspond to the three areas of the thumbnail management form.
+These two methods to link images correspond to the two areas of the thumbnail management form.
 
-<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png"></p>
+<p align="center"><img src="images/PuMuKit_3_Content_Admin_Guide_v1.1_html_6753099c.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 18. Thumbnail management form</font></div>
 
@@ -511,7 +569,7 @@ These three methods to link images correspond to the three areas of the thumbnai
 After linking one or more Thumbnails to a MO or series using this module, you will be able to see those linked thumbnails in the Multimedia-Tab of the referred object:
 <p>
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_73582573.png)
+<p align="center"><img src="images/PuMuKit_3_Content_Admin_Guide_v1.1_html_73582573.png"></p>
 
 <div align="center"><font size=1 color="Blue">Figure 19. Thumbnails in the Multimedia-Tab of a MO</font></div>
 
@@ -523,7 +581,7 @@ In the MO management module, the new thumbnail can be posted in two different wa
 
 -   If the content of the multimedia object is a video, you can extract a thumbnail from the video frames. Using the "Photo" button, an image will be extracted at the selected instant of the video.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m190fe2b4.png)
+![](images/PuMuKit_3_Content_Admin_Guide_v1.1_html_m190fe2b4.png)
 
 <div align="center"><font size=1 color="Blue">Figure 20. Photo tool (Frame Capture tool)</font></div>
 
@@ -531,10 +589,28 @@ In the MO management module, the new thumbnail can be posted in two different wa
 -   The thumbnail can be uploaded to the server from your computer by clicking on "New Image". These images are resized on the server to optimize space and reduce the bandwidth needed to display the portal.
 <p>
 
-<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6753099c.png"></p>
+## 3.4 UNESCO Catalogue view
 
+This view shows the MOs catalogued in the UNESCO tags. It has also an advanced viewer that allows search by all the fields of MO metadata.
 
-<div align="center"><font size=1 color="Blue">Figure 21. Picture edition form</font></div>
+![](images/unesco_catalogue.png)
+
+<div align="center"><font size=1 color="Blue">Figure 21. UNESCO catalogue view</font></div>
+
+In the left menu you can Access to all the UNESCO tags and clicking in a tag you can see all the catalogued videos of that tag.
+There are two filter options in this view, the normal search where you can search by title, subtitle or description:
+
+![](images/unesco_catalogue_normal_filter.png)
+
+<div align="center"><font size=1 color="Blue">Figure 22. Normal search filter</font></div>
+
+And the advanced search where you can search by all the available fields of MOs:
+
+![](images/unesco_catalogue_advanced_filter.png)
+
+<div align="center"><font size=1 color="Blue">Figure 23. Advanced Search filter</font></div>
+
+It is possible to edit all the fields of a selected MO in this section, just like in the MO view.
 
 # 4 Ingesting and importing content
 
@@ -542,48 +618,40 @@ In the MO management module, the new thumbnail can be posted in two different wa
 
 Multimedia objects and series are created using the "Multimedia series" module. From the PuMuKIT-Backoffice to automate the process there is a wizard that will guide you through the steps of the creation and cataloging of mono-stream content. You can launch the Ingest-Wizard from the Series Management or the MO Management module.
 
-If you run the Ingest-Wizard from the Series-module you will be prompted to create a new series or select an existing one. If you run it from the MO-module of a given series the wizard will assume that you intend to ingest a new object in that specific series and will skip the Series selection step (**STEP I**).
-
 ### 4.1.1 Running the Ingest-wizard
 
 The wizard will launch after clicking the button "Wizard", as shown in the picture below:
 
 <p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_2fab8148.png"></p>
 
-<div align="center"><font size=1 color="Blue">Figure 22. Wizard button</font></div>
+<div align="center"><font size=1 color="Blue">Figure 24. Wizard button</font></div>
 
 <p>
-This Ingest-wizard  is composed of three steps:
+This Ingest-wizard  is composed of four steps:
 <p>
 
--   **STEP 0**: Series selection or creation: The wizard will show you a pop-up window to complete the title and description of the series that will contain the new multimedia object. (If the wizard is run from within an existing series MO management module this step will not be displayed and the new media objects will be stored in said series).
+-   **STEP I**: The wizard will show you a pop-up window to choose one or several multimedia objects: In this step, you can choose to upload one single multimedia
+object or a group of them to the series.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m23c5cf20.png)
-
-<div align="center"><font size=1 color="Blue">Figure 23. Wizard Step</font></div>
-
-<p>
--   **STEP I**: In this step, you can choose to upload one single multimedia object or a group of them to the series.
-<p>
     
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_6aa0e25d.png)
+![](images/step_1_wizard.png)
 
-<div align="center"><font size=1 color="Blue">Figure 24. Wizard Step I</font></div>
+<div align="center"><font size=1 color="Blue">Figure 25. Wizard Step I</font></div>
 
-<p>
+
 -   **STEP II**: Basic MO metadata: A second window will be shown to complete the title, subtitle, description and headline of the new multimedia object.This step will not be displayed if you select "Add multiple multimedia objects" in the previous step.
-<p>
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_684d7db7.png)
 
-<div align="center"><font size=1 color="Blue">Figure 25. Wizard Step II</font></div>
+![](images/step_2_wizard.png)
+
+<div align="center"><font size=1 color="Blue">Figure 26. Wizard Step II</font></div>
 
 
 -   **STEP III**: Technical Metadata and Media uploading: Finally, a third window will be shown to complete technical metadata about the publication and processing. It will be possible as well to select the video that will be uploaded. The fields to complete are:
 
     -   **Master**: Defines the quality of the master video you will store.You can store a direct copy of the ingested video choosing "master_copy" or a compressed copy by choosing "master_h264".
 
-    -   **Publication**Channels**: Multimedia channels where newly created object will be published: Web TV.
+    -   **Publication Channels**: Multimedia channels where newly created object will be published: Web TV.
 
     -   **Priority**: Priority of transcoding. It is used to set the priority of the video in the transcode queue.
 
@@ -595,12 +663,11 @@ This Ingest-wizard  is composed of three steps:
        
        - **Inbox on Server**:  To select a single file stored the server file folder.
 
-    -   **Resource (local or server)**: Field used to select the local media file or server directory.
+       - **Audio/video file:**: Field used to select the local media file or server directory.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m3ce9bdda.png)
+![](images/step_3_wizard.png)
 
-<div align="center"><font size=1 color="Blue">Figure 26. Wizard Step IV</font></div>
-
+<div align="center"><font size=1 color="Blue">Figure 27. Wizard Step IV</font></div>
 
 -   **FINAL STEP**: This window shows the result of the wizard and it allows you to choose several new actions:
 
@@ -610,106 +677,75 @@ This Ingest-wizard  is composed of three steps:
 
     -   Create another Multimedia Object in a new Series.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m3ac7e07c.png)
+![](images/step_4_wizard.png)
 
-<div align="center"><font size=1 color="Blue">Figure 27. Wizard Final Step</font></div>
+<div align="center"><font size=1 color="Blue">Figure 28. Wizard Final Step</font></div>
 
 <p>
 After completing the steps of the Ingest-wizard, the multimedia object with the specified metadata will be created and the uploaded video file transcoded and catalogued. When the media process finishes you will see the media ready in the "Multimedia" tab ("Video Files" block) of the newly created MO.
 
-The ingestion process automatically generates a thumbnail-image for the multimedia object by capturing a frame of the video. It is recommended to review it and capture another manually, if required.The thumbnail-image for the series must be manually selected (See section 3.3).
+The upload process automatically generates a thumbnail-image for the multimedia object by capturing a frame of the video. It is recommended to review it and capture another manually, if required. The thumbnail-image for the series must be manually selected (See section 3.3).
 <p>
 
-## 4.2 Importing videos from Opencast
+# 5 Statistics
 
-This module gives you the possibility to import in PuMuKIT, videos produced by an Opencast system that is integrated with your PuMuKIT platform.
+The Statistics module is a module where you can monitor the number of viewings of multimedia objects and series published.
 
-Once the video processing has finished in Opencast, click on the "Ingester" PuMuKIT module and you will see this window:
+![](images/statistics.png)
 
+<div align="center"><font size=1 color="Blue">Figure 29. Statistics tab</font></div>
 
-![](images/opencast.importer.module.png)
+The Statistics window has two main views:
 
-<div align="center"><font size=1 color="Blue">Figure 28. Opencast importer module</font></div>
+-   **Multimedia Objects**: In this view, you can check the statistics for all the multimedia objects in PuMuKIT.
+-   **Series**: In this view, you can check the statistics for all series in PuMuKIT. The number of views of a series is the sum of the number of views for all the multimedia objects belonging to that series.
 
-<p>
-A list of the videos processed and ready to import in Opencast can be seen, sorted by recording date.
-<p>
+To the right of the search parameters there are two info boxes; the orange box indicates the total number of multimedia objects or series found for your search parameters and the green box shows the total number of views for all these objects during the date range you selected.
 
-The Information and controls shown for every Opencast video (MH-video) listed are:
+<p align="center"><img src="images/info_box_statistics.png"></p>
 
--   **Opencast id**.
+<div align="center"><font size=1 color="Blue">Figure 30. Info box</font></div>
 
--   **Title of the MH-video (Name)**.
+## 5.1 Series and objects search filter
 
--   **Duration of the video**.
+Thanks to this filter, you can narrow down results and easily locate the series or objects you are looking for. This search filter allows you to execute searches based on the title and date range.
 
--   **Recording date (Date)**.
+<p align="center"><img src="images/statistics_search_form.png"></p>
 
--   **"Import" (or "imported") and "play" controls:**
+<div align="center"><font size=1 color="Blue">Figure 31. Series and objects search-form</font></div>
 
-     - Click on "play" to open a window with the Opencast-player for the video.
-     
-     - Click on "import" to import the video and add it to its corresponding PuMuKIT series. The control will change to "imported".
-     
-     - Click on "imported" to go to the PuMuKIT series where the video now is placed (see sections 3.2.1, 3.2.2 and 3.2.3).
-     
-There is also a search form that allows you to find OC-videos sorted by any of the Opencast metadata fields (presenter, title, id...).
+## 5.2 Most Viewed
 
-<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m4b356bdf.png"></p>
+In this field the ranking of the most viewed series and objects are shown. This ranking is displayed through a ranking list at the left and a corresponding bar graph at the right.
 
-<div align="center"><font size=1 color="Blue">Figure 29. Opencast video search</font></div>
+-   **Clicking on a series** on this list will bring you to the statistics for that series, where the statistics for all the multimedia objects belonging to that series will be displayed.
+-   **Clicking on a multimedia object** on this list will bring you to the statistics for that object, displaying a thumbnail through which you can access that object's video player on the Video Portal.
 
-<p>
-For each imported video there are three possibilities:
-<p>
+## 5.3 Views by time period
 
--   It is the first imported video from its Opencast-series.
+In this field you will see the total number of views, between the data ranges you previously selected (if any), grouped by periods of time for all the objects or series shown at that moment in the statistics module.
 
--   There are already more videos imported from that Opencast-series.
+These views can be grouped by day, month (by default) or year. You can change the grouping criteria by clicking on the corresponding button at the top-right corner of the "Views by time period" display.
 
--   The video doesn't have a series defined in Opencast.
+![](images/statistics_time_period.png)
 
+<div align="center"><font size=1 color="Blue">Figure 32. Views by time period</font></div>
 
-### 4.2.1 First video of a series
+# 6 Live Streaming
 
-In this case, a new PuMuKIT-series will be created in PuMuKIT associated to the Opencast-series (from now on, all the videos from that OC-series will be imported in this PuMuKIT-series).
-
-In this case, the data of the series in PuMuKIT and the metadata of the video must be edited. Both the series and the video will keep some of the data they previously had in Opencast: title, description, date... However, other fields must be filled in manually: person, thumbnail...
-
-In series with more than one video, it is recommended to edit the default values of the multimedia objects before importing the rest of the videos of the series to speed up the metadata improvement process. 
-
-See section 4.1 to edit series and section 4.2 to edit the data of the video. 
-
-
-### 4.2.2 Additional videos of a series
-
-In this case, it is only necessary to edit the metadata of the video (because the series will be already created in PuMuKIT). The generic data of the series will be updated automatically when importing the video and will also keep the data from Opencast: title, description, date... See section 4.2.
-
-### 4.2.3 Video without a series in Opencast
-
-In this case, a new series without any kind of information will be created in PuMuKIT. See section 4 to edit the data of the series.
-
-For each video without a series in Opencast, you will have a new series in PuMuKIT.
-
-If you want to move the video to other series, you will have to select the video, cut the multimedia object, go to the new series and paste it there. The ad-hoc created series should be removed after moving the multimedia object.
-
-
-# 5 Live Streaming
-
-The "Live Broadcast" module allows you to manage the live streaming channels of the PuMuKIT video-portal. 
+The "Live Management" module allows you to manage the live streaming channels of the PuMuKIT video-portal. It is divided in two different "tools", the Channel configuration and the Live Events.
 
 ![](images/live_channels_module.png)
 
-<div align="center"><font size=1 color="Blue">Figure 30. Live channels module</font></div>
+<div align="center"><font size=1 color="Blue">Figure 33. Live channels view</font></div>
 
-## 5.1 Live channel module
+## 6.1 Live channel module
 
 The Live channels module can be configured using the following parameters:
 
-<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_34781e32.png"></p>
+![](images/create_new_channel.png)
 
-
-<div align="center"><font size=1 color="Blue">Figure 31. Live channel edition form</font></div>
+<div align="center"><font size=1 color="Blue">Figure 34. Live channel edition form</font></div>
 
 -   **Name**: Live channel name shown in the frontend.
 
@@ -721,25 +757,17 @@ The Live channels module can be configured using the following parameters:
      
      - On Hold: Disables live streaming on the channel. It can be configured to play videos (waiting playlist) while there is not any live streaming being published on the channel.
 
-       **NOTE**: When the live streaming source is not available it is recommended to change the channel state to "Waiting".
+       **NOTE**: When the live streaming source is not available it is recommended to change the channel state to "On hold".
 
 -   **URL**: Streaming server's URL. You can only use RTMP based urls. We recommend using the AMS technology (Adobe Media Server) because it can deliver live streaming content to both desktop and mobile devices. The URL by default is rtmp://<URL>/livepkgr .
 
       PuMuKIT also supports FMS technology (Flash Media Server).
-      
--   **Resolution**: Player resolution of the live channel in the Video-Portal.
 
 -   **Technology**: It supports FMS technology (Flash Media Server) and WMS technology (Windows Media Services). To use AMS technology chooses FMS. AMS is the new version of FMS that is able to deliver multimedia content to mobile devices as well.
 
 -   **STREAM**: Name that identifies the video flow on the streaming server.
 
--   **IP Source**: IP address of the streaming server. This parameter configures the live channel to only accept the video stream from the Ip address introduced.
-
--   **Qualities**: It allows multi-quality streams. Multi-quality streams are useful to deliver video streaming to slow Internet conections or mobile devices. Bandwidth in kbps and Width in pixels. If Bandwidth is not configured, by default it is set-up to 1 Mbps.
-
--   **Index play**: The live streaming event is announced in the home page of the PuMuKIT Video-portal while it is happening. A live event must be created and configured with date and duration.
-
-## 5.2 Streaming encoder configuration
+## 6.2 Streaming encoder configuration
 
 The streaming encoder delivers multimedia content to the streaming server. The streaming server relays the multimedia content to the users desktop computers or mobile device. We recommend Adobe Media Server (AMS) as Pumukit live streaming server.
 
@@ -759,63 +787,109 @@ Streaming encoder configuration recommendations for AMS:
      
 -   Select AAC audio codec if available. AAC format is fully compatible with desktop computers, Android and iOS devices. Mp3 format at 44100 Hz sample rate can also be used but it might have problems with older devices (iPad 1). 
 
-## 5.3 Live events module
+## 6.3 Advanced Live events module
 
-It is a module that allows you to manage the announcement of the next events that will be broadcasted through live channels. 
+![](images/live_event_frontend.png)
 
-![](images/live_broadcasts_announcements_module.png)
+<div align="center"><font size=1 color="Blue">Figure 35. Announcement of live event</font></div>
 
-<div align="center"><font size=1 color="Blue">Figure 32. Live broadcasts announcements module</font></div>
+With this configuration it is possible create personalized live events. These events can broadcast separated in different sessions and the show a countdown previously to the event.
+Moreover the events can be related with the series that saves the recording of that event.
+Once all the sessions of an event are finished, the event url will be redirect to the related series if the series has MO published.
+
+![](images/advanced_live_channel.png)
+
+<div align="center"><font size=1 color="Blue">Figure 36. Advanced Live Events View</font></div>
+
+There are two possible options to create new events:
+
+-   New event and series: Clicking on this option, a new direct event and a new related series are created.
+-   New event from series: A new event is created from a selected series (previously created).
+
+Next, we detailed the configuration options of an event:
+
+![](images/event_configuration_tab.png)
+
+<div align="center"><font size=1 color="Blue">Figure 37. Event configuration tab</font></div>
+
+-   Title: Title of the event.
+-   Description: A summary of the event.
+-   Author: Person that creates the event.
+-   Producer: Person that produces the event.
+-   Location: Place where the event happens
+-   Channels: Select a previously configured channel where broadcasts the live event.
+-   External URL: Activate this checkbox to use a video or a external server URL to broadcast. Then write the desired URL in the next line, and it will be used instead of the selected channel.
+-   Images: Image that the event has in the frontend preview
+-   Announce: Active the checkbox to announce the celebration of the event in the frontend. If it is not activated, only people that know the URL can access to the event.
+-   Broadcast profile: Select if the live event is public or protected by password.
+-   Show configuration for messages, poster image and color text: Clicking on this option you can configure the image and the text showed in the player previously to the event. You can find the next options:
+     - Already held event message: The message shown in the player when the event is finished.
+     - Not yet held event message: Message shown in the player previously to the event starts.
+     - Event poster: Image shown in the player previously and after the event.
+     - Poster text color: Select the text color to the messages.
+
+<p align="center"><img src="images/poster_configuration_options.png"></p>
+
+<div align="center"><font size=1 color="Blue">Figure 38. Poster configuration options</font></div>
+
+Once the event is configured in necessary create the sessions of that event. Click on the Session tab can see the next options.
+
+![](images/session_configuration_tab.png)
+
+<div align="center"><font size=1 color="Blue">Figure 39. Session configuration tab</font></div>
+
+To create a new session simply click on "New event session" and the time of the session can be configured.
+
+<p align="center"><img src="images/session_configuration_options.png"></p>
+
+<div align="center"><font size=1 color="Blue">Figure 40. Session configure options</font></div>
+
+In the series tab the metadata of the related series can be edited. If you change some parameters, these will change in the created series.
 
 <p>
-If you click on the edit button, a window will be shown where you can edit the following settings of the live event:
-<p>
+In this module there is also a search filter to facilitate find the events by name, date or a predefined filters:
 
-![](images/window_edit_live_broadcasts_announcements_module.png)
+- Live events: Events that are broadcasting now
+- Future events: Events that have sessions to broadcast in the future
+- Today events list: Events that have sessions today
 
-<div align="center"><font size=1 color="Blue">Figure 33. Window edit live broadasts announcements module</font></div>
+<p align="center"><img src="images/filter_events.png"></p>
 
--   **Event**: name of the next event shown in the frontend.
+<div align="center"><font size=1 color="Blue">Figure 41. Search filter in events module</font></div>
 
--   **Place**: shows the place where the event will take place.
-
--   **Channel**: it's the channel you can follow the event through.
-
--   **Schedule**: in this field we can edit the date and time of the event and its duration.
-
--   **Display**: if we select it, the information of the broadcast will be shown in the channel as the next event.
-
-![](images/announcements_of_the_next_live_event.png)
-
-<div align="center"><font size=1 color="Blue">Figure 34. Announcement of the next live event</font></div>
-
-# 6 System management modules
+# 7 System management modules
 
 PuMuKIT's Back-office has other modules to perform less common system management tasks. In this section, the different admin existing modules will be summarized just for informational proposes. 
 
-## 6.1 Encoder jobs module
+## 7.1 Encoder jobs module
 
 It is a module that summarizes transcoding jobs: those in progress, those pending for transcoding and those finished (both correctly and incorrectly).
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_1172fa0c.png)
+![](images/encoder_jobs.png)
 
-<div align="center"><font size=1 color="Blue">Figure 35. Encoder jobs module</font></div>
+<div align="center"><font size=1 color="Blue">Figure 42. Encoder jobs module</font></div>
 
-## 6.2 Admin users module
+## 7.2 Admin users module
 
 Using this module you can configure users who have access to the administration application. Through this module, you can create, edit and delete users.
 
-There are three user types:
+There are five user types:
 
--   **Administrator**: has full acces.
+-   **Administrator**: Has full access to the platform.
 
--   **Publisher**: has no access to the administration menu.
+-   **Publisher**: This person is the content administrator of the platform. It has access to all the modules except the "Management" menu. (Including Admin users, Groups, Permission Profiles editing and Roles editing).
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_1c9b8e45.png)
+-   **Ingestor**: Users that mainly upload and catalog content in the platform. They can not publish new videos, (a Publisher should do after reviewing the ingested content) they only have restricted access to manage the multimedia content in the back office. It does not have access to the "Management" menu (as before), it cannot access the tags and series types Tables. It cannot change the multimedia object status. It can only upload videos through the Wizard or through the OC-Importer.
 
-<div align="center"><font size=1 color="Blue">Figure 36. Admin user module</font></div>
+-   **Autopublisher**: They are users that can manage only their own multimedia content. This Permission-profile can be used for Professors and instructors. It has the same restrictions as the "Ingestor". It cannot access the "Live" menu (live channels and events). It cannot access the OC-Importer. It only has access to the series and multimedia objects he creates ("Owner" role) or he can manage ("Admin Groups").
 
-## 6.3 Roles module
+-   **Viewer**: Users that only has authenticated access to video portal so they can watch videos restricted to authenticated users. They can not access to PuMuKIT back office.
+
+![](images/list_users.png)
+
+<div align="center"><font size=1 color="Blue">Figure 43. Admin user module</font></div>
+
+## 7.3 Roles module
 
 It is a module that allows you to manage roles with people linked to multimedia objects. These roles can be as follows:
 
@@ -823,80 +897,47 @@ It is a module that allows you to manage roles with people linked to multimedia 
 
 -   **Private**: these are used internally to manage and catalogue multimedia objects in a better way. They are not shown in the Web portal.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_4973185c.png)
+![](images/roles_list.png)
 
-<div align="center"><font size=1 color="Blue">Figure 37. Roles module</font></div>
+<div align="center"><font size=1 color="Blue">Figure 44. Roles module</font></div>
 
-# 7 Other management modules
+# 8 Other management modules
 
 PuMuKIT's Back-office also has other modules to perform less common management tasks. In this section, the different admin existing modules will be summarized. 
 
-## 7.1 Dashboard module
+## 8.1 Dashboard module
 
 It is a module created with a set of tools that allows you to see a summary of the server state: last published videos, last created videos, portal information, disk usage, transcoding usage...
 
 ![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m1e7d0faa.png)
 
-<div align="center"><font size=1 color="Blue">Figure 38. Dashboard module</font></div>
+<div align="center"><font size=1 color="Blue">Figure 45. Dashboard module</font></div>
 
-## 7.2 Tables module
+## 8.2 Tables module
 
-### 7.2.1 People module
+### 8.2.1 People table
 
-It is a module to manage people data linked to a multimedia object, whether they present a lecture, they are short-film actors or they have a much more tecnichal role as producers, directors, etc... People are linked to the multimedia object through the roles that are managed in the corresponding module. 
+It is a module to manage people data linked to a multimedia object, whether they present a lecture, they are short-film actors or they have a much more tecnichal role as producers, directors, etc... People are linked to the multimedia object through the roles that are managed in the corresponding module by an Administrator user.
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_b337d.png)
+![](images/people_list.png)
 
-<div align="center"><font size=1 color="Blue">Figure 39. People module</font></div>
+<div align="center"><font size=1 color="Blue">Figure 46. People module</font></div>
 
 <p>
 This module allows the creation, edition and removal of information related to people. It should also be noted that each entry is a combination of a person and its "position" (professor, chancellor, etc...) so a person with two different positions will have two different entries. This makes easier to solve issues with temporary positions as Chancellor of the Univerity. This particular person will have two entries: one as chancellor and another as professor. 
 <p>
 
-### 7.2.2 Tags module
+### 8.2.2 Tags table
 
 This is a module that allows you to manage Tags areas used to catalogue multimedia objects. 
 
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_305eb328.png)
+![](images/tags_list.png)
 
-<div align="center"><font size=1 color="Blue">Figure 40. Areas ok knowledge module</font></div>
+<div align="center"><font size=1 color="Blue">Figure 47. Areas ok knowledge module</font></div>
 
 <p>
 Different Knowledge Areas (KA) "types" or taxonomies can be managed in PuMuKIT. A KA "type" can be the UNESCO schema, etc... or even a custom designed one (based on the departments of your institution, etc...). Moreover, you can create relationships among areas to make recommendations when a multimedia object is catalogued in a specific area.
 <p>
-
-### 7.2.3 Broadcast profile module
-
-It is a module that allows you to manage the broadcasting of multimedia objects. Broadcasting defines the scope or privacy of multimedia objects. 
-
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m2c38dcb0.png)
-
-<div align="center"><font size=1 color="Blue">Figure 41. Broadcast profiles module</font></div>
-
-<p>
-Click on “new” to create a new broadcast profile, the next window will open:
-<p>
-
-<p align="center"><img src="images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m64d6a754.png"></p>
-
-<div align="center"><font size=1 color="Blue">Figure 42. Broadcast edition form</font></div>
-
-
--   **Name**: name of the profile, if the profile is private it will match the user name used to sign-in.
-
--   **Type**: “public” for free access profiles and “cor” for private profiles.
-
--   **Passwd**: password for private profiles.
-
--   **Description**: usually a descriptive phrase to know what the profile is used for. This field is not mandatory.
-
-### 7.2.4 Series types module
-
-It is a module that allows you to administrate the types of series (also designated as channels) where multimedia object series of the catalogue are classified.
-
-![](images/PuMuKit_2_Content_Admin_Guide_v1.1_html_m761f57ba.png)
-
-<div align="center"><font size=1 color="Blue">Figure 43. Series types module</font></div>
 
 
 
