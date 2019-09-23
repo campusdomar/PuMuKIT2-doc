@@ -1,4 +1,4 @@
-PuMuKIT-2 SysAdmin Guide
+PuMuKIT SysAdmin Guide
 ========================
 
 # PuMuKIT Content Manager Manual
