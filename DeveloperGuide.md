@@ -28,21 +28,21 @@ There is also a list of optional bundles that come deactivated.
 In order to install/activate them, follow the instructions in the guide of each bundle.
 
 Activated by default:
-* [BaseLivePlayerBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/BaseLivePlayerBundle/Resources/doc/ConfigurationGuide.md): provides a service to show live stream events.
-* [BasePlayerBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/BasePlayerBundle/Resources/doc/ConfigurationGuide.md): provides a service to show video.
-* [CoreBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/CoreBundle/Resources/doc/ConfigurationGuide.md): provides software functionalities.
-* [EncoderBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/EncoderBundle/Resources/doc/ConfigurationGuide.md): provides a service to encode audio/video tracks.
-* [InspectionBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/InspectionBundle/Resources/doc/ConfigurationGuide.md): provides a service to inspect multimedia tracks.
-* [JWPlayerBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/JWPlayerBundle/Resources/doc/ConfigurationGuide.md): provides the JWPlayer player to show videos.
-* [NewAdminBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/NewAdminBundle/Resources/doc/ConfigurationGuide.md): provides the back-office admin UI.
-* [SchemaBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/SchemaBundle/Resources/doc/ConfigurationGuide.md): defines the schema of classes and services.
-* [StatsBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/StatsBundle/Resources/doc/ConfigurationGuide.md): provides a service to log the statistics.
+* [BaseLivePlayerBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/BaseLivePlayerBundle/Resources/doc/Configuration.md): provides a service to show live stream events.
+* [BasePlayerBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/BasePlayerBundle/Resources/doc/Configuration.md): provides a service to show video.
+* [CoreBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/CoreBundle/Resources/doc/Configuration.md): provides software functionalities.
+* [EncoderBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/EncoderBundle/Resources/doc/Configuration.md): provides a service to encode audio/video tracks.
+* InspectionBundle: provides a service to inspect multimedia tracks.
+* JWPlayerBundle: provides the JWPlayer player to show videos.
+* [NewAdminBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/NewAdminBundle/Resources/doc/Configuration.md): provides the back-office admin UI.
+* [SchemaBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/SchemaBundle/Resources/doc/Configuration.md): defines the schema of classes and services.
+* [StatsBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/StatsBundle/Resources/doc/Configuration.md): provides a service to log the statistics.
 * [WebTVBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/WebTVBundle/Resources/doc/OverrideGuide.md): defines the portal web.
-* [WizardBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/WizardBundle/Resources/doc/ConfigurationGuide.md): provides a service to guide the user on uploading multimedia content.
-* [WorkflowBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/WorkflowBundle/Resources/doc/ConfigurationGuide.md): provides a service to automatically extract a picture from a video that just has been transcoded if the MultimediaObject does not have any picture yet.
+* [WizardBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/WizardBundle/Resources/doc/Configuration.md): provides a service to guide the user on uploading multimedia content.
+* [WorkflowBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/WorkflowBundle/Resources/doc/Configuration.md): provides a service to automatically extract a picture from a video that just has been transcoded if the MultimediaObject does not have any picture yet.
 
 Not activated by default:
-* [NotificationBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/NotificationBundle/Resources/doc/ConfigurationGuide.md): sends emails when a job finished, whether it failed or succeed
+* [NotificationBundle](https://github.com/pumukit/PuMuKIT/blob/master/src/Pumukit/NotificationBundle/Resources/doc/Configuration.md): sends emails when a job finished, whether it failed or succeed
 
 List of Events
 --------------
