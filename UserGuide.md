@@ -1,7 +1,5 @@
 PuMuKIT User Guide
-====================
-
-# PuMuKIT Content Manager Manual
+==================
 
 ## Table of contents
 

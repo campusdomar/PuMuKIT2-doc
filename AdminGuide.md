@@ -1,8 +1,6 @@
 PuMuKIT SysAdmin Guide
 ========================
 
-# PuMuKIT Content Manager Manual
-
 ## Table of contents
 
 1. [General Overview](#1-general-overview)
