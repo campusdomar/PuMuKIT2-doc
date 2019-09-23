@@ -22,7 +22,7 @@ PuMuKIT has been built using the below technologies. It is recommended to read t
 List of Bundles
 ---------------
 
-PuMuKIT has been developed with the Symfony framework. Symfony was based on bundles, and so, PuMuKIT is structured in bundles.
+PuMuKIT has been developed with the Symfony framework. Symfony is based on bundles, and so, PuMuKIT is structured in bundles.
 There is a list of bundles that come activated by default with the project, these are mandatory for the code to work. 
 There is also a list of optional bundles that come deactivated. 
 In order to install/activate them, follow the instructions in the guide of each bundle.
