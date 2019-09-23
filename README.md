@@ -1,4 +1,4 @@
-PuMuKIT-2 Documentation Project
+PuMuKIT Documentation Project
 ===============================
 
 Documentation:
@@ -12,13 +12,13 @@ Documentation:
 6. [Third Party Bundles List.](ThirdPartyBundlesList.md)
 
 
-PuMuKIT-2 Site:
+PuMuKIT Site:
 --------------
 
 http://pumukit.org
 
 
-PuMuKIT-2 Code Project:
+PuMuKIT Code Project:
 ----------------------
 
-https://github.com/campusdomar/PuMuKIT2
+https://github.com/pumukit/PuMuKIT
