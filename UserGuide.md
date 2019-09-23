@@ -1,8 +1,6 @@
 PuMuKIT User Guide
 ====================
 
-*This page has been updated on September 18th , 2019*
-
 # PuMuKIT Content Manager Manual
 
 ## Table of contents

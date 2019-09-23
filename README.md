@@ -1,10 +1,9 @@
 PuMuKIT Documentation Project
-===============================
+=============================
 
-*This page has been updated on September 18th , 2019*
+*This page has been updated on September, 2019*
 
-Documentation:
------------------------
+## Documentation:
 
 1. [Installation Guide.](InstallationGuide.md)
 2. [User Guide.](UserGuide.md)
@@ -14,13 +13,11 @@ Documentation:
 6. [Third Party Bundles List.](ThirdPartyBundlesList.md)
 
 
-PuMuKIT Site:
---------------
+## PuMuKIT Site
 
 http://pumukit.org
 
 
-PuMuKIT Code Project:
-----------------------
+## PuMuKIT Code Project:
 
 https://github.com/pumukit/PuMuKIT

@@ -10,11 +10,11 @@
 
 ## 1. Requirements
 
-PuMuKIT is a LEMP (Linux, nginx, MongoDB, PHP) application, created with the Symfony2 framework. It uses libav-tools (or ffmpeg) to analyze the audiovisual data, as well as to transcode the data.
+PuMuKIT is a LEMP (Linux, nginx, MongoDB, PHP) application, created with the Symfony framework. It uses libav-tools (or ffmpeg) to analyze the audiovisual data, as well as to transcode the data.
 
 We recommend to install PuMuKIT on **Ubuntu 18.04** Linux. PuMuKIT has been developed and tested on that Linux distribution and version.
 
-Although it is recommended to use Ubuntu 18.04 it's not mandatory. You can try other Linux distributions and versions at you own risk. The raw requirements for PuMuKIT installation at OS level are: Linux, nginx (1.4.6), libav-tools (9.18), php7 (7.2) and mongo (3.0). Libav-tools with h264 and aac support is needed. Also the following php5 modules are required: php7.2-json, php7.2-cli, php5-mongo, php7.2-ldap, php7.2-curl, php7.2-intl, php7.2-fpm and php7.2-xdebug. Make sure text search is enabled for your mongodb (version 3.0+).
+Although it is recommended to use Ubuntu 18.04 it's not mandatory. You can try other Linux distributions and versions at you own risk. The raw requirements for PuMuKIT installation at OS level are: Linux, nginx (1.4.6), libav-tools (9.18), php7 (7.2) and mongo (3.0). Libav-tools with h264 and aac support is needed. Also the following php7 modules are required: php7.2-json, php7.2-cli, php7.2-mongo, php7.2-ldap, php7.2-curl, php7.2-intl, php7.2-fpm and php7.2-xdebug. Make sure text search is enabled for your mongodb (version 3.0+).
 
 Use [composer](https://getcomposer.org/) to check and install the dependencies
 
@@ -104,7 +104,7 @@ In case it gives a token error, check the [solution in the F.A.Q](#add-github-to
 
 10. Give cache and log directories the right permissions.
 
-   * Follow the instructions at Symfony [documentation](http://symfony.com/doc/2.6/book/installation.html#checking-symfony-application-configuration-and-setup).
+   * Follow the instructions at Symfony [documentation](https://symfony.com/doc/3.4/setup.html#checking-symfony-application-configuration-and-setup).
 
 11. Set the `"date.timezone"` setting in all the `php.ini` files with your timezone (e.g. `Europe/Madrid`):
 
@@ -333,7 +333,7 @@ sudo service ningx restart
 
 **Setting up Permissions?**
 
- * http://symfony.com/doc/2.6/book/installation.html#checking-symfony-application-configuration-and-setup
+ * https://symfony.com/doc/3.4/setup.html#checking-symfony-application-configuration-and-setup
  * http://symfony.es/documentacion/como-solucionar-el-problema-de-los-permisos-de-symfony2/
  * Setting up ownership of upload directories
 
