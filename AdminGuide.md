@@ -43,7 +43,7 @@ PuMuKIT-2 SysAdmin Guide
 
   2.2.2.3 [No scope](#2223-no-scope)
 
-  2.2.3 [Permissions explained](#223-permission-explained)
+  2.2.3 [Permissions explained](#223-permissions-explained)
 
   2.3 [Roles tool](#23-roles-tool)
   
