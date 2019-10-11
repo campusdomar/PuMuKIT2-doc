@@ -47,7 +47,7 @@ PuMuKIT User Guide
   
   3.2.3.2 [Default KA tags](#3232-default-ka-tags)
 
-  3.2.4 [Owners & groups](#324-owners-&-groups)
+  3.2.4 [Owners & groups](#324-owners--groups)
 
   3.2.4.1 [Owners](#3241-owners)
 
