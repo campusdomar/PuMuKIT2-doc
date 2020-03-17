@@ -78,7 +78,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 6. Download the last version of PuMuKIT:
 
     ```
-    git clone https://github.com/campusdomar/PuMuKIT.git /var/www/pumukit
+    git clone https://github.com/pumukit/PuMuKIT.git /var/www/pumukit
     ```
 
 7. Activate the master tag:
