@@ -11,7 +11,7 @@ PuMuKIT 3.5.*
 
 ## Steps
 
-1. Connect to backoffice and go to PermissionProfile table
+1. Connect to backoffice as System Super Administrator and go to PermissionProfile table 
 
 
 Activate for Administrator, Publisher, Ingestor and AutoPublisher the following permissions.
