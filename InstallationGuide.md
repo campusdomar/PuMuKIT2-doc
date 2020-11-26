@@ -47,7 +47,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
 
     ```
     sudo apt-get install -y git curl nginx unzip
-    sudo apt-get install -y php7.2-fpm php7.2-cli php7.2-curl php7.2-intl php7.2-json
+    sudo apt-get install -y php7.2-fpm php7.2-cli php7.2-curl php7.2-intl php7.2-json php7.2-xml php7.2-gd
     sudo apt-get install -y php7.2-intl php7.2-xdebug php7.2-curl php7.2-ldap
     sudo apt-get install -y ffmpeg php-pear php7.2-dev php7.2-mbstring php7.2-zip
     ```
@@ -58,6 +58,7 @@ Follow the below instructions. If any error is thrown check the [F.A.Q. section]
     sudo apt-get install -y mongodb-org
     sudo systemctl enable mongod.service
     sudo systemctl start mongod.service
+    sudo pecl channel-update pecl.php.net
     sudo pecl install mongodb-1.5.3
     sudo echo "extension=mongodb.so" | sudo tee /etc/php/7.2/mods-available/mongodb.ini
     sudo ln -s /etc/php/7.2/mods-available/mongodb.ini /etc/php/7.2/cli/conf.d/20-mongodb.ini
