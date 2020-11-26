@@ -1,7 +1,7 @@
 PuMuKIT Documentation Project
 =============================
 
-*This page has been updated on September, 2019*
+*This page has been updated on November 2020*
 
 ## Documentation:
 
